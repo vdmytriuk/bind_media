@@ -1,0 +1,81 @@
+.grid{
+  &_tertiary{
+    @include gridTemplate(3, 1, 45px 0 100px 0, 80px 60px, 32px 0 48px 0, 48px 0)
+    .grid{
+      &__item{
+        @media(min-width: 789px){
+          &:first-of-type{
+            grid-column-start: 1;
+            grid-column-end: 3;
+          }
+        }
+      }
+    }
+  }
+  &_binary{
+    @include gridTemplate(2, 1, 45px 0 20px 0, 75px, 32px 0 0 0, 48px 0)
+    @media screen and (max-width: 1025px){
+      --columnsCount: 2;
+    }
+    @include mobile-xl{
+      --columnsCount: 1;
+    }
+  }
+  &__item{
+    &-img{
+      margin-bottom: 20px;
+      img{
+        width: 100%;
+      }
+    }
+    &-inner{
+      @include flexAlignment(center, space-between)
+      margin-bottom: 15px;
+    }
+    &-tags{
+      @include flexAlignment(center, flex-start)
+    }
+    &-tag{
+      padding: 5px 30px;
+      border-radius: 50px;
+      span{
+        font-weight: 900;
+        line-height: 1.375;
+      }
+      &.blue{
+        background: rgba(0, 192, 231, 0.1);
+        span{
+          color: $lightBlue;
+        }
+      }
+      &.sandy{
+        background: rgba(255, 195, 58, 0.1);
+        span{
+          color: $sandy;
+        }
+      }
+      &.tomato{
+        background: rgba(248, 78, 108, 0.1);
+        span{
+          color: $tomato;
+        }
+      }
+      &.darkturqoise{
+        background: rgba(77, 235, 221, 0.1);
+        span{
+          color: $darkturqoise;
+        }
+      }
+    }
+    &-date{
+      @include font(12px, 600, 14px)
+      color: $darkturqoise;
+    }
+    &-day{
+      margin-right: 5px;
+    }
+    &-text{
+      margin-bottom: 0;
+    }
+  }
+}

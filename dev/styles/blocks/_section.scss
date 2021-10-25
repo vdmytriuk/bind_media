@@ -1,0 +1,150 @@
+.section{
+  margin-top: 100px;
+  padding-top: 100px;
+  @include tablet-m{
+    margin-top: 70px;
+    padding-top: 50px;
+  }
+  // Container settings & create global background styles
+  .container{
+    position: relative;
+    @include flexAlignment(center, space-between, wrap);
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      opacity: .1;
+      width: 175px;
+      height: 360px;
+      @include tablet-m{
+        top: 150px;
+      }
+    }
+  }
+  // Changing position for even/odd sections
+  &:nth-of-type(odd){
+    .container{
+      &:before{
+        left: 0;
+        border-top-left-radius: 40px;
+        border-bottom-right-radius: 40px;
+        transform: translate(-120px , -50%) skew(-25deg);
+        @include tablet-m{
+          transform: translate(-60px , -50%) skew(-25deg);
+        }
+      }
+    }
+    .section{
+      &__image{
+        &-award{
+          left: 0;
+          transform: translate(-50%, 50%);
+          @include tablet-m{
+            transform: translate(-10%, 50%);
+          }
+        }
+      }
+    }
+  }
+  &:nth-of-type(even){
+    .container {
+      flex-direction: row-reverse;
+      &:before {
+        right: 0;
+        border-top-right-radius: 40px;
+        border-bottom-left-radius: 40px;
+        transform: translate(120px, -50%) skew(25deg);
+        @include tablet-m{
+          transform: translate(60px , -50%) skew(25deg);
+        }
+      }
+    }
+    .section{
+      &__image{
+        &-award{
+          right: 0;
+          transform: translate(50%, 50%);
+          @include tablet-m{
+            transform: translate(10%, 50%);
+          }
+        }
+      }
+    }
+  }
+  // Colors for backgrounds
+  &_blue{
+    @include sectionBackgroundColor($lightBlue)
+  }
+  &_sandy{
+    @include sectionBackgroundColor($sandy)
+  }
+  &_tomato{
+    @include sectionBackgroundColor($tomato)
+  }
+  &_darkturqoise{
+    @include sectionBackgroundColor($darkturqoise)
+  }
+  // Colors for strong text
+  &_blue-to-light{
+    @include sectionFontColor($blueGradient)
+  }
+  &_light-to-blue{
+    @include sectionFontColor($blueGradientReverse)
+  }
+  &_orange-to-red{
+    @include sectionFontColor($orangeGradientReverse)
+  }
+  &_red-to-orange{
+    @include sectionFontColor($orangeGradient)
+  }
+  // Global text
+  h3{
+    strong{
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+  // Blocks alignment
+  &__info{
+    flex-basis: 50%;
+    @include tablet-m {
+      flex-basis: 100%;
+    }
+    p{
+      margin-bottom: 22px;
+    }
+    .subtitle{
+      margin-bottom: 0;
+    }
+    &-icon{
+      margin-bottom: 30px;
+    }
+  }
+  &__image{
+    position: relative;
+    flex-basis: calc(45% - 70px);
+    @include tablet-m{
+      margin-bottom: 62px;
+    }
+    &-img{
+      box-shadow: 0px 72px 124px rgba(0, 0, 0, 0.121831);
+    }
+    &-award{
+      position: absolute;
+      bottom: 0;
+      width: 140px;
+      @include tablet-m {
+        width: 90px;
+      }
+    }
+    @include tablet-m {
+      flex-basis: 100%;
+    }
+  }
+  &__numbers{
+    @include flexAlignment(center, space-between)
+    h3{
+      margin-bottom: 10px;
+    }
+  }
+}

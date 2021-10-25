@@ -1,0 +1,108 @@
+.reviews{
+  margin-top: 250px;
+  .container{
+    position: relative;
+  }
+  @media(min-width: 1026px){
+    .container{
+      padding: 0 110px;
+    }
+  }
+  @include laptop-xs{
+    margin-top: 100px;
+    .custom-image{
+      height: 50vh;
+      width: 100%;
+      margin-bottom: 50px;
+      img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  &__slide{
+    display: flex!important;
+    @include flexAlignment(center, space-between, wrap)
+  }
+  &__info{
+    flex-basis: 50%;
+    @include laptop-xs {
+      flex-basis: 100%;
+    }
+    @include tablet-m {
+      h3{
+        @include font(24px, 400, 36px)
+      }
+    }
+    &-author{
+      @include laptop-xs{
+        width: 50%;
+        h6{
+          margin-bottom: 8px;
+        }
+        .text2{
+          line-height: 20px;
+        }
+      }
+    }
+  }
+  &__buttons{
+    @include flexAlignment();
+    position: absolute;
+    right: 80px;
+    bottom: 30px;
+    @include laptop-xs{
+      right: 20px;
+      bottom: 10px;
+    }
+  }
+  &__button{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    background: $orangeGradient;
+    box-shadow: 0px 7px 25px rgba(255, 104, 101, 0.4);
+    &[aria-disabled="true"]{
+      background: $white;
+      border: 1px solid #E6E6E6;
+      box-shadow: none;
+      &:before , &:after {
+        background: #E6E6E6;
+      }
+    }
+    &:before , &:after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 8px;
+      height: 2px;
+      background: $white;
+      border-radius: 10px;
+    }
+    &_next{
+      &:before{
+        transform: translate(-50%, calc(-50% - 2.5px)) rotate(45deg);
+      }
+      &:after{
+        transform: translate(-50%, calc(-50% + 2.5px)) rotate(-45deg);
+      }
+    }
+    &_prev{
+      margin-right: 25px;
+      &:before{
+        transform: translate(-50%, calc(-50% - 2.5px)) rotate(-45deg);
+      }
+      &:after{
+        transform: translate(-50%, calc(-50% + 2.5px)) rotate(45deg);
+      }
+      @include laptop-xs{
+        margin-left: 8px;
+      }
+    }
+  }
+
+}

@@ -1,0 +1,42 @@
+.members{
+  &__blocks{
+    @include gridTemplate(4, 1, 0, 65px 27px, 0, 60px 0)
+    margin-top: 80px;
+    @include tablet-m{
+      margin-top: 20px;
+    }
+  }
+  &__image{
+    margin-bottom: 35px;
+    img{
+      width: 100%;
+    }
+  }
+  &__info{
+    @include flexAlignment(center, space-between)
+    &-name{
+      p{
+        @include font(18px, 600, 32px)
+        margin-bottom: 7px;
+      }
+      span{
+        @include font(12px, 600, 14px)
+        color: $darkturqoise;
+        text-transform: uppercase;
+      }
+    }
+    &-socials{
+      display: flex;
+      a{
+        display: block;
+        padding: 12px;
+        margin-right: 8px;
+        border-radius: 50px;
+        background-color: $white;
+        &:last-of-type{
+          margin-right: 0;
+        }
+      }
+    }
+  }
+}

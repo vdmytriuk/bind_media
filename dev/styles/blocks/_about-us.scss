@@ -1,0 +1,39 @@
+.about-us{
+  @media(min-width: 789px){
+    .section{
+      &__image{
+        flex-basis: 50%;
+      }
+      &__info{
+        flex-basis: 40%;
+        p{
+          margin-bottom: 60px;
+        }
+        .subtitle{
+          margin-bottom: 0;
+        }
+
+      }
+        &:nth-of-type(even){
+          .container{
+            flex-direction: row;
+          }
+        }
+        &:nth-of-type(odd){
+          .container {
+            flex-direction: row-reverse;
+          }
+        }
+      }
+  }
+
+
+  @include tablet-m{
+    .custom-image{
+      margin-bottom: 36px;
+    }
+    .section{
+      padding: 0;
+    }
+  }
+}

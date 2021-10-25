@@ -1,0 +1,159 @@
+// Font settings
+
+@mixin font-face($font-family, $file-path, $weight: normal, $style: normal) {
+  @font-face {
+    font-family: $font-family;
+    src: url('#{$file-path}.eot');
+    src: local('#{$file-path}'),
+    url('#{$file-path}.eot?#iefix') format('embedded-opentype'),
+    url('#{$file-path}.woff') format('woff'),
+    url('#{$file-path}.ttf') format('truetype');
+    font-weight: $weight;
+    font-style: $style;
+  }
+}
+@mixin font($size, $weight: normal, $lineHeight: 1){
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $lineHeight;
+}
+
+// // Layout alignment Flex&Grid
+
+// Flex
+
+@mixin flexAlignment($vertical: false, $horizontal: false, $wrap: false) {
+  display: flex;
+
+  @if($vertical) {
+    align-items: $vertical;
+  }
+
+  @if($horizontal) {
+    justify-content: $horizontal;
+  }
+
+  @if($wrap) {
+    flex-wrap: wrap;
+  }
+}
+
+// Grid
+
+@mixin gridTemplate($columnsCount, $mobileColumnsCount, $margin, $gap, $mobileMargin, $mobileGap){
+  --columnsCount: #{$columnsCount};
+  @include laptop-xs {
+    --columnsCount: 3;
+  }
+  @include mobile-l {
+    --columnsCount: #{$mobileColumnsCount};
+  }
+  display: grid;
+  margin: $margin;
+  grid-template-columns: repeat(var(--columnsCount), 1fr);
+  grid-gap: $gap;
+  @include mobile-l {
+    margin: $mobileMargin;
+    grid-gap: $mobileGap;
+  }
+}
+
+
+// MEDIA
+
+
+@mixin mobile-s {
+  @media screen and (max-width: 321px) {
+    @content;
+  }
+}
+
+@mixin mobile-m {
+  @media screen and (max-width: 376px) {
+    @content;
+  }
+}
+
+@mixin mobile-l {
+  @media screen and (max-width: 481px) {
+    @content;
+  }
+}
+
+@mixin mobile-xl {
+  @media screen and (max-width: 541px) {
+    @content;
+  }
+}
+
+@mixin tablet-s {
+  @media screen and (max-width: 668px) {
+    @content;
+  }
+}
+
+@mixin tablet-m {
+  @media screen and (max-width: 769px) {
+    @content;
+  }
+}
+
+@mixin laptop-xs {
+  @media screen and (max-width: 1025px) {
+    @content;
+  }
+}
+
+@mixin laptop-s {
+  @media screen and (max-width: 1281px) {
+    @content;
+  }
+}
+
+@mixin laptop-m {
+  @media screen and (max-width: 1367px) {
+    @content;
+  }
+}
+
+@mixin laptop-l {
+  @media screen and (max-width: 1441px) {
+    @content;
+  }
+}
+
+@mixin desktop-s {
+  @media screen and (max-width: 1537px) {
+    @content;
+  }
+}
+
+@mixin desktop-m {
+  @media screen and (max-width: 1601px) {
+    @content;
+  }
+}
+
+@mixin fullWidth {
+  flex-basis: calc(100% - 20px);
+  margin: auto;
+}
+
+
+// Mixins for section
+
+@mixin sectionBackgroundColor($color) {
+  .container {
+    &:before {
+      background: $color;
+    }
+  }
+}
+
+@mixin sectionFontColor($color) {
+  h3{
+    strong{
+      background: $color;
+    }
+  }
+}

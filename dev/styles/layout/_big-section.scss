@@ -1,0 +1,27 @@
+.big-section{
+  margin-top: 100px;
+  @media (min-width: 1025px) {
+    margin-top: 200px;
+    padding-top: 110px;
+    padding-bottom: 180px;
+    background-image: url("../img/backgrounds/background_rounded.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .separator{
+    margin: 0;
+  }
+  &_mob{
+    @include laptop-xs{
+      padding-top: 75px;
+      padding-bottom: 125px;
+      background-image: url("../img/backgrounds/background_rounded.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    @include mobile-xl{
+      background-image: url("../img/backgrounds/background_rounded_mob.png");
+    }
+  }
+}

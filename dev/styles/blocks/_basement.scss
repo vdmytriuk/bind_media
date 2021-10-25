@@ -1,0 +1,113 @@
+.basement{
+  &__inner{
+    padding: 110px 50px;
+    @include laptop-xs {
+      padding: 40px 40px 350px 40px;
+    }
+    @include mobile-s {
+      padding: 20px 15px 300px 15px;
+    }
+  }
+  .container{
+    position: relative;
+    background-image: $blueGradient;
+    margin-top: 260px;
+    z-index: 0;
+    @include laptop-xs{
+      margin: 90px 10px 10px 10px;
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      bottom: 10px;
+      left: 10px;
+      background: $white;
+      box-sizing: border-box;
+      opacity: 1;
+      z-index: -2;
+      transition: .3s ease-in;
+    }
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 25%;
+      background: $orangeGradient;
+      box-sizing: border-box;
+      transform: rotate(180deg);
+      z-index: -3;
+      @include laptop-xs{
+        display: none;
+      }
+    }
+  }
+  &__persons{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    @include flexAlignment(flex-end, flex-end)
+    @include laptop-xs{
+      left: 50%;
+      width: calc(100% - 20px);
+      transform: translate(-50%, -10px);
+    }
+  }
+  &__person{
+    position: relative;
+    width: fit-content;
+    &:first-of-type{
+      transform: translate(50%, 0);
+      z-index: 1;
+      @include mobile-xl{
+        position: absolute;
+        left: -10px;
+        transform: none;
+      }
+    }
+    &-img{
+      width: fit-content;
+      @include mobile-xl {
+        img {
+          height: 64vw;
+        }
+      }
+    }
+    &-info{
+      position: absolute;
+      bottom: 20px;
+      left: -10px;
+      color: $white;
+      z-index: 2;
+      @include mobile-xl{
+          left: 30px;
+      }
+      &_centered{
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+      h6 , .text2{
+        line-height: 1;
+        width: fit-content;
+        padding: 3px;
+        background: $darkGrey;
+        @include mobile-s{
+          transform: scale(0.8);
+        }
+      }
+      h6{
+        margin-bottom: 7px;
+        white-space: nowrap;
+      }
+    }
+  }
+  &__info{
+    h3{
+      margin-bottom: 60px;
+    }
+
+  }
+}

@@ -1,0 +1,76 @@
+.separator{
+  margin-top: 110px;
+  &__blocks{
+    @include gridTemplate(4, 1, 70px 0, 95px 60px, 45px 0, 50px 0);
+  }
+  &__block{
+    @include flexAlignment(center)
+    flex-direction: column;
+    text-align: center;
+    h6{
+      margin-bottom: 28px;
+    }
+  }
+  &__icon{
+    position: relative;
+    margin-bottom: 30px;
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translate(0 , -50%);
+      opacity: .1;
+      width: 35px;
+      height: 70px;
+    }
+    &_to-left{
+      &:before{
+        border-top-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        transform: translate(0 , -50%) skew(25deg);
+      }
+    }
+    &_to-right{
+      &:before{
+        border-top-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        transform: translate(0 , -50%) skew(-25deg);
+      }
+    }
+    &_left{
+      &:before{
+        left: 0;
+      }
+    }
+    &_right{
+      &:before{
+        right: 0;
+      }
+    }
+    &_center{
+      &:before{
+        right: 50%;
+      }
+    }
+    &_blue{
+      &:before{
+        background: #00C0E7;
+      }
+    }
+    &_sandy{
+      &:before{
+        background: #FFC33A;
+      }
+    }
+    &_tomato{
+      &:before{
+        background: #F84E6C;
+      }
+    }
+    &_darkturqoise{
+      &:before{
+        background: #00E3CF;
+      }
+    }
+  }
+}

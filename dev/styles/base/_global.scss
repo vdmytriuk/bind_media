@@ -1,0 +1,63 @@
+body{
+  font-family: "Gilroy";
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 30px;
+  color: $darkGrey;
+  @include tablet-m{
+    font-weight: 500;
+  }
+}
+
+main{
+  overflow: hidden;
+  margin-top: 180px;
+  @include mobile-xl {
+    margin-top: 130px;
+  }
+}
+
+button{
+  padding: 0;
+  border: none;
+  font: inherit;
+  color: inherit;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+}
+
+ul{
+  li{
+    list-style-type: none;
+  }
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  border: 1px solid #dfdfdf;
+  background-color: inherit;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #dfdfdf;
+}
+
+.mob{
+  @media (min-width: 769px) {
+    display: none!important;
+  }
+}
+.desk{
+  @media (max-width: 768px){
+    display: none!important;
+  }
+}
+img{
+  object-fit: cover;
+}

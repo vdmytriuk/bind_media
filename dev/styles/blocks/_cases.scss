@@ -1,0 +1,32 @@
+.cases{
+  margin-top: 200px;
+  @include tablet-m{
+    margin-top: 117px;
+  }
+  &__blocks{
+    --columnsCount: 3;
+    display: grid;
+    margin: 70px 0;
+    grid-template-columns: repeat(var(--columnsCount), 1fr);
+    grid-gap: 95px 60px;
+    @include tablet-m {
+      display: flex;
+      flex-wrap: nowrap;
+      margin: 50px 0;
+      overflow-x: scroll;
+      grid-gap: 0 24px;
+    }
+  }
+  &__block{
+    @include tablet-m{
+      flex: none;
+      width: 70vw;
+    }
+    &-img{
+      margin-bottom: 35px;
+      img{
+        width: 100%;
+      }
+    }
+  }
+}

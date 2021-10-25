@@ -1,0 +1,40 @@
+.awards{
+  margin-top: 200px;
+  padding-top: 85px;
+  background-image: url("../img/backgrounds/background_awards.png");
+  background-position: left;
+  background-size: 60%;
+  background-repeat: no-repeat;
+  @include tablet-m{
+    margin-top: 100px;
+    padding: 0;
+    background-size: 160%;
+    background-position: bottom;
+  }
+  .container{
+    @include flexAlignment(center, space-between, wrap)
+    @include tablet-m{
+      flex-direction: column-reverse;
+    }
+  }
+  &__image{
+    flex-basis: 45%;
+    img{
+      width: 90%;
+      margin: 0 auto;
+      @include tablet-m{
+        width: 100%;
+      }
+    }
+    @include tablet-m{
+      flex-basis: 100%;
+    }
+  }
+  &__info{
+    flex-basis: 33%;
+    @include tablet-m{
+      flex-basis: 100%;
+      margin-bottom: 70px;
+    }
+  }
+}

@@ -1,0 +1,13 @@
+.container{
+  max-width: 1280px;
+  padding: 0 40px;
+  margin: 0 auto;
+  @include laptop-xs {
+    padding: 0 20px;
+  }
+  @include mobile-xl {
+    padding: 0 16px;
+  }
+}
+
+

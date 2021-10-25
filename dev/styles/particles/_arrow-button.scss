@@ -1,0 +1,94 @@
+.arrow-button__box{
+  text-align: right;
+  width: 250px;
+}
+
+.arrow-button{
+  display: inline-block;
+  position: relative;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  text-transform: capitalize;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 137px 0 30px;
+  cursor: pointer;
+  color: $darkGrey;
+  transition: padding .5s cubic-bezier(0.7, -0.4, 0.4, 1.4), color .5s cubic-bezier(0.7, -0.4, 0.4, 1.4);
+  margin: 0 0 0 auto;
+}
+
+.arrow-button__box_centered{
+  margin: 0 auto;
+}
+
+.arrow-button__title{
+  display: inline-block;
+  white-space: nowrap;
+  font-weight: 900;
+}
+
+.arrow-button__arrow{
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  right: 24px;
+  height: 1px;
+  width: 90px;
+  background: $darkGrey;
+  transition: width .5s cubic-bezier(0.7, -0.4, 0.4, 1.4), background-color .5s cubic-bezier(0.7, -0.4, 0.4, 1.4);
+  pointer-events: none;
+}
+
+.arrow-button__arrow:before,
+.arrow-button__arrow:after{
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 5px;
+  height: 1px;
+  background: inherit;
+  transform-origin: right;
+  pointer-events: none;
+}
+
+.arrow-button__arrow:before{
+  transform: rotate(40deg);
+}
+
+.arrow-button__arrow:after{
+  transform: rotate(-40deg);
+}
+
+.arrow-button__circle{
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 500px;
+  border: 1px $darkGrey solid;
+  transition: width .5s cubic-bezier(0.7, -0.4, 0.4, 1.4), border-color .5s cubic-bezier(0.7, -0.4, 0.4, 1.4);
+  pointer-events: none;
+}
+
+/*
+Hover state
+*/
+.arrow-button:hover{
+  padding-right: 75px;
+  color: $lightBlue;
+}
+
+.arrow-button:hover .arrow-button__arrow{
+  width: 38px;
+  background-color: $lightBlue;
+}
+
+.arrow-button:hover .arrow-button__circle{
+  width: 100%;
+  border-color: $lightBlue;
+}

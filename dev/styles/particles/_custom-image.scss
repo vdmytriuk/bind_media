@@ -1,0 +1,30 @@
+.custom-image{
+  position: relative;
+  margin: 0 10px 10px 10px;
+  width: fit-content;
+  @include laptop-xs{
+    width: calc(100% - 20px);
+  }
+  img{
+    width: 100%;
+  }
+  &:before{
+    content: '';
+    position: absolute;
+    top: 25%;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    z-index: -1;
+  }
+  &_blue{
+    &:before{
+      background: $blueGradient;
+    }
+  }
+  &_orange{
+    &:before{
+      background: $orangeGradient;
+    }
+  }
+}
