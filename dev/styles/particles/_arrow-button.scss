@@ -1,6 +1,5 @@
 .arrow-button__box{
-  text-align: right;
-  width: 250px;
+  width: fit-content;
 }
 
 .arrow-button{
@@ -12,7 +11,7 @@
   text-transform: capitalize;
   height: 50px;
   line-height: 50px;
-  padding: 0 137px 0 30px;
+  padding: 0 137px 0 0;
   cursor: pointer;
   color: $darkGrey;
   transition: padding .5s cubic-bezier(0.7, -0.4, 0.4, 1.4), color .5s cubic-bezier(0.7, -0.4, 0.4, 1.4);
@@ -79,7 +78,7 @@
 Hover state
 */
 .arrow-button:hover{
-  padding-right: 75px;
+  padding: 0 75px 0 30px;
   color: $lightBlue;
 }
 

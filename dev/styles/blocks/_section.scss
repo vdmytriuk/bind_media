@@ -5,34 +5,44 @@
     margin-top: 70px;
     padding-top: 50px;
   }
+
+  .arrow-button:hover{
+    color: $darkGrey;
+  }
+  .arrow-button:hover .arrow-button__arrow{
+    background-color: $darkGrey;
+  }
+  .arrow-button:hover .arrow-button__circle{
+    border-color: $darkGrey;
+  }
   // Container settings & create global background styles
   .container{
     position: relative;
     @include flexAlignment(center, space-between, wrap);
-    &:before {
-      content: '';
-      position: absolute;
-      top: 50%;
-      opacity: .1;
-      width: 175px;
-      height: 360px;
-      @include tablet-m{
-        top: 150px;
-      }
-    }
+    //&:before {
+    //  content: '';
+    //  position: absolute;
+    //  top: 50%;
+    //  opacity: .1;
+    //  width: 175px;
+    //  height: 360px;
+    //  @include tablet-m{
+    //    top: 150px;
+    //  }
+    //}
   }
   // Changing position for even/odd sections
   &:nth-of-type(odd){
     .container{
-      &:before{
-        left: 0;
-        border-top-left-radius: 40px;
-        border-bottom-right-radius: 40px;
-        transform: translate(-120px , -50%) skew(-25deg);
-        @include tablet-m{
-          transform: translate(-60px , -50%) skew(-25deg);
-        }
-      }
+      //&:before{
+      //  left: 0;
+      //  border-top-left-radius: 40px;
+      //  border-bottom-right-radius: 40px;
+      //  transform: translate(-120px , -50%) skew(-25deg);
+      //  @include tablet-m{
+      //    transform: translate(-60px , -50%) skew(-25deg);
+      //  }
+      //}
     }
     .section{
       &__image{
@@ -49,15 +59,15 @@
   &:nth-of-type(even){
     .container {
       flex-direction: row-reverse;
-      &:before {
-        right: 0;
-        border-top-right-radius: 40px;
-        border-bottom-left-radius: 40px;
-        transform: translate(120px, -50%) skew(25deg);
-        @include tablet-m{
-          transform: translate(60px , -50%) skew(25deg);
-        }
-      }
+      //&:before {
+      //  right: 0;
+      //  border-top-right-radius: 40px;
+      //  border-bottom-left-radius: 40px;
+      //  transform: translate(120px, -50%) skew(25deg);
+      //  @include tablet-m{
+      //    transform: translate(60px , -50%) skew(25deg);
+      //  }
+      //}
     }
     .section{
       &__image{
@@ -72,18 +82,18 @@
     }
   }
   // Colors for backgrounds
-  &_blue{
-    @include sectionBackgroundColor($lightBlue)
-  }
-  &_sandy{
-    @include sectionBackgroundColor($sandy)
-  }
-  &_tomato{
-    @include sectionBackgroundColor($tomato)
-  }
-  &_darkturqoise{
-    @include sectionBackgroundColor($darkturqoise)
-  }
+  //&_blue{
+  //  @include sectionBackgroundColor($lightBlue)
+  //}
+  //&_sandy{
+  //  @include sectionBackgroundColor($sandy)
+  //}
+  //&_tomato{
+  //  @include sectionBackgroundColor($tomato)
+  //}
+  //&_darkturqoise{
+  //  @include sectionBackgroundColor($darkturqoise)
+  //}
   // Colors for strong text
   &_blue-to-light{
     @include sectionFontColor($blueGradient)

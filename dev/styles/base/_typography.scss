@@ -67,3 +67,13 @@ strong{
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.hero-text{
+  background: $heroGradient;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.tomato-text{
+  background: $tomato;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

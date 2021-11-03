@@ -4,7 +4,8 @@
   padding-top: 55px;
   margin-top: 140px;
   background-image: url("../img/backgrounds/background_m.png");
-  background-position: right;
+  background-position-x: right;
+  background-position-y: 10px;
   background-size: 55%;
   background-repeat: no-repeat;
   @include laptop-xs {
