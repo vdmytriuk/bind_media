@@ -1,3 +1,5 @@
+
+
 var Site = {
     isVisited: 1,
     onload: document.addEventListener('DOMContentLoaded', function() { Site.init(); }),
