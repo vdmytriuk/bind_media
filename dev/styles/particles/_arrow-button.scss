@@ -79,15 +79,15 @@ Hover state
 */
 .arrow-button:hover{
   padding: 0 75px 0 30px;
-  color: $lightBlue;
+  //color: $lightBlue;
 }
 
 .arrow-button:hover .arrow-button__arrow{
   width: 38px;
-  background-color: $lightBlue;
+  //background-color: $lightBlue;
 }
 
 .arrow-button:hover .arrow-button__circle{
   width: 100%;
-  border-color: $lightBlue;
+  //border-color: $lightBlue;
 }

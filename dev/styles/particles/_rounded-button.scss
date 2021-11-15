@@ -1,11 +1,12 @@
 .rounded-button{
   position: relative;
   display: block;
-  background: $blueGradient;
-  padding: 15px 80px 15px 50px;
+  background: transparent;
+  padding: 13px 73px 14px 32px;
   color: $darkGrey;
   @include font(16px, 900, 22px);
   border-radius: 100px;
+  border: 1px solid $lightBlue;
   overflow: hidden;
   z-index:0;
   cursor: pointer;
@@ -20,47 +21,44 @@
   &_centered{
     margin: 0 auto;
   }
-  &:before {
+  &:before{
     content: '';
     position: absolute;
-    top: 1px;
-    right: 1px;
-    bottom: 1px;
-    left: 1px;
-    background: $white;
-    border-radius: 100px;
-    box-sizing: border-box;
-    opacity: 1;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $lightBlue;
     z-index: -1;
-    transition: .3s ease-in;
+    transform: translateX(100%);
+    transition: transform .3s ease-in;
   }
   &:after{
     content: url("../img/icons/light_arrow_right.svg");
     position: absolute;
-    right: 1px;
-    top: 1px;
+    right: 4px;
+    top: 4px;
     @include flexAlignment(center, center);
     border-radius: 100px;
-    background: $blueGradient;
+    background: $lightBlue;
     transition: .3s ease-in;
-    width: 50px;
-    height: 50px;
+    width: 41px;
+    height: 41px;
   }
   &:hover{
     color: $white;
-    background: #00C0E7;
     &:before{
-      background: #00C0E7;
+      transform: translateX(0);
     }
     &:after{
-      background: #4DEBDD;
-    ;
+      content: url("../img/icons/blue_arrow_right.svg");
+      background: $white;
     }
   }
   &:disabled{
     background: $disabled;
     cursor: auto;
-    &:before , &:after{
+    &:after{
       background: $disabled;
     }
     &:hover{
