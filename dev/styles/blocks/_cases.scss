@@ -28,5 +28,13 @@
         width: 100%;
       }
     }
+    h5{
+      transition: .3s;
+    }
+    &:hover{
+      h5{
+        color: $lightBlue;
+      }
+    }
   }
 }
