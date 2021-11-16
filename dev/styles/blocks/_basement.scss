@@ -12,6 +12,7 @@
     position: relative;
     background-image: $blueGradient;
     margin-top: 260px;
+    max-width: 1200px;
     z-index: 0;
     @include laptop-xs{
       margin: 90px 10px 10px 10px;

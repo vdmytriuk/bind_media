@@ -5,6 +5,7 @@
   }
   &__blocks{
     @include flexAlignment(center, space-between, wrap)
+    margin-right: -5%;
     @include mobile-xl {
       flex-wrap: nowrap;
       overflow-x: scroll;
