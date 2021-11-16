@@ -6,6 +6,7 @@ var Site = {
     init: function() {
         this.headerBurger();
         this.headerScroll();
+        this.headerDropdown();
         this.initLibs();
         this.customSelect();
     },
@@ -38,6 +39,14 @@ var Site = {
             } else {
                 document.querySelector("header").classList.remove("header_scrolled");
             }
+        }
+    },
+
+    headerDropdown: ()=> {
+        if($(window).width() < 789) {
+            $('.header-dropdown').click(function() {
+                $(this).toggleClass('active')
+            })
         }
     },
 
