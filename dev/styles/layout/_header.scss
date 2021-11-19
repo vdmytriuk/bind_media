@@ -33,6 +33,20 @@
         }
       }
     }
+    @include tablet-m{
+      a{
+        img{
+          width: 200px;
+        }
+      }
+    }
+    @include mobile-l{
+      a{
+        img{
+          width: 120px;
+        }
+      }
+    }
   }
   &__content{
     @include flexAlignment(center, flex-end)

@@ -7,6 +7,7 @@ var Site = {
         this.headerBurger();
         this.headerScroll();
         this.headerDropdown();
+        this.clientsScroll();
         this.initLibs();
         this.customSelect();
     },
@@ -47,6 +48,12 @@ var Site = {
             $('.header-dropdown').click(function() {
                 $(this).toggleClass('active')
             })
+        }
+    },
+
+    clientsScroll: ()=> {
+        if($(window).width() < 789) {
+            $('.our-clients__blocks').animate({scrollLeft: 1400}, 20000);
         }
     },
 
