@@ -82,7 +82,10 @@
     @include tablet-m {
       flex-wrap: wrap;
     }
-    &__item{
+    a{
+      @include font(14px, 600, 30px)
+    }
+    .menu-item{
       position: relative;
       margin-right: 8%;
       @include tablet-m {
@@ -93,13 +96,13 @@
       &:last-of-type{
         margin-right: 0;
       }
-      &-heading{
+      a{
         @include tablet-m {
           @include font(30px, 400, 60px)
         }
       }
     }
-    .text2{
+    a{
       transition: .3s ease-in;
       &:hover{
         @media(min-width: 789px){
@@ -108,8 +111,8 @@
       }
     }
   }
-  &-dropdown{
-    &__menu{
+  .menu-item-has-child{
+    .sub-menu{
       position: absolute;
       left: 0;
       top: 30px;
@@ -127,6 +130,19 @@
         &:last-of-type{
           padding-bottom: 24px;
         }
+        a{
+          color: inherit!important;
+          transition: .3 ease-in;
+          &:hover{
+            color: $lightBlue!important;
+          }
+          &:before , &:after{
+            display: none;
+          }
+          @include tablet-m {
+            @include font(14px, 600, 30px)
+          }
+        }
       }
       @include tablet-m{
         position: static;
@@ -137,10 +153,13 @@
         overflow: hidden;
       }
     }
-    .header-list {
-      &__item{
-        &-heading {
+        a {
           position: relative;
+          @include tablet-m{
+            width: 100%;
+            display: block;
+
+          }
 
           &::before {
             content: "";
@@ -174,47 +193,33 @@
             }
           }
         }
-      }
-    }
     &:hover{
       @media(min-width: 789px){
-        .header-dropdown {
-          &__menu{
+          .sub-menu{
             opacity: 1;
             z-index: 0;
           }
-        }
-        .header-list{
-          &__item {
-            &-heading {
-              color: $lightBlue;
+       a {
+          color: $lightBlue;
+          &::after {
+            background-color: $lightBlue;
+            transform: translate(3px, -50%) rotate(45deg);
+          }
 
-              &::after {
-                background-color: $lightBlue;
-                transform: translate(3px, -50%) rotate(45deg);
-              }
-
-              &::before {
-                background-color: $lightBlue;
-                transform: translate(-3px, -50%) rotate(-45deg);
-              }
-            }
+          &::before {
+            background-color: $lightBlue;
+            transform: translate(-3px, -50%) rotate(-45deg);
           }
         }
       }
     }
     &.active{
-      .header{
-        &-dropdown{
-          &__menu {
+          .sub-menu {
             @include tablet-m {
               max-height: 500px;
             }
           }
-        }
-        &-list{
-          &__item {
-            &-heading {
+            a {
               color: $lightBlue;
 
               &::after {
@@ -227,9 +232,6 @@
                 transform: translate(-3px, -50%) rotate(-45deg);
               }
             }
-          }
-        }
-      }
     }
   }
   &__burger {

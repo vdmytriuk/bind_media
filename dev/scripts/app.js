@@ -45,7 +45,7 @@ var Site = {
 
     headerDropdown: ()=> {
         if($(window).width() < 789) {
-            $('.header-dropdown').click(function() {
+            $('.menu-item-has-child').click(function() {
                 $(this).toggleClass('active')
             })
         }
