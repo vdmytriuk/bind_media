@@ -38,7 +38,11 @@ a{
   text-decoration: none;
   color: inherit;
 }
-
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
 ::-webkit-scrollbar {
   width: 10px;
   border: 1px solid #dfdfdf;

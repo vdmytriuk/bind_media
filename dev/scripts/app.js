@@ -10,6 +10,9 @@ var Site = {
         this.clientsScroll();
         this.initLibs();
         this.customSelect();
+        this.customSelectForm();
+        this.formTabs();
+        this.modal();
     },
 
     headerBurger: ()=> {
@@ -118,5 +121,105 @@ var Site = {
                 }
             });
         }
+    },
+
+    customSelectForm: ()=> {
+        document.querySelectorAll('.modal-tabs__select').forEach(setupSelector);
+        let counter = 0;
+        function setupSelector(selector) {
+            selector.addEventListener('change', e => {
+                console.log('changed', e.target.value)
+            })
+
+            selector.addEventListener('mousedown', e => {
+                if(window.innerWidth >= 1 && counter === 0) {
+                    e.preventDefault();
+                    counter++;
+                    const select = selector.children[0];
+                    const dropDown = document.createElement('ul');
+                    dropDown.className = "modal-tabs__select-options";
+
+                    [...select.children].forEach(option => {
+                        const dropDownOption = document.createElement('li');
+                        dropDownOption.className = 'text2'
+                        dropDownOption.textContent = option.textContent;
+
+
+                        dropDownOption.addEventListener('mousedown', (e) => {
+                            e.stopPropagation();
+                            select.value = option.value;
+                            selector.value = option.value;
+                            select.style.color = "#303E55"
+                            select.dispatchEvent(new Event('change'));
+                            selector.dispatchEvent(new Event('change'));
+                            selector.classList.remove('active')
+                            dropDown.remove();
+                            counter--;
+                        });
+                        selector.classList.add('active')
+                        dropDown.appendChild(dropDownOption);
+                    });
+
+                    selector.appendChild(dropDown);
+                    document.addEventListener('click', (e) => {
+                        if(!selector.contains(e.target)) {
+                            dropDown.remove();
+                            selector.classList.remove('active');
+                            counter = 0;
+                        }
+                    });
+                } else {
+                    e.preventDefault();
+                }
+            });
+        }
+    },
+
+    formTabs: ()=> {
+        const typeButtons = document.querySelectorAll('.modal-tabs__type-bar button')
+        const nextButtons = document.querySelectorAll('.modal-tabs__button')
+        const modalSteps = document.querySelectorAll('.modal-tabs__inner')
+
+        let counter = 0;
+
+        nextButtons.forEach((item, index) => {
+            item.addEventListener('click', (e)=> {
+                if(counter < 2) {
+                    e.preventDefault();
+                    typeButtons.forEach(btn => {
+                        btn.classList.remove('active')
+                    })
+                    typeButtons[index + 1].classList.add('active')
+                    modalSteps.forEach(step => {
+                        step.classList.remove('active')
+                    })
+                    modalSteps[index + 1].classList.add('active')
+                    counter++;
+                } else {
+
+                }
+            })
+        })
+
+    },
+
+    modal: ()=> {
+        const modalTrigger = document.querySelectorAll('.rounded-button')
+        const modalLayout = document.querySelector('.modal')
+        const modalClose = document.querySelector('.modal__close')
+        modalTrigger.forEach(item => {
+            item.addEventListener('click', ()=> {
+                modalLayout.classList.add('active')
+                document.querySelector('body').style.overflow = 'hidden'
+            })
+        })
+        modalLayout.addEventListener('click', ()=> {
+            modalLayout.classList.remove('active')
+            document.querySelector('body').style.overflow = 'visible'
+        })
+        modalClose.addEventListener('click', ()=> {
+            modalLayout.classList.remove('active')
+            document.querySelector('body').style.overflow = 'visible'
+        })
     }
 };
