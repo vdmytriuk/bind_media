@@ -176,15 +176,97 @@ var Site = {
     },
 
     formTabs: ()=> {
-        const typeButtons = document.querySelectorAll('.modal-tabs__type-bar button')
+        const typeButtons = document.querySelectorAll('.modal-tabs__type-bar div')
         const nextButtons = document.querySelectorAll('.modal-tabs__button')
         const modalSteps = document.querySelectorAll('.modal-tabs__inner')
+
 
         let counter = 0;
 
         nextButtons.forEach((item, index) => {
             item.addEventListener('click', (e)=> {
-                if(counter < 2) {
+
+                sessionStorage.access = 'confirm'
+
+                let activeTab = document.querySelector("div.modal-tabs__inner.active")
+
+                let formInput = activeTab.querySelectorAll('.js-input')
+
+
+                if (formInput) {
+                    formInput.forEach(item => {
+                        let inputWrapper = item.closest('.modal-tabs__input')
+                        if(item.value == '') {
+                            inputWrapper.classList.add('incorrect')
+                            inputWrapper.querySelector('.modal-tabs__prompt').innerText = 'Input empty'
+                            inputWrapper.querySelector('.modal-tabs__prompt').classList.add('active')
+                            sessionStorage.access = 'denied'
+                        } else {
+                            inputWrapper.classList.remove('incorrect')
+                            inputWrapper.querySelector('.modal-tabs__prompt').innerText = ''
+                            inputWrapper.querySelector('.modal-tabs__prompt').classList.remove('active')
+                            sessionStorage.access = 'confirm'
+                        }
+                    })
+                }
+
+
+                let select = activeTab.querySelector('select')
+
+                if(select) {
+                    let selectWrapper = document.querySelector('.modal-tabs__select-wrapper')
+                    if (select.value == 1) {
+                        selectWrapper.querySelector('.modal-tabs__prompt').innerText = 'Please select'
+                        selectWrapper.querySelector('.modal-tabs__prompt').classList.add('active')
+                        select.classList.add('incorrect')
+                        sessionStorage.access = 'denied'
+                    } else {
+                        selectWrapper.querySelector('.modal-tabs__prompt').innerText = ''
+                        selectWrapper.querySelector('.modal-tabs__prompt').classList.remove('active')
+                        select.classList.remove('incorrect')
+                    }
+                }
+
+
+                let emailInput = activeTab.querySelector('.js-input-email')
+
+                function validateEmail(email) {
+                    let re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                    return re.test(String(email).toLowerCase());
+                }
+
+                if (emailInput) {
+                    let inputWrapper = emailInput.closest('.modal-tabs__input')
+                    if(!validateEmail(emailInput.value)) {
+                        inputWrapper.classList.add('incorrect')
+                        inputWrapper.querySelector('.modal-tabs__prompt').innerText = 'Type valid email address'
+                        sessionStorage.access = 'denied'
+                    } else {
+                        inputWrapper.classList.remove('incorrect');
+                    }
+                }
+
+                let phoneInput = activeTab.querySelector('.js-input-phone')
+
+                function validatePhone(phone) {
+                    let re = /^[0-9\s]*$/;
+                    return re.test(String(phone));
+                }
+
+                if (phoneInput) {
+                    let inputWrapper = phoneInput.closest('.modal-tabs__input')
+                    if(!validatePhone(phoneInput.value)) {
+                        inputWrapper.classList.add('incorrect')
+                        inputWrapper.querySelector('.modal-tabs__prompt').innerText = 'Type valid phone number'
+                        sessionStorage.access = 'denied'
+                    } else {
+
+                    }
+                }
+
+
+
+                if(counter < 2 && sessionStorage.access == 'confirm') {
                     e.preventDefault();
                     typeButtons.forEach(btn => {
                         btn.classList.remove('active')
@@ -195,8 +277,15 @@ var Site = {
                     })
                     modalSteps[index + 1].classList.add('active')
                     counter++;
+                    sessionStorage.access = 'denied'
                 } else {
 
+                }
+
+                if (sessionStorage.access == 'denied' && counter !== 2) {
+                    e.preventDefault();
+                } else if (sessionStorage.access == 'denied') {
+                    e.preventDefault()
                 }
             })
         })

@@ -99,7 +99,7 @@
       display: flex;
       justify-content: space-between;
       width: 100%;
-      button{
+      div{
         display: block;
         width: fit-content;
         min-height: 35px;
@@ -183,6 +183,20 @@
         z-index: 3;
       }
     }
+    &__prompt {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      color: red;
+      opacity: 0;
+      transform: translate(25%, 0);
+      transition: .3s ease-in-out;
+
+      &.active {
+        transform: translate(25%, 100%);
+        opacity: 1;
+      }
+    }
     &__input{
         position: relative;
         padding: 10px 40px;
@@ -191,6 +205,7 @@
         border: 1px solid $lightBlue;
         border-radius: 100px;
         z-index: 2;
+        transition: .3s ease-in-out;
         //&:after{
         //  content: url("../img/icons/light_arrow_right.svg");
         //  position: absolute;
@@ -204,6 +219,9 @@
         //  height: 50px;
         //  z-index: 3;
         //}
+      &.incorrect {
+        border: 1px solid red;
+      }
       &_no-after{
         &:after{
           display: none;
@@ -229,7 +247,6 @@
     }
     &__select{
       position: relative;
-      margin-bottom: 25px;
       display: inline-block;
       width: 100%;
       select {
@@ -247,6 +264,9 @@
         cursor: pointer;
         appearance: none;
         transition: .3s;
+        &.incorrect {
+          border: 1px solid red;
+        }
         @include mobile-xl{
           width: 100%;
         }
@@ -270,6 +290,7 @@
           transform: rotate(-90deg);
         }
       }
+
       &-options{
         position: absolute;
         top: 55px;
@@ -295,6 +316,10 @@
         .text2{
           line-height: 30px;
         }
+      }
+      &-wrapper {
+        margin-bottom: 25px;
+        position: relative;
       }
     }
     &__bottom{
