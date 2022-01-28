@@ -293,7 +293,7 @@ var Site = {
     },
 
     modal: ()=> {
-        const modalTrigger = document.querySelectorAll('.rounded-button')
+        const modalTrigger = document.querySelectorAll('.js-modal')
         const modalLayout = document.querySelector('.modal')
         const modalClose = document.querySelector('.modal__close')
         modalTrigger.forEach(item => {

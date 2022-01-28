@@ -3,6 +3,7 @@
   display: block;
   background: transparent;
   padding: 13px 73px 14px 32px;
+  width: fit-content;
   color: $darkGrey;
   @include font(16px, 900, 22px);
   border-radius: 100px;
