@@ -2,6 +2,10 @@
   margin-top: 110px;
   &__blocks{
     @include gridTemplate(4, 1, 70px 0, 95px 60px, 45px 0, 50px 0);
+
+    &_binary {
+      @include gridTemplate(2, 1, 70px 0, 90px 150px, 45px 0, 50px 0);
+    }
   }
   &__block{
     @include flexAlignment(center)
