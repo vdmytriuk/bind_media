@@ -49,8 +49,11 @@ h6{
 
 .text2{
   @include font(14px, 600, 30px)
+}
 
-
+.body-large {
+  @include font(24px, 400, 30px)
+  font-style: italic;
 }
 
 strong{
