@@ -21,7 +21,7 @@
       }
       span{
         @include font(12px, 600, 14px)
-        color: $darkturqoise;
+        color: var(--dark-turqoise);
         text-transform: uppercase;
       }
     }
@@ -32,7 +32,7 @@
         padding: 12px;
         margin-right: 8px;
         border-radius: 50px;
-        background-color: $white;
+        background-color: var(--white);
         &:last-of-type{
           margin-right: 0;
         }

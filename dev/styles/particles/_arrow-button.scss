@@ -13,7 +13,7 @@
   line-height: 50px;
   padding: 0 137px 0 0;
   cursor: pointer;
-  color: $darkGrey;
+  color: var(--dark-grey);
   transition: padding .5s cubic-bezier(0.7, -0.4, 0.4, 1.4), color .5s cubic-bezier(0.7, -0.4, 0.4, 1.4);
   margin: 0 0 0 auto;
 }
@@ -35,7 +35,7 @@
   right: 24px;
   height: 1px;
   width: 90px;
-  background: $darkGrey;
+  background: var(--dark-grey);
   transition: width .5s cubic-bezier(0.7, -0.4, 0.4, 1.4), background-color .5s cubic-bezier(0.7, -0.4, 0.4, 1.4);
   pointer-events: none;
 }
@@ -69,7 +69,7 @@
   width: 50px;
   height: 50px;
   border-radius: 500px;
-  border: 1px $darkGrey solid;
+  border: 1px var(--dark-grey) solid;
   transition: width .5s cubic-bezier(0.7, -0.4, 0.4, 1.4), border-color .5s cubic-bezier(0.7, -0.4, 0.4, 1.4);
   pointer-events: none;
 }
@@ -79,15 +79,15 @@ Hover state
 */
 .arrow-button:hover{
   padding: 0 75px 0 30px;
-  //color: $lightBlue;
+  //color: var(--light-blue);
 }
 
 .arrow-button:hover .arrow-button__arrow{
   width: 38px;
-  //background-color: $lightBlue;
+  //background-color: var(--light-blue);
 }
 
 .arrow-button:hover .arrow-button__circle{
   width: 100%;
-  //border-color: $lightBlue;
+  //border-color: var(--light-blue);
 }

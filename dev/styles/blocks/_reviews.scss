@@ -62,10 +62,10 @@
     width: 50px;
     height: 50px;
     border-radius: 100px;
-    background: $tomato;
+    background: var(--tomato);
     box-shadow: 0px 7px 25px rgba(255, 104, 101, 0.4);
     &[aria-disabled="true"]{
-      background: $white;
+      background: var(--white);
       border: 1px solid #E6E6E6;
       box-shadow: none;
       &:before , &:after {
@@ -80,7 +80,7 @@
       transform: translate(-50%, -50%);
       width: 8px;
       height: 2px;
-      background: $white;
+      background: var(--white);
       border-radius: 10px;
     }
     &_next{

@@ -45,31 +45,31 @@
       &.blue{
         background: rgba(0, 192, 231, 0.1);
         span{
-          color: $lightBlue;
+          color: var(--light-blue);
         }
       }
       &.sandy{
         background: rgba(255, 195, 58, 0.1);
         span{
-          color: $sandy;
+          color: var(--sandy);
         }
       }
       &.tomato{
         background: rgba(248, 78, 108, 0.1);
         span{
-          color: $tomato;
+          color: var(--tomato);
         }
       }
       &.darkturqoise{
         background: rgba(77, 235, 221, 0.1);
         span{
-          color: $darkturqoise;
+          color: var(--dark-turqoise);
         }
       }
     }
     &-date{
       @include font(12px, 600, 14px)
-      color: $darkturqoise;
+      color: var(--dark-turqoise);
     }
     &-day{
       margin-right: 5px;

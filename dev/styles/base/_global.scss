@@ -4,7 +4,7 @@ body{
   font-style: normal;
   font-size: 16px;
   line-height: 30px;
-  color: $darkGrey;
+  color: var(--dark-grey);
   @include tablet-m{
     font-weight: 500;
   }

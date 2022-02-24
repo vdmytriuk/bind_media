@@ -4,10 +4,10 @@
   background: transparent;
   padding: 13px 73px 14px 32px;
   width: fit-content;
-  color: $darkGrey;
+  color: var(--dark-grey);
   @include font(16px, 900, 22px);
   border-radius: 100px;
-  border: 1px solid $lightBlue;
+  border: 1px solid var(--light-blue);
   overflow: hidden;
   z-index:0;
   cursor: pointer;
@@ -29,7 +29,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: $lightBlue;
+    background-color: var(--light-blue);
     z-index: -1;
     transform: translateX(100%);
     transition: transform .3s ease-in;
@@ -41,26 +41,26 @@
     top: 4px;
     @include flexAlignment(center, center);
     border-radius: 100px;
-    background: $lightBlue;
+    background: var(--light-blue);
     transition: .3s ease-in;
     width: 41px;
     height: 41px;
   }
   &:hover{
-    color: $white;
+    color: var(--white);
     &:before{
       transform: translateX(0);
     }
     &:after{
       content: url("../img/icons/blue_arrow_right.svg");
-      background: $white;
+      background: var(--white);
     }
   }
   &:disabled{
-    background: $disabled;
+    background: var(--disabled);
     cursor: auto;
     &:after{
-      background: $disabled;
+      background: var(--disabled);
     }
     &:hover{
       color: inherit;

@@ -31,7 +31,7 @@
     width: 10px;
     height: 2px;
     transition: all 0.3s ease-out;
-    background-color: $darkGrey;
+    background-color: var(--dark-grey);
     transform: translate(-3px, -50%) rotate(45deg);
   }
   &::after{
@@ -43,7 +43,7 @@
     width: 10px;
     height: 2px;
     transition: all 0.3s ease-out;
-    background-color: $darkGrey;
+    background-color: var(--dark-grey);
     transform: translate(3px, -50%) rotate(-45deg);
   }
   &.active{
@@ -70,16 +70,16 @@
       align-items: center;
       cursor: pointer;
       &:nth-of-type(2){
-        color: $lightBlue;
+        color: var(--light-blue);
       }
       &:nth-of-type(3){
-        color: $sandy;
+        color: var(--sandy);
       }
       &:nth-of-type(4){
-        color: $tomato;
+        color: var(--tomato);
       }
       &:nth-of-type(5){
-        color: $darkturqoise;
+        color: var(--dark-turqoise);
       }
     }
   }

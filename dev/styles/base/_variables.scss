@@ -1,14 +1,19 @@
-// Gradients
-$orangeGradient: linear-gradient(90.63deg, #FF566D 41.32%, #FFC33A 99.54%);
-$orangeGradientReverse: linear-gradient(90.69deg, #FFC33A 66.89%, #FF566D 98.69%);
-$blueGradient: linear-gradient(90.63deg, #00c0e7 66.17%, #00E3CF 98.31%);
-$blueGradientReverse: linear-gradient(90.63deg, #00E3CF 66.17%, #00C0E7 98.31%);
-$heroGradient: linear-gradient(90.66deg, #00C0E7 0.66%, #00D1E3 62.5%);
-// Colors
-$white: #ffffff;
-$darkGrey: #303E55;
-$lightBlue: #00C0E7;
-$sandy: #FFC33A;
-$tomato: #F84E6C;
-$darkturqoise: #00E3CF;
-$disabled: #E6E6E6;
+
+:root {
+  // Gradients
+  --blue-gradient: linear-gradient(90.63deg, #00c0e7 66.17%, #00E3CF 98.31%);
+  --blue-gradient-reverse: linear-gradient(90.63deg, #00E3CF 66.17%, #00C0E7 98.31%);
+  --orange-gradient: linear-gradient(90.63deg, #FF566D 41.32%, #FFC33A 99.54%);
+  --orange-gradient-reverse: linear-gradient(90.69deg, #FFC33A 66.89%, #FF566D 98.69%);
+  --hero-gradient: linear-gradient(90.66deg, #00C0E7 0.66%, #00D1E3 62.5%);
+  // Colors
+  --light-blue: #00C0E7;
+  --white: #ffffff;
+  --dark-grey: #303E55;
+  --sandy: #FFC33A;
+  --tomato: #F84E6C;
+  --dark-turqoise: #00E3CF;
+  --disabled: #E6E6E6;
+}
+
+

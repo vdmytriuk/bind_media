@@ -12,7 +12,8 @@ var Site = {
         this.customSelect();
         this.customSelectForm();
         this.formTabs();
-        this.modal();
+        // this.modal();
+        this.theme();
     },
 
     headerBurger: ()=> {
@@ -292,23 +293,33 @@ var Site = {
 
     },
 
-    modal: ()=> {
-        const modalTrigger = document.querySelectorAll('.js-modal')
-        const modalLayout = document.querySelector('.modal')
-        const modalClose = document.querySelector('.modal__close')
-        modalTrigger.forEach(item => {
-            item.addEventListener('click', ()=> {
-                modalLayout.classList.add('active')
-                document.querySelector('body').style.overflow = 'hidden'
-            })
-        })
-        modalLayout.addEventListener('click', ()=> {
-            modalLayout.classList.remove('active')
-            document.querySelector('body').style.overflow = 'visible'
-        })
-        modalClose.addEventListener('click', ()=> {
-            modalLayout.classList.remove('active')
-            document.querySelector('body').style.overflow = 'visible'
-        })
+    // modal: ()=> {
+    //     const modalTrigger = document.querySelectorAll('.js-modal')
+    //     const modalLayout = document.querySelector('.modal')
+    //     const modalClose = document.querySelector('.modal__close')
+    //     modalTrigger.forEach(item => {
+    //         item.addEventListener('click', ()=> {
+    //             modalLayout.classList.add('active')
+    //             document.querySelector('body').style.overflow = 'hidden'
+    //         })
+    //     })
+    //     modalLayout.addEventListener('click', ()=> {
+    //         modalLayout.classList.remove('active')
+    //         document.querySelector('body').style.overflow = 'visible'
+    //     })
+    //     modalClose.addEventListener('click', ()=> {
+    //         modalLayout.classList.remove('active')
+    //         document.querySelector('body').style.overflow = 'visible'
+    //     })
+    // },
+
+    theme: ()=> {
+        const body = document.querySelector('body');
+        const root = document.querySelector(':root');
+
+        if (body.classList.contains('tomato')) {
+            root.style.setProperty('--blue-gradient', 'linear-gradient(90.63deg, #FF566D 41.32%, #FFC33A 99.54%)');
+            root.style.setProperty('--light-blue', '#F84E6C')
+        }
     }
 };

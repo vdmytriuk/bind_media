@@ -12,13 +12,13 @@
   }
 
   .arrow-button:hover{
-    color: $darkGrey;
+    color: var(--dark-grey);
   }
   .arrow-button:hover .arrow-button__arrow{
-    background-color: $darkGrey;
+    background-color: var(--dark-grey);
   }
   .arrow-button:hover .arrow-button__circle{
-    border-color: $darkGrey;
+    border-color: var(--dark-grey);
   }
   // Container settings & create global background styles
   .container{
@@ -88,29 +88,29 @@
   }
   // Colors for backgrounds
   //&_blue{
-  //  @include sectionBackgroundColor($lightBlue)
+  //  @include sectionBackgroundColor(var(--light-blue))
   //}
   //&_sandy{
-  //  @include sectionBackgroundColor($sandy)
+  //  @include sectionBackgroundColor(var(--sandy))
   //}
   //&_tomato{
-  //  @include sectionBackgroundColor($tomato)
+  //  @include sectionBackgroundColor(var(--tomato))
   //}
   //&_darkturqoise{
-  //  @include sectionBackgroundColor($darkturqoise)
+  //  @include sectionBackgroundColor(var(--dark-turqoise))
   //}
   // Colors for strong text
   &_blue-to-light{
-    @include sectionFontColor($blueGradient)
+    @include sectionFontColor(var(--blue-gradient))
   }
   &_light-to-blue{
-    @include sectionFontColor($blueGradientReverse)
+    @include sectionFontColor(var(--blue-gradient-reverse))
   }
   &_orange-to-red{
-    @include sectionFontColor($orangeGradientReverse)
+    @include sectionFontColor(var(--orange-gradient-reverse))
   }
   &_red-to-orange{
-    @include sectionFontColor($orangeGradient)
+    @include sectionFontColor(var(--orange-gradient))
   }
   // Global text
   h3{

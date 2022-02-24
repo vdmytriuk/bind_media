@@ -83,7 +83,7 @@
       position: absolute;
       bottom: 20px;
       left: -10px;
-      color: $white;
+      color: var(--white);
       z-index: 2;
       @include mobile-xl{
           left: 30px;
@@ -96,7 +96,7 @@
         line-height: 1;
         width: fit-content;
         padding: 3px;
-        background: $darkGrey;
+        background: var(--dark-grey);
         @include mobile-s{
           transform: scale(0.8);
         }
@@ -109,17 +109,17 @@
   }
   &__info{
     h3{
-      color: $white;
+      color: var(--white);
       margin-bottom: 60px;
     }
 
     .rounded-button {
-      color: $white;
-      border: 1px solid $white;
+      color: var(--white);
+      border: 1px solid var(--white);
 
       &:after {
         content: url(../img/icons/blue_arrow_right.svg);;
-        background: $white;
+        background: var(--white);
       }
 
       &:before {
@@ -127,10 +127,10 @@
       }
 
       &:hover {
-        color: $lightBlue;
+        color: var(--light-blue);
         &:after {
           content: url(../img/icons/light_arrow_right.svg);;
-          background: $lightBlue;
+          background: var(--light-blue);
         }
       }
     }

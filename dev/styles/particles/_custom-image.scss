@@ -19,12 +19,12 @@
   }
   &_blue{
     &:before{
-      background: $blueGradient;
+      background: var(--blue-gradient);
     }
   }
   &_orange{
     &:before{
-      background: $orangeGradient;
+      background: var(--orange-gradient);
     }
   }
 }

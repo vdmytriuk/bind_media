@@ -62,28 +62,28 @@ strong{
 
 .blue-text{
   strong {
-    background: $blueGradient;
+    background: var(--blue-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 }
 .orange-text{
   strong {
-    background: $orangeGradient;
+    background: var(--orange-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 }
 .hero-text{
   strong {
-    background: $blueGradient;
+    background: var(--blue-gradient);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 }
 .tomato-text{
   strong {
-    background: $tomato;
+    background: var(--tomato);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
