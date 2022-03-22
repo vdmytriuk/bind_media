@@ -43,6 +43,13 @@
     @include mobile-l{
       a{
         img{
+          width: 175px;
+        }
+      }
+    }
+    @include mobile-m{
+      a{
+        img{
           width: 120px;
         }
       }
@@ -256,6 +263,9 @@
       height: 13px;
       overflow: hidden;
       transition: .25s ease-in-out;
+      @media (min-width: 375px) {
+        transform: scale(1.5);
+      }
       &.active{
         span{
           &:nth-child(1){
