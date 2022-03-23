@@ -1,5 +1,69 @@
 .separator{
   margin-top: 110px;
+  &_decorated {
+    .container {
+      position: relative;
+      &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0;
+        opacity: 0.05;
+        width: 240px;
+        height: 465px;
+        border-top-left-radius: 65px;
+        border-bottom-right-radius: 65px;
+        transform: translate(-150px, -50%) skew(-25deg);
+        @include tablet-m{
+          top: 150px;
+          transform: translate(-75px , 5%) skew(-25deg);
+        }
+      }
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        opacity: 0.05;
+        width: 220px;
+        height: 465px;
+        border-top-right-radius: 65px;
+        border-bottom-left-radius: 65px;
+        transform: translate(60%, 40%) skew(25deg);
+        @include tablet-m{
+          transform: translate(35%, 40%) skew(25deg);
+        }
+      }
+    }
+  }
+
+  &_blue {
+    .container {
+      &:before {
+        background: var(--light-blue);
+      }
+
+      &:after {
+        background: var(--dark-turqoise);
+      }
+    }
+  }
+
+  &_red {
+    .container {
+      &:before {
+        background: var(--tomato);
+      }
+
+      &:after {
+        background: var(--sandy);
+      }
+    }
+  }
+
+
+
   &__blocks{
     @include gridTemplate(4, 1, 70px 0, 95px 60px, 45px 0, 50px 0);
 
