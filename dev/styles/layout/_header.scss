@@ -33,7 +33,7 @@
         }
       }
     }
-    @include tablet-m{
+    @include laptop-xs{
       a{
         img{
           width: 200px;
@@ -59,7 +59,7 @@
     @include flexAlignment(center, flex-end)
     width: 100%;
     background: var(--white);
-    @include tablet-m{
+    @include laptop-xs{
       position: absolute;
       top: 0;
       left: 0;
@@ -79,14 +79,14 @@
   &__nav{
     width: 60%;
     margin-right: 5%;
-    @include tablet-m {
+    @include laptop-xs {
       width: 100%;
       margin: 12vw 0;
     }
   }
   &-list{
     @include flexAlignment(center, flex-end);
-    @include tablet-m {
+    @include laptop-xs {
       flex-wrap: wrap;
     }
     a{
@@ -95,7 +95,7 @@
     .menu-item{
       position: relative;
       margin-right: 8%;
-      @include tablet-m {
+      @include laptop-xs {
         width: 100%;
         margin-right: 0;
         margin-bottom: 8px;
@@ -104,7 +104,7 @@
         margin-right: 0;
       }
       a{
-        @include tablet-m {
+        @include laptop-xs {
           @include font(30px, 400, 60px)
         }
       }
@@ -119,6 +119,8 @@
     }
   }
   .menu-item-has-children{
+    margin-right: calc(8% + 20px);
+
     .sub-menu{
       position: absolute;
       left: 0;
@@ -146,12 +148,12 @@
           &:before , &:after{
             display: none;
           }
-          @include tablet-m {
+          @include laptop-xs {
             @include font(14px, 600, 30px)
           }
         }
       }
-      @include tablet-m{
+      @include laptop-xs{
         position: static;
         padding-top: 0;
         opacity: 1;
@@ -162,7 +164,7 @@
     }
         a {
           position: relative;
-          @include tablet-m{
+          @include laptop-xs{
             width: 100%;
             display: block;
 
@@ -179,7 +181,7 @@
             transition: all 0.3s ease-out;
             background-color: var(--dark-grey);
             transform: translate(-3px, -50%) rotate(45deg);
-            @include tablet-m {
+            @include laptop-xs {
               right: 0;
             }
           }
@@ -195,7 +197,7 @@
             transition: all 0.3s ease-out;
             background-color: var(--dark-grey);
             transform: translate(3px, -50%) rotate(-45deg);
-            @include tablet-m {
+            @include laptop-xs {
               right: 0;
             }
           }
@@ -222,7 +224,7 @@
     }
     &.active{
           .sub-menu {
-            @include tablet-m {
+            @include laptop-xs {
               max-height: 500px;
             }
           }
@@ -252,7 +254,7 @@
     outline: 0;
     vertical-align: middle;
     transition: .25s ease-in-out;
-    @include tablet-m {
+    @include laptop-xs {
       display: block;
     }
     &-lines{
