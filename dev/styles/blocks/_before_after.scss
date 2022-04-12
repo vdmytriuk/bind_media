@@ -1,0 +1,135 @@
+.before-after-block {
+  height: 439px;
+  margin: 80px auto;
+  max-width: 100%;
+  overflow: hidden;
+  width: 842px;
+  position: relative;
+  @include  laptop-xs {
+    height: auto;
+    margin: 30px auto;
+  }
+  &__before {
+    background-size: cover;
+    height: 100%;
+    position: relative;
+    width: 100%;
+    @include  laptop-xs {
+      position: static;
+      height: 170px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-top: 30px;
+      &:before {
+        content: "Before";
+        display: block;
+        position: relative;
+        top: -30px;
+        color: var(--darkGrey);
+        font-weight: 700;
+      }
+    }
+  }
+  &__after {
+    background-size: cover;
+    bottom: 0;
+    border-right: 4px solid #00C0E7;
+    height: 100%;
+    max-width: 100%;
+    min-width: 0.6%;
+    overflow: visible;
+    position: absolute;
+    width: 50%;
+    @include  laptop-xs {
+      border-right: 0;
+      width: 100%;
+      position: static;
+      height: 170px;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      margin-top: 30px;
+    }
+    &::before {
+      background: url('../img/case_study/chevron-right-left.png') no-repeat scroll 0 center transparent;
+      background-size:contain;
+      content: " ";
+      float: right;
+      height: 100%;
+      margin-right: -34px;
+      position: relative;
+      top:0;
+      width: 64px;
+      @include  laptop-xs {
+        content: "After";
+        display: block;
+        position: relative;
+        top: -30px;
+        background: none;
+        float: none;
+        color: var(--darkGrey);
+        font-weight: 700;
+      }
+    }
+  }
+}
+
+#compareSlider {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  background: transparent;
+  cursor: col-resize;
+  height: 100vw;
+  left: 0;
+  margin: 0;
+  outline: none;
+  padding: 0;
+  position: relative;
+  top: -100vw;
+  width: 100%;
+  @include  laptop-xs {
+    display: none;
+  }
+  &::-moz-range-track {
+    background: transparent;
+  }
+  &::-ms-track {
+    border: none;
+    background-color: transparent;
+    height: 100vw;
+    left: 0;
+    outline: none;
+    position: relative;
+    top: -100vw;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    cursor: col-resize;
+    color: transparent;
+  }
+  &::-ms-fill-lower {
+    background-color:transparent;
+  }
+  &::-webkit-slider-thumb {
+    -webkit-appearance:none;
+    height: 100vw;
+    width: 0.5%;
+    opacity: 0;
+  }
+  &::-moz-range-thumb {
+    -moz-appearance: none;
+    height: 100vw;
+    width: 0.5%;
+    opacity: 0;
+  }
+  &::-ms-thumb {
+    height: 100vw;
+    width: 0.5%;
+    opacity:0;
+  }
+  &::-ms-tooltip {
+    display:none;
+  }
+}

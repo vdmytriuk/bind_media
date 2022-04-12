@@ -70,6 +70,23 @@
       color: inherit;
     }
   }
+  &_wh {
+    border: 1px solid #fff;
+    background: transparent;
+    color: #fff;
+    &:before {
+      background: transparent;
+    }
+    &:after {
+      background: #fff;
+      content: url("../img/icons/light_arrow_right_blue.svg");
+    }
+    &:hover {
+      &:after {
+        content: url("../img/icons/light_arrow_right.svg");
+      }
+    }
+  }
 }
 
 .tomato {

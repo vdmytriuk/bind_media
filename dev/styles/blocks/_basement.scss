@@ -135,4 +135,72 @@
       }
     }
   }
+  &_bg {
+    .basement__info {
+      @include  laptop-xs {
+        padding: 0 45px;
+      }
+    }
+    .container {
+      background-size: cover;
+      @include  laptop-xs {
+        padding: 0;
+        margin: 30px 0 0 0;
+      }
+      &:before {
+        display: none;
+      }
+    }
+    h3 {
+      color:  var(--white);;
+    }
+    .basement__inner {
+      padding: 70px 50px;
+      @include  laptop-xs {
+        padding: 70px 0;
+      }
+    }
+    .basement__persons {
+      @include  laptop-xs {
+        position: relative;
+        bottom: -80px;
+      }
+    }
+    .basement__person {
+      @include  laptop-xs {
+        width: auto;
+        &:first-of-type{
+          position: relative;
+          width: auto;
+          transform: translate(50%, 0);
+        }
+      }
+      @include mobile-xl{
+        width: auto;
+        flex-shrink: 0;
+      }
+    }
+    .basement__person-img  {
+      img {
+        @include mobile-xl{
+          object-fit: initial;
+        }
+      }
+
+    }
+  }
+  &_cta {
+    .rounded-button {
+      display: inline-block;
+    }
+    .container {
+      &:before,
+      &:after {
+        display: none;
+      }
+    }
+    .basement__inner {
+      text-align: center;
+    }
+  }
 }

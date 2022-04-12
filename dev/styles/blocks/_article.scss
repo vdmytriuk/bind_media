@@ -1,0 +1,318 @@
+.article {
+  padding-top: 0;
+  margin-top: 0;
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .read-time {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    letter-spacing: 0.39em;
+    text-transform: uppercase;
+    padding-left: 40px;
+    position: relative;
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: -5px;
+      width: 20px;
+      height: 23px;
+      background: url('../img/icons/ic_clock.svg') no-repeat center;
+      background-size: contain;
+    }
+  }
+
+  h1 {
+    margin-bottom: 35px;
+  }
+
+  .quote__heading {
+    padding-top: 0;
+    flex-basis: auto;
+    width: auto;
+    margin-bottom: 60px;
+    align-items: center;
+    @include laptop-xs {
+      order: 0;
+    }
+  }
+
+  &__img {
+    margin-bottom: 60px;
+    @include laptop-xs {
+      margin-bottom: 40px;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__content {
+    margin: 0 auto;
+    max-width: 840px;
+    width: 100%;
+
+    h2, h3, h4 {
+      text-align: center;
+      font-size: 48px;
+      font-weight: 400;
+      margin: 100px 0 35px;
+      @include laptop-xs {
+        margin: 50px 0 35px;
+        font-size: 35px;
+      }
+
+      strong {
+        background: linear-gradient(90.66deg, #00C0E7 0.66%, #00E3CF 62.5%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+
+    h5 {
+
+    }
+
+    p {
+      margin-bottom: 20px;
+    }
+
+    a {
+      color: var(--dark-turqoise);
+      text-decoration: underline;
+
+      &:hover {
+        color:var(--dark-turqoise);
+        text-decoration: none;
+      }
+    }
+  }
+
+  figure {
+    margin-bottom: 30px;
+
+    figcaption {
+      text-align: center;
+      color: #3f4863;
+      font-weight: 500;
+      font-size: 14px;
+    }
+
+    &.centred {
+      margin: 0 auto;
+    }
+
+    &.float-right {
+      float: right;
+      margin-left: 120px;
+      @include laptop-xs {
+        float: none;
+        margin-left: auto;
+        margin: 0 auto;
+      }
+
+    }
+
+    &.float-left {
+      float: left;
+      margin-right: 120px;
+      @include laptop-xs {
+        float: none;
+        margin-right: auto;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  figure {
+    position: relative;
+    margin: 0 10px 10px 10px;
+    width: fit-content;
+    @include laptop-xs {
+      width: calc(100% - 20px);
+    }
+
+    img {
+      width: 100%;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 25%;
+      left: -10px;
+      right: -10px;
+      bottom: -10px;
+      z-index: -1;
+      background: linear-gradient(90.66deg, #00C0E7 0.66%, #00E3CF 62.5%);
+    }
+  }
+
+  ol {
+    list-style: none;
+    counter-reset: li;
+    margin-left: 20px;
+    li {
+      counter-increment: li;
+      &::before {
+        content: counter(li)'.';
+        color: #00C0E7;
+        display: inline-block;
+        font-size: 20px;
+        margin-left: -15px;
+        margin-right: 10px;
+        font-weight: 800;
+      }
+    }
+  }
+  ul {
+    list-style: none;
+    margin-left: 20px;
+    li {
+      counter-increment: li;
+      &::before {
+        content: '';
+        width: 15px;
+        height: 15px;
+        display: inline-block;
+        border-radius: 50%;
+        margin-left: -15px;
+        margin-right: 10px;
+        background: linear-gradient(90.66deg, #00C0E7 0.66%, #00D1E3 62.5%);
+      }
+    }
+  }
+  iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+  }
+  blockquote {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 30px;
+    padding-left: 40px;
+    margin: 20px 0;
+    color: #303E55;
+    background: url("../img/icons/ic_quot.png") no-repeat;
+    @include laptop-xs {
+      padding-left: 30px;
+    }
+  }
+}
+
+.iframe-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+
+}
+.author-row {
+  background:#F7FAFD;
+  padding: 38px 0;
+  margin: 100px 0;
+  position: relative;
+  @include laptop-xs {
+    margin: 50px 0;
+  }
+  &:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background: inherit;
+    width: 150vw;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .quote__heading {
+    margin-bottom: 0;
+    position: relative;
+    z-index: 2;
+    @include laptop-xs {
+      display: block;
+      text-align: center;
+      min-width: auto;
+      .quote__img {
+        display: inline-block;
+      }
+      .quote__title {
+        padding-right: 16px;
+      }
+    }
+  }
+}
+
+.social-share {
+  position: absolute;
+  top: 65px;
+  left: -30px;
+
+  @media (max-width: 1190px) {
+    position: static;
+    top: 0;
+    left: 0;
+    flex-basis: 100%;
+    width: 100%;
+  }
+
+  &__title {
+    color: #303E55;
+    font-size: 12px;
+    line-height: 73px;
+    letter-spacing: 0.39em;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  &__items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (max-width: 1190px) {
+      flex-direction: row;
+      justify-content: center;
+    }
+    a {
+      display: inline-block;
+      margin: 0 0 36px 0;
+      opacity: 1;
+      transition: opacity .3s ease-in-out;
+      @media (max-width: 1190px) {
+        margin: 0 18px 36px 18px;
+      }
+      &:hover {
+        opacity: .7;
+      }
+    }
+  }
+
+}
+
+.related-articles {
+  margin: 100px 0;
+  @include laptop-xs {
+    margin: 50px 0;
+  }
+
+  .grid {
+    .grid__item {
+      min-width: 270px;
+    }
+  }
+}

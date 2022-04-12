@@ -313,6 +313,10 @@ var Site = {
     //     })
     // },
 
+    beforeAfter: ()=> {
+        document.getElementById('compare').style.width = document.getElementById('compareSlider').value + "%";
+    },
+
     theme: ()=> {
         const body = document.querySelector('body');
         const root = document.querySelector(':root');

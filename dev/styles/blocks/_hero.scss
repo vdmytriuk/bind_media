@@ -29,4 +29,16 @@
     }
 
   }
+  &-banner {
+    margin: 0 auto -150px;
+    width: 1320px;
+    max-width: 100%;
+    height: 420px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    @include laptop-xs {
+      display: none;
+    }
+  }
 }

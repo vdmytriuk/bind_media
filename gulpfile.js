@@ -46,7 +46,7 @@ let validateHTML = () => {
     return src([
         `dev/html/*.html`,
         `dev/html/**/*.html`])
-        .pipe(htmlValidator());
+        // .pipe(htmlValidator());
 };
 
 let compressHTML = () => {

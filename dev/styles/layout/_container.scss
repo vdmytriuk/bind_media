@@ -8,6 +8,16 @@
   @include mobile-xl {
     padding: 0 16px;
   }
+  &_sm {
+    max-width: 1080px;
+    padding: 0 60px;
+    @include laptop-xs {
+      padding: 0 20px;
+    }
+    @include mobile-xl {
+      padding: 0 16px;
+    }
+  }
 }
 
 

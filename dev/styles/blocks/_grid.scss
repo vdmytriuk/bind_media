@@ -12,6 +12,14 @@
       }
     }
   }
+  &_tertiary-equal {
+    @include gridTemplate(3, 1, 45px 0 100px 0, 80px 60px, 32px 0 48px 0, 48px 0);
+    @include laptop-xs {
+      --columnsCount: 3;
+      grid-gap: 32px;
+      overflow-x: scroll;
+    }
+  }
   &_binary{
     @include gridTemplate(2, 1, 45px 0 20px 0, 75px, 32px 0 0 0, 48px 0)
     @media screen and (max-width: 1025px){
