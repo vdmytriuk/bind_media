@@ -228,7 +228,7 @@
   &:nth-child(odd) {
     #{$root}__img {
       &:after {
-        background: var(--lightBlue);
+        background: var(--light-blue);
         transform: translate(-26px, -50%) skew(-25deg);
         border-top-left-radius: 10px;
         border-bottom-right-radius: 10px;
@@ -237,7 +237,7 @@
 
     #{$root}__text {
       strong {
-        color: var(--lightBlue);
+        color: var(--light-blue);
       }
     }
   }
