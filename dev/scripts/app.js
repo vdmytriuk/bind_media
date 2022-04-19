@@ -12,7 +12,7 @@ var Site = {
         this.customSelect();
         this.customSelectForm();
         this.formTabs();
-        // this.modal();
+        this.modal();
         this.theme();
     },
 
@@ -293,25 +293,25 @@ var Site = {
 
     },
 
-    // modal: ()=> {
-    //     const modalTrigger = document.querySelectorAll('.js-modal')
-    //     const modalLayout = document.querySelector('.modal')
-    //     const modalClose = document.querySelector('.modal__close')
-    //     modalTrigger.forEach(item => {
-    //         item.addEventListener('click', ()=> {
-    //             modalLayout.classList.add('active')
-    //             document.querySelector('body').style.overflow = 'hidden'
-    //         })
-    //     })
-    //     modalLayout.addEventListener('click', ()=> {
-    //         modalLayout.classList.remove('active')
-    //         document.querySelector('body').style.overflow = 'visible'
-    //     })
-    //     modalClose.addEventListener('click', ()=> {
-    //         modalLayout.classList.remove('active')
-    //         document.querySelector('body').style.overflow = 'visible'
-    //     })
-    // },
+    modal: ()=> {
+        const modalTrigger = document.querySelectorAll('.js-modal')
+        const modalLayout = document.querySelector('.modal')
+        const modalClose = document.querySelector('.modal__close')
+        modalTrigger.forEach(item => {
+            item.addEventListener('click', ()=> {
+                modalLayout.classList.add('active')
+                document.querySelector('body').style.overflow = 'hidden'
+            })
+        })
+        modalLayout.addEventListener('click', ()=> {
+            modalLayout.classList.remove('active')
+            document.querySelector('body').style.overflow = 'visible'
+        })
+        modalClose.addEventListener('click', ()=> {
+            modalLayout.classList.remove('active')
+            document.querySelector('body').style.overflow = 'visible'
+        })
+    },
 
     beforeAfter: ()=> {
         document.getElementById('compare').style.width = document.getElementById('compareSlider').value + "%";
