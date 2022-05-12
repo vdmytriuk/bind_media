@@ -12,7 +12,7 @@
     background-position: bottom;
   }
   .container{
-    @include flexAlignment(center, space-between, wrap)
+    @include flexAlignment(center, space-between, wrap);
     @include tablet-m{
       flex-direction: column-reverse;
     }

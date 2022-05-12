@@ -56,7 +56,7 @@
     }
   }
   &__content{
-    @include flexAlignment(center, flex-end)
+    @include flexAlignment(center, flex-end);
     width: 100%;
     background: var(--white);
     @include tablet-m{

@@ -1,6 +1,6 @@
 .members{
   &__blocks{
-    @include gridTemplate(4, 1, 0, 65px 27px, 0, 60px 0)
+    @include gridTemplate(4, 1, 0, 65px 27px, 0, 60px 0);
     margin-top: 80px;
     @include tablet-m{
       margin-top: 20px;
@@ -13,14 +13,14 @@
     }
   }
   &__info{
-    @include flexAlignment(center, space-between)
+    @include flexAlignment(center, space-between);
     &-name{
       p{
-        @include font(18px, 600, 32px)
+        @include font(18px, 600, 32px);
         margin-bottom: 7px;
       }
       span{
-        @include font(12px, 600, 14px)
+        @include font(12px, 600, 14px);
         color: var(--dark-turqoise);
         text-transform: uppercase;
       }

@@ -1,6 +1,6 @@
 .hero{
   .container{
-    @include flexAlignment(center, space-between, wrap)
+    @include flexAlignment(center, space-between, wrap);
     overflow: hidden;
   }
   .custom-image{
