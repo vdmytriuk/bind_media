@@ -50,6 +50,7 @@
   "dependencies": {
     "gulp-html": "^4.0.0",
     "gulp-sass": "^5.1.0",
+    "minimist": "^1.2.6",
     "sass": "^1.51.0"
   }
 }
