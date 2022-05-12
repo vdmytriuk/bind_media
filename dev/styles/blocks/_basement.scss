@@ -29,7 +29,7 @@
       right: 0;
       bottom: 0;
       width: 30%;
-      background: linear-gradient(90deg, #FF566D 0%, #FFC33A 100%);;
+      background: linear-gradient(90deg, #FF566D 0%, #FFC33A 100%);
       box-sizing: border-box;
       transform: rotate(180deg);
       z-index: -3;
@@ -118,7 +118,7 @@
       border: 1px solid var(--white);
 
       &:after {
-        content: url(../img/icons/blue_arrow_right.svg);;
+        content: url(../img/icons/blue_arrow_right.svg);
         background: var(--white);
       }
 
@@ -129,7 +129,7 @@
       &:hover {
         color: var(--light-blue);
         &:after {
-          content: url(../img/icons/light_arrow_right.svg);;
+          content: url(../img/icons/light_arrow_right.svg);
           background: var(--light-blue);
         }
       }

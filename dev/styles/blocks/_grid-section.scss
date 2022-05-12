@@ -1,7 +1,7 @@
 .grid-section{
   &__top{
     .container{
-      @include flexAlignment(center, flex-start, wrap)
+      @include flexAlignment(center, flex-start, wrap);
       .subtitle{
         margin-right: 30px;
       }
