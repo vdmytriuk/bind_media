@@ -2,7 +2,7 @@
   position: fixed;
   top: 0;
   left: 0;
-  @include flexAlignment(center, center)
+  @include flexAlignment(center, center);
   height: 100vh;
   width: 100vw;
   background: $white;
@@ -10,13 +10,13 @@
   animation: words 1s forwards;
   animation-delay: .8s;
   &__logo{
-    @include flexAlignment(flex-end)
+    @include flexAlignment(flex-end);
     @include laptop-xs{
-      @include flexAlignment($horizontal: center)
+      @include flexAlignment($horizontal: center);
       width: 70%;
     }
     &-word{
-      @include flexAlignment(flex-end)
+      @include flexAlignment(flex-end);
       position: relative;
       overflow: hidden;
       width: fit-content;

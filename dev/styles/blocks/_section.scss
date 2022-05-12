@@ -142,7 +142,7 @@
     }
   }
   &__numbers{
-    @include flexAlignment(center, space-between)
+    @include flexAlignment(center, space-between);
     h3{
       margin-bottom: 10px;
     }

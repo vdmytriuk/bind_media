@@ -49,7 +49,7 @@
     position: absolute;
     bottom: 0;
     right: 0;
-    @include flexAlignment(flex-end, flex-end)
+    @include flexAlignment(flex-end, flex-end);
     @include laptop-xs{
       left: 50%;
       width: calc(100% - 20px);

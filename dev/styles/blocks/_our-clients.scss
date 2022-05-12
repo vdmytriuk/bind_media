@@ -4,7 +4,7 @@
     margin-top: 31px;
   }
   &__blocks{
-    @include flexAlignment(center, space-between, wrap)
+    @include flexAlignment(center, space-between, wrap);
     @include mobile-xl {
       flex-wrap: nowrap;
       overflow-x: scroll;

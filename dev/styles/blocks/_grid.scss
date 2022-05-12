@@ -1,6 +1,6 @@
 .grid{
   &_tertiary{
-    @include gridTemplate(3, 1, 45px 0 100px 0, 80px 60px, 32px 0 48px 0, 48px 0)
+    @include gridTemplate(3, 1, 45px 0 100px 0, 80px 60px, 32px 0 48px 0, 48px 0);
     .grid{
       &__item{
         @media(min-width: 789px){
@@ -13,7 +13,7 @@
     }
   }
   &_binary{
-    @include gridTemplate(2, 1, 45px 0 20px 0, 75px, 32px 0 0 0, 48px 0)
+    @include gridTemplate(2, 1, 45px 0 20px 0, 75px, 32px 0 0 0, 48px 0);
     @media screen and (max-width: 1025px){
       --columnsCount: 2;
     }
@@ -29,7 +29,7 @@
       }
     }
     &-inner{
-      @include flexAlignment(center, space-between)
+      @include flexAlignment(center, space-between);
       margin-bottom: 15px;
     }
     &-tags{
@@ -68,7 +68,7 @@
       }
     }
     &-date{
-      @include font(12px, 600, 14px)
+      @include font(12px, 600, 14px);
       color: $darkturqoise;
     }
     &-day{

@@ -38,7 +38,7 @@
       width: 50%;
     }
     li{
-      @include flexAlignment(center, false)
+      @include flexAlignment(center, false);
       margin-bottom: 16px;
     }
     &:nth-of-type(2){
@@ -50,7 +50,7 @@
     }
     &:nth-of-type(3){
       @include laptop-xs {
-        @include flexAlignment($wrap: wrap)
+        @include flexAlignment($wrap: wrap);
         margin-top: 20px;
       }
       @include tablet-m{
