@@ -15,6 +15,7 @@
       margin-bottom: 40px;
     }
     p{
+      max-width: 405px;
       margin-bottom: 40px;
       @include mobile-l{
         margin-bottom: 30px;
