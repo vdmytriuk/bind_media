@@ -10,16 +10,28 @@
     }
   }
   &__content{
+    position: relative;
     display: flex;
     width: 100%;
     justify-content: space-between;
   }
+  &__bg{
+    position: absolute;
+    top: -201px;
+    right: -131px;
+    width: 499px;
+    height: 396px;
+  }
   &__right{
+    position: relative;
+    z-index: 2;
     max-width: 377px;
     width: 100%;
     margin: 0 0 0 30px;
   }
   &__left{
+    position: relative;
+    z-index: 2;
     display: flex;
     max-width: 771px;
     width: 100%;
@@ -72,6 +84,9 @@
     &__top{
       margin: 0;
     }
+    &__bg{
+      top: 83px;
+    }
     &__left{
       margin: 0;
       flex-direction: column;
@@ -95,6 +110,9 @@
     }
     &__content{
       flex-direction: column;
+    }
+    &__bg{
+      display: none;
     }
     &__right{
       margin: 40px auto 0;
