@@ -1,0 +1,128 @@
+.awards-rd{
+  margin: 117px 0 200px 0;
+  &__top{
+    margin: 0 0 75px 0;
+    p{
+      font-size: 12px;
+      line-height: 73px;
+      letter-spacing: 0.39em;
+      text-transform: uppercase;
+    }
+  }
+  &__content{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+  &__right{
+    max-width: 377px;
+    width: 100%;
+    margin: 0 0 0 30px;
+  }
+  &__left{
+    display: flex;
+    max-width: 771px;
+    width: 100%;
+    justify-content: space-between;
+    margin: 0 -10px;
+  }
+  &__card{
+    position: relative;
+    width: 308px;
+    padding: 0 0 0 37px;
+    margin: 0 15px;
+    &:before{
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 1px;
+      height: 100%;
+    }
+    img{
+      width: 124px;
+      height: 73px;
+      display: inline-block;
+      margin: 0 0 0 16px;
+    }
+    p{
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 30px;
+      margin: 37px 0 0 0;
+    }
+  }
+  &__blocks{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 93px -5px -5px;
+  }
+  &__block{
+    width: 110px;
+    height: 110px;
+    margin: 5px;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  @media(max-width: 1023px){
+    margin: 100px 0;
+    &__top{
+      margin: 0;
+    }
+    &__left{
+      margin: 0;
+      flex-direction: column;
+    }
+    &__card{
+      width: 100%;
+      max-width: 500px;
+      margin: 0 0 40px;
+      &:last-child{
+        margin: 0;
+      }
+    }
+    &__blocks{
+      margin: 40px -5px 0;
+    }
+  }
+  @media(max-width: 767px){
+    &__top{
+      max-width: 500px;
+      margin: 0 auto 26px;
+    }
+    &__content{
+      flex-direction: column;
+    }
+    &__right{
+      margin: 40px auto 0;
+    }
+    &__card{
+      width: 100%;
+      margin: 0 auto 74px;
+      padding: 0 0 0 30px;
+      &:last-child{
+        margin: 0 auto;
+      }
+      p{
+        margin: 23px 0 0 0;
+        font-size: 16px;
+      }
+    }
+    &__blocks{
+      justify-content: center;
+    }
+  }
+  @media (max-width: 475px) {
+    &__blocks{
+      justify-content: flex-start;
+    }
+    &__block{
+      margin: 3px;
+      width: 75px;
+      height: 75px;
+    }
+  }
+}
