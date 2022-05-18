@@ -15,6 +15,9 @@
       margin: 50px 0;
       overflow-x: scroll;
       grid-gap: 0 24px;
+      &::-webkit-scrollbar {
+        display: none;
+      }
     }
   }
   &__block{
