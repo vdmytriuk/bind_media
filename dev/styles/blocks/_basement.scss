@@ -107,6 +107,9 @@
     }
   }
   &__info{
+    //max-width: 640px;
+    position: relative;
+    z-index: 2;
     h3{
       color: var(--white);
       margin-bottom: 60px;

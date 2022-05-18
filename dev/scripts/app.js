@@ -48,15 +48,19 @@ var Site = {
     },
 
     headerDropdown: ()=> {
-        if($(window).width() < 789) {
-            $('.menu-item-has-child').click(function() {
-                $(this).toggleClass('active')
+        if(window.screen.width <= 1281){
+            let menuItems = document.querySelectorAll('.menu-item.menu-item-has-children>a');
+            menuItems.forEach(item => {
+                item.onclick = (e) => {
+                    e.preventDefault();
+                    item.parentNode.classList.toggle('active');
+                }
             })
         }
     },
 
     clientsScroll: ()=> {
-        if($(window).width() < 789) {
+        if($(window).width() <= 541) {
             $('.our-clients__blocks').animate({scrollLeft: 1400}, 20000);
         }
     },

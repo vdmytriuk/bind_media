@@ -12,7 +12,7 @@
     padding: 25px 0;
     box-shadow: 2px 2px 6px 0px rgba(34, 60, 80, 0.10);
   }
-  @include laptop-xs {
+  @include laptop-s {
     padding: 35px 0;
   }
   &__inner{
@@ -21,7 +21,7 @@
     max-width: 1360px;
     padding: 0 20px;
     margin: 0 auto;
-    @include laptop-xs {
+    @include laptop-s {
       padding: 0 16px;
     }
   }
@@ -33,7 +33,7 @@
         }
       }
     }
-    @include laptop-xs{
+    @include laptop-s{
       a{
         img{
           width: 200px;
@@ -59,18 +59,26 @@
     @include flexAlignment(center, flex-end);
     width: 100%;
     background: var(--white);
-    @include laptop-xs{
+    @include laptop-s{
+      display: block;
       position: absolute;
+      overflow: auto;
       top: 0;
       left: 0;
-      flex-direction: column;
-      align-items: flex-start;
-      justify-content: flex-start;
+      //flex-direction: column;
+      //align-items: flex-start;
+      //justify-content: flex-start;
       margin-top: 90px;
       padding: 0 16px;
       height: calc(100vh - 90px);
       transform: translateX(-100%);
       transition: .3s ease-in;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+      .rounded-button{
+        margin-bottom: 90px;
+      }
       &.active{
         transform: translateX(0);
       }
@@ -79,14 +87,14 @@
   &__nav{
     width: 60%;
     margin-right: 5%;
-    @include laptop-xs {
+    @include laptop-s {
       width: 100%;
-      margin: 12vw 0;
+      margin: 40px 0;
     }
   }
   &-list{
     @include flexAlignment(center, flex-end);
-    @include laptop-xs {
+    @include laptop-s {
       flex-wrap: wrap;
     }
     a{
@@ -95,7 +103,7 @@
     .menu-item{
       position: relative;
       margin-right: 8%;
-      @include laptop-xs {
+      @include laptop-s {
         width: 100%;
         margin-right: 0;
         margin-bottom: 8px;
@@ -104,7 +112,7 @@
         margin-right: 0;
       }
       a{
-        @include laptop-xs {
+        @include laptop-s {
           @include font(30px, 400, 60px)
         }
       }
@@ -119,7 +127,7 @@
     }
   }
   .menu-item-has-children{
-    margin-right: calc(8% + 20px);
+    //margin-right: calc(8% + 20px);
 
     .sub-menu{
       position: absolute;
@@ -148,12 +156,12 @@
           &:before , &:after{
             display: none;
           }
-          @include laptop-xs {
+          @include laptop-s {
             @include font(14px, 600, 30px)
           }
         }
       }
-      @include laptop-xs{
+      @include laptop-s{
         position: static;
         padding-top: 0;
         opacity: 1;
@@ -164,7 +172,7 @@
     }
         a {
           position: relative;
-          @include laptop-xs{
+          @include laptop-s{
             width: 100%;
             display: block;
 
@@ -181,7 +189,7 @@
             transition: all 0.3s ease-out;
             background-color: var(--dark-grey);
             transform: translate(-3px, -50%) rotate(45deg);
-            @include laptop-xs {
+            @include laptop-s {
               right: 0;
             }
           }
@@ -197,7 +205,7 @@
             transition: all 0.3s ease-out;
             background-color: var(--dark-grey);
             transform: translate(3px, -50%) rotate(-45deg);
-            @include laptop-xs {
+            @include laptop-s {
               right: 0;
             }
           }
@@ -224,7 +232,7 @@
     }
     &.active{
           .sub-menu {
-            @include laptop-xs {
+            @include laptop-s {
               max-height: 500px;
             }
           }
@@ -254,7 +262,7 @@
     outline: 0;
     vertical-align: middle;
     transition: .25s ease-in-out;
-    @include laptop-xs {
+    @include laptop-s {
       display: block;
     }
     &-lines{

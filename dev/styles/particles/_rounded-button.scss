@@ -42,7 +42,8 @@
     content: url("../img/icons/light_arrow_right.svg");
     position: absolute;
     right: 4px;
-    top: 4px;
+    top: 50%;
+    transform: translateY(-50%);
     @include flexAlignment(center, center);
     border-radius: 100px;
     background: var(--light-blue);
