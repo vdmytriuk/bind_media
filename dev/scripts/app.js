@@ -50,10 +50,12 @@ var Site = {
     headerDropdown: ()=> {
         if(window.screen.width <= 1281){
             let menuItems = document.querySelectorAll('.menu-item.menu-item-has-children>a');
+            let body = document.querySelector('body');
             menuItems.forEach(item => {
                 item.onclick = (e) => {
                     e.preventDefault();
                     item.parentNode.classList.toggle('active');
+                    body.classList.toggle('body-lock');
                 }
             })
         }
