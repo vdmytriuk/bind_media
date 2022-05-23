@@ -20,12 +20,7 @@
       <div class="header__content">
          <nav class="header__nav">
             <ul class="header-list">
-               <li class="menu-item">
-                  <a href="./about-us.html">
-                     Who we are
-                  </a>
-               </li>
-               <li class="menu-item menu-item-has-child">
+               <li class="menu-item menu-item-has-children">
                   <a href="#">
                      What we do
                   </a>
@@ -53,8 +48,13 @@
                   </ul>
                </li>
                <li class="menu-item">
+                  <a href="#">
+                     Case Studies
+                  </a>
+               </li>
+               <li class="menu-item">
                   <a href="./portfolio.html">
-                     Portfolio
+                     About Us
                   </a>
                </li>
                <li class="menu-item">
@@ -62,9 +62,14 @@
                      Insights
                   </a>
                </li>
+               <li class="menu-item">
+                  <a href="./insights.html">
+                     Resources
+                  </a>
+               </li>
             </ul>
          </nav>
-         <button class="rounded-button">Get My Proposal</button>
+         <button class="rounded-button js-modal">Get My Proposal</button>
       </div>
       <button class="header__burger" type="button">
               <span class="header__burger-lines">
@@ -81,305 +86,386 @@
    <section class="hero">
       <div class="container">
          <div class="hero__description">
-            <h1 class="hero-text">We’re building the best place to work <strong>in the WORLD.</strong></h1>
+            <h1 class="hero-text">Talented <br> people delivering <strong>great results.</strong></h1>
             <button class="rounded-button">Get My Proposal</button>
          </div>
          <div class="hero__image">
             <div class="custom-image custom-image_blue">
                <picture>
-               <img src="./img/main/hero_img.png" alt="Hero Image">
+                  <img src="./img/main/hero_img-2.png" alt="Hero Image">
                </picture>
             </div>
          </div>
       </div>
    </section>
-
-   <section class="separator">
-         <div class="container">
-            <div class="section-header">
-               <h3 data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">Our reasons for being</h3>
-            </div>
-            <div class="separator__blocks separator__blocks_binary" data-aos="fade-up" data-aos-delay="300" data-aos-duration="800">
-               <div class="separator__block">
-                  <div class="separator__icon separator__icon_left separator__icon_to-right separator__icon_blue">
-                     <picture>
-                     <img src="./img/icons/separator/peoples.svg" alt="Icon">
-                     </picture>
-                  </div>
-                  <h6>We put our people first</h6>
-                  <p>Every team member has a voice and is presented with equal opportunities. We provide each other with support and challenge each other to grow on a personal and professional level. The mental wellbeing of our team and encouraging a healthy life/work balance (because life comes first) are of the utmost importance.</p>
-               </div>
-               <div class="separator__block">
-                  <div class="separator__icon separator__icon_center separator__icon_to-left separator__icon_sandy">
-                     <picture>
-                     <img src="./img/icons/separator/mountains.svg" alt="Icon">
-                     </picture>
-                  </div>
-                  <h6>We’re cutting edge</h6>
-                  <p>We are masters of our craft and specificity, pushing ourselves and each other to stay at the forefront question assumptions, iterate constantly and are courageous with our ideas. We harness every opportunity to pioneer, keeping our team and our partners at the very forefront of innovation.</p>
-               </div>
-               <div class="separator__block">
-                  <div class="separator__icon separator__icon_left separator__icon_to-right separator__icon_tomato">
-                     <picture>
-                     <img src="./img/icons/separator/search.svg" alt="Icon">
-                     </picture>
-                  </div>
-                  <h6>We’re transparent</h6>
-                  <p>We’re honest, accountable for our actions and own our mistakes. When we do make mistakes, we see them as opportunities for learning - both for ourselves and the wider team. We understand that transparency results in better trust, productivity and loyalty within our team's culture, as well as between our partners.</p>
-               </div>
-               <div class="separator__block">
-                  <div class="separator__icon  separator__icon_center separator__icon_to-left separator__icon_darkturqoise">
-                     <picture>
-                     <img src="./img/icons/separator/friendly.svg" alt="Icon">
-                     </picture>
-                  </div>
-                  <h6>We give back</h6>
-                  <p>We believe we have the power to make the world a more positive place - for causes we’re passionate about, our communities and the planet. We give back not only financially, but through volunteering of our teams mentorship and professional support, as well as promoting a culture of sustainability.</p>
-               </div>
-            </div>
+   <section class="quote-rd blue-to-light">
+      <div class="container">
+         <p class="subtitle">
+            not that we’re bragging but
+         </p>
+         <div class="quote-rd__color-text">
+            <p>
+               We are the <span>UK’S #1 client rated</span> digital agency.
+            </p>
          </div>
-      </section>
+      </div>
+   </section>
 
+<!--   <section class="separator">-->
+<!--         <div class="container">-->
+<!--            <div class="section-header">-->
+<!--               <h3 data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">Our reasons for being</h3>-->
+<!--            </div>-->
+<!--            <div class="separator__blocks separator__blocks_binary" data-aos="fade-up" data-aos-delay="300" data-aos-duration="800">-->
+<!--               <div class="separator__block">-->
+<!--                  <div class="separator__icon separator__icon_left separator__icon_to-right separator__icon_blue">-->
+<!--                     <picture>-->
+<!--                     <img src="./img/icons/separator/peoples.svg" alt="Icon">-->
+<!--                     </picture>-->
+<!--                  </div>-->
+<!--                  <h6>We put our people first</h6>-->
+<!--                  <p>Every team member has a voice and is presented with equal opportunities. We provide each other with support and challenge each other to grow on a personal and professional level. The mental wellbeing of our team and encouraging a healthy life/work balance (because life comes first) are of the utmost importance.</p>-->
+<!--               </div>-->
+<!--               <div class="separator__block">-->
+<!--                  <div class="separator__icon separator__icon_center separator__icon_to-left separator__icon_sandy">-->
+<!--                     <picture>-->
+<!--                     <img src="./img/icons/separator/mountains.svg" alt="Icon">-->
+<!--                     </picture>-->
+<!--                  </div>-->
+<!--                  <h6>We’re cutting edge</h6>-->
+<!--                  <p>We are masters of our craft and specificity, pushing ourselves and each other to stay at the forefront question assumptions, iterate constantly and are courageous with our ideas. We harness every opportunity to pioneer, keeping our team and our partners at the very forefront of innovation.</p>-->
+<!--               </div>-->
+<!--               <div class="separator__block">-->
+<!--                  <div class="separator__icon separator__icon_left separator__icon_to-right separator__icon_tomato">-->
+<!--                     <picture>-->
+<!--                     <img src="./img/icons/separator/search.svg" alt="Icon">-->
+<!--                     </picture>-->
+<!--                  </div>-->
+<!--                  <h6>We’re transparent</h6>-->
+<!--                  <p>We’re honest, accountable for our actions and own our mistakes. When we do make mistakes, we see them as opportunities for learning - both for ourselves and the wider team. We understand that transparency results in better trust, productivity and loyalty within our team's culture, as well as between our partners.</p>-->
+<!--               </div>-->
+<!--               <div class="separator__block">-->
+<!--                  <div class="separator__icon  separator__icon_center separator__icon_to-left separator__icon_darkturqoise">-->
+<!--                     <picture>-->
+<!--                     <img src="./img/icons/separator/friendly.svg" alt="Icon">-->
+<!--                     </picture>-->
+<!--                  </div>-->
+<!--                  <h6>We give back</h6>-->
+<!--                  <p>We believe we have the power to make the world a more positive place - for causes we’re passionate about, our communities and the planet. We give back not only financially, but through volunteering of our teams mentorship and professional support, as well as promoting a culture of sustainability.</p>-->
+<!--               </div>-->
+<!--            </div>-->
+<!--         </div>-->
+<!--      </section>-->
    <section class="big-section big-section_mob">
-      <section class="members">
-         <div class="container">
-            <div class="section-header">
-               <h3 class="blue-text" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">Team <strong>Members</strong></h3>
+      <section class="separator-rd mod">
+         <section class="container">
+            <div class="separator-rd__content">
+               <div class="separator-rd__left">
+                  <div class="separator-rd__top" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
+                     <div class="separator-rd__img desktop">
+                        <img src="./img/awards/men.jpg" alt="men">
+                     </div>
+                     <div class="separator-rd__editor">
+                        <h3>
+                           Founded by paid
+                            <br>
+                           <strong>media experts.</strong>
+                        </h3>
+                        <p>
+                           Bind Media is born out of paid media expertise. We strive to be an incredible place to grow your career and do top notch work for our clients, by proudly standing behind our 4 guiding values.
+                        </p>
+                     </div>
+                  </div>
+                  <div class="separator-rd__bottom" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
+                     <ul>
+                        <li>
+                           <p>
+                              <strong>
+                                 We put our people first
+                              </strong>
+                           </p>
+                           <p>
+                              We want to always be a great place to work and grow your career. Life-work balance is paramount, because life comes first.
+                           </p>
+                        </li>
+                        <li>
+                           <p>
+                              <strong>
+                                 We’re cutting edge
+                              </strong>
+                           </p>
+                           <p>
+                              We harness every opportunity to pioneer, keeping our team and our partners at the very forefront of innovation.
+                           </p>
+                        </li>
+                        <li>
+                           <p>
+                              <strong>
+                                 We’re transparent
+                              </strong>
+                           </p>
+                           <p>
+                              Transparency results in better trust, productivity and loyalty within our team and clients we partner with.
+                           </p>
+                        </li>
+                        <li>
+                           <p>
+                              <strong>
+                                 We give back
+                              </strong>
+                           </p>
+                           <p>
+                              We give back not only financially, but through volunteering of our teams mentorship and professional support.
+                           </p>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="separator-rd__img mobile" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
+                     <img src="./img/awards/men.jpg" alt="men">
+                  </div>
+               </div>
             </div>
-            <div class="members__blocks">
-               <div class="members__block">
-                  <div class="members__image" data-aos="fade-up" data-aos-duration="800">
-                     <picture>
-                     <img src="./img/members/1.png" alt="Member">
-                     </picture>
-                  </div>
-                  <div class="members__info" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
-                     <div class="members__info-name">
-                        <p>Eliot Shiner</p>
-                        <span>Co-Founder</span>
-                     </div>
-                     <div class="members__info-socials">
-                        <a href="#">
-                           <picture>
-                           <img src="./img/icons/email.svg" alt="Email">
-                           </picture>
-                        </a>
-                        <a href="#">
-                           <picture>
-                           <img src="./img/icons/linkedin.svg" alt="Email">
-                           </picture>
-                        </a>
-                     </div>
-                  </div>
-               </div>
-               <div class="members__block">
-                  <div class="members__image" data-aos="fade-up" data-aos-duration="800">
-                     <picture>
-                     <img src="./img/members/1.png" alt="Member">
-                     </picture>
-                  </div>
-                  <div class="members__info" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
-                     <div class="members__info-name">
-                        <p>Eliot Shiner</p>
-                        <span>Co-Founder</span>
-                     </div>
-                     <div class="members__info-socials">
-                        <a href="#">
-                           <picture>
-                           <img src="./img/icons/email.svg" alt="Email">
-                           </picture>
-                        </a>
-                        <a href="#">
-                           <picture>
-                           <img src="./img/icons/linkedin.svg" alt="Email">
-                           </picture>
-                        </a>
-                     </div>
-                  </div>
-               </div>
-               <div class="members__block">
-                  <div class="members__image" data-aos="fade-up" data-aos-duration="800">
-                     <picture>
-                     <img src="./img/members/1.png" alt="Member">
-                     </picture>
-                  </div>
-                  <div class="members__info" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
-                     <div class="members__info-name">
-                        <p>Eliot Shiner</p>
-                        <span>Co-Founder</span>
-                     </div>
-                     <div class="members__info-socials">
-                        <a href="#">
-                           <picture>
-                           <img src="./img/icons/email.svg" alt="Email">
-                           </picture>
-                        </a>
-                        <a href="#">
-                           <picture>
-                           <img src="./img/icons/linkedin.svg" alt="Email">
-                           </picture>
-                        </a>
-                     </div>
-                  </div>
-               </div>
-               <div class="members__block">
-                  <div class="members__image" data-aos="fade-up" data-aos-duration="800">
-                     <picture>
-                     <img src="./img/members/1.png" alt="Member">
-                     </picture>
-                  </div>
-                  <div class="members__info" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
-                     <div class="members__info-name">
-                        <p>Eliot Shiner</p>
-                        <span>Co-Founder</span>
-                     </div>
-                     <div class="members__info-socials">
-                        <a href="#">
-                           <picture>
-                           <img src="./img/icons/email.svg" alt="Email">
-                           </picture>
-                        </a>
-                        <a href="#">
-                           <picture>
-                           <img src="./img/icons/linkedin.svg" alt="Email">
-                           </picture>
-                        </a>
-                     </div>
-                  </div>
-               </div>
-               <div class="members__block">
-                  <div class="members__image" data-aos="fade-up" data-aos-duration="800">
-                     <picture>
-                     <img src="./img/members/1.png" alt="Member">
-                     </picture>
-                  </div>
-                  <div class="members__info" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
-                     <div class="members__info-name">
-                        <p>Eliot Shiner</p>
-                        <span>Co-Founder</span>
-                     </div>
-                     <div class="members__info-socials">
-                        <a href="#">
-                           <picture>
-                           <img src="./img/icons/email.svg" alt="Email">
-                           </picture>
-                        </a>
-                        <a href="#">
-                           <picture>
-                           <img src="./img/icons/linkedin.svg" alt="Email">
-                           </picture>
-                        </a>
-                     </div>
-                  </div>
-               </div>
-               <div class="members__block">
-                  <div class="members__image" data-aos="fade-up" data-aos-duration="800">
-                     <picture>
-                     <img src="./img/members/1.png" alt="Member">
-                     </picture>
-                  </div>
-                  <div class="members__info" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
-                     <div class="members__info-name">
-                        <p>Eliot Shiner</p>
-                        <span>Co-Founder</span>
-                     </div>
-                     <div class="members__info-socials">
-                        <a href="#">
-                           <picture>
-                           <img src="./img/icons/email.svg" alt="Email">
-                           </picture>
-                        </a>
-                        <a href="#">
-                           <picture>
-                           <img src="./img/icons/linkedin.svg" alt="Email">
-                           </picture>
-                        </a>
-                     </div>
-                  </div>
-               </div>
-               <div class="members__block">
-                  <div class="members__image" data-aos="fade-up" data-aos-duration="800">
-                     <picture>
-                     <img src="./img/members/1.png" alt="Member">
-                     </picture>
-                  </div>
-                  <div class="members__info" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
-                     <div class="members__info-name">
-                        <p>Eliot Shiner</p>
-                        <span>Co-Founder</span>
-                     </div>
-                     <div class="members__info-socials">
-                        <a href="#">
-                           <picture>
-                           <img src="./img/icons/email.svg" alt="Email">
-                           </picture>
-                        </a>
-                        <a href="#">
-                           <picture>
-                           <img src="./img/icons/linkedin.svg" alt="Email">
-                           </picture>
-                        </a>
-                     </div>
-                  </div>
-               </div>
-               <div class="members__block">
-                  <div class="members__image" data-aos="fade-up" data-aos-duration="800">
-                     <picture>
-                     <img src="./img/members/1.png" alt="Member">
-                     </picture>
-                  </div>
-                  <div class="members__info" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
-                     <div class="members__info-name">
-                        <p>Eliot Shiner</p>
-                        <span>Co-Founder</span>
-                     </div>
-                     <div class="members__info-socials">
-                        <a href="#">
-                           <picture>
-                           <img src="./img/icons/email.svg" alt="Email">
-                           </picture>
-                        </a>
-                        <a href="#">
-                           <picture>
-                           <img src="./img/icons/linkedin.svg" alt="Email">
-                           </picture>
-                        </a>
-                     </div>
-                  </div>
-               </div>
-               <div class="members__block">
-                  <div class="members__image" data-aos="fade-up" data-aos-duration="800">
-                     <picture>
-                     <img src="./img/members/1.png" alt="Member">
-                     </picture>
-                  </div>
-                  <div class="members__info" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
-                     <div class="members__info-name">
-                        <p>Eliot Shiner</p>
-                        <span>Co-Founder</span>
-                     </div>
-                     <div class="members__info-socials">
-                        <a href="#">
-                           <picture>
-                           <img src="./img/icons/email.svg" alt="Email">
-                           </picture>
-                        </a>
-                        <a href="#">
-                           <picture>
-                           <img src="./img/icons/linkedin.svg" alt="Email">
-                           </picture>
-                        </a>
-                     </div>
-                  </div>
-               </div>
-
-            </div>
-         </div>
+         </section>
       </section>
    </section>
 
-   <section class="about-us">
+   <section class="members">
+      <div class="container">
+         <div class="section-header">
+            <h3 class="blue-text" data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">Team <strong>Members</strong></h3>
+         </div>
+         <div class="members__blocks">
+            <div class="members__block">
+               <div class="members__image" data-aos="fade-up" data-aos-duration="800">
+                  <picture>
+                     <img src="./img/members/1.png" alt="Member">
+                  </picture>
+               </div>
+               <div class="members__info" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
+                  <div class="members__info-name">
+                     <p>Eliot Shiner</p>
+                     <span>Co-Founder</span>
+                  </div>
+                  <div class="members__info-socials">
+                     <a href="#">
+                        <picture>
+                           <img src="./img/icons/email.svg" alt="Email">
+                        </picture>
+                     </a>
+                     <a href="#">
+                        <picture>
+                           <img src="./img/icons/linkedin.svg" alt="Email">
+                        </picture>
+                     </a>
+                  </div>
+               </div>
+            </div>
+            <div class="members__block">
+               <div class="members__image" data-aos="fade-up" data-aos-duration="800">
+                  <picture>
+                     <img src="./img/members/1.png" alt="Member">
+                  </picture>
+               </div>
+               <div class="members__info" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
+                  <div class="members__info-name">
+                     <p>Eliot Shiner</p>
+                     <span>Co-Founder</span>
+                  </div>
+                  <div class="members__info-socials">
+                     <a href="#">
+                        <picture>
+                           <img src="./img/icons/email.svg" alt="Email">
+                        </picture>
+                     </a>
+                     <a href="#">
+                        <picture>
+                           <img src="./img/icons/linkedin.svg" alt="Email">
+                        </picture>
+                     </a>
+                  </div>
+               </div>
+            </div>
+            <div class="members__block">
+               <div class="members__image" data-aos="fade-up" data-aos-duration="800">
+                  <picture>
+                     <img src="./img/members/1.png" alt="Member">
+                  </picture>
+               </div>
+               <div class="members__info" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
+                  <div class="members__info-name">
+                     <p>Eliot Shiner</p>
+                     <span>Co-Founder</span>
+                  </div>
+                  <div class="members__info-socials">
+                     <a href="#">
+                        <picture>
+                           <img src="./img/icons/email.svg" alt="Email">
+                        </picture>
+                     </a>
+                     <a href="#">
+                        <picture>
+                           <img src="./img/icons/linkedin.svg" alt="Email">
+                        </picture>
+                     </a>
+                  </div>
+               </div>
+            </div>
+            <div class="members__block">
+               <div class="members__image" data-aos="fade-up" data-aos-duration="800">
+                  <picture>
+                     <img src="./img/members/1.png" alt="Member">
+                  </picture>
+               </div>
+               <div class="members__info" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
+                  <div class="members__info-name">
+                     <p>Eliot Shiner</p>
+                     <span>Co-Founder</span>
+                  </div>
+                  <div class="members__info-socials">
+                     <a href="#">
+                        <picture>
+                           <img src="./img/icons/email.svg" alt="Email">
+                        </picture>
+                     </a>
+                     <a href="#">
+                        <picture>
+                           <img src="./img/icons/linkedin.svg" alt="Email">
+                        </picture>
+                     </a>
+                  </div>
+               </div>
+            </div>
+            <div class="members__block">
+               <div class="members__image" data-aos="fade-up" data-aos-duration="800">
+                  <picture>
+                     <img src="./img/members/1.png" alt="Member">
+                  </picture>
+               </div>
+               <div class="members__info" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
+                  <div class="members__info-name">
+                     <p>Eliot Shiner</p>
+                     <span>Co-Founder</span>
+                  </div>
+                  <div class="members__info-socials">
+                     <a href="#">
+                        <picture>
+                           <img src="./img/icons/email.svg" alt="Email">
+                        </picture>
+                     </a>
+                     <a href="#">
+                        <picture>
+                           <img src="./img/icons/linkedin.svg" alt="Email">
+                        </picture>
+                     </a>
+                  </div>
+               </div>
+            </div>
+            <div class="members__block">
+               <div class="members__image" data-aos="fade-up" data-aos-duration="800">
+                  <picture>
+                     <img src="./img/members/1.png" alt="Member">
+                  </picture>
+               </div>
+               <div class="members__info" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
+                  <div class="members__info-name">
+                     <p>Eliot Shiner</p>
+                     <span>Co-Founder</span>
+                  </div>
+                  <div class="members__info-socials">
+                     <a href="#">
+                        <picture>
+                           <img src="./img/icons/email.svg" alt="Email">
+                        </picture>
+                     </a>
+                     <a href="#">
+                        <picture>
+                           <img src="./img/icons/linkedin.svg" alt="Email">
+                        </picture>
+                     </a>
+                  </div>
+               </div>
+            </div>
+            <div class="members__block">
+               <div class="members__image" data-aos="fade-up" data-aos-duration="800">
+                  <picture>
+                     <img src="./img/members/1.png" alt="Member">
+                  </picture>
+               </div>
+               <div class="members__info" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
+                  <div class="members__info-name">
+                     <p>Eliot Shiner</p>
+                     <span>Co-Founder</span>
+                  </div>
+                  <div class="members__info-socials">
+                     <a href="#">
+                        <picture>
+                           <img src="./img/icons/email.svg" alt="Email">
+                        </picture>
+                     </a>
+                     <a href="#">
+                        <picture>
+                           <img src="./img/icons/linkedin.svg" alt="Email">
+                        </picture>
+                     </a>
+                  </div>
+               </div>
+            </div>
+            <div class="members__block">
+               <div class="members__image" data-aos="fade-up" data-aos-duration="800">
+                  <picture>
+                     <img src="./img/members/1.png" alt="Member">
+                  </picture>
+               </div>
+               <div class="members__info" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
+                  <div class="members__info-name">
+                     <p>Eliot Shiner</p>
+                     <span>Co-Founder</span>
+                  </div>
+                  <div class="members__info-socials">
+                     <a href="#">
+                        <picture>
+                           <img src="./img/icons/email.svg" alt="Email">
+                        </picture>
+                     </a>
+                     <a href="#">
+                        <picture>
+                           <img src="./img/icons/linkedin.svg" alt="Email">
+                        </picture>
+                     </a>
+                  </div>
+               </div>
+            </div>
+            <div class="members__block">
+               <div class="members__image" data-aos="fade-up" data-aos-duration="800">
+                  <picture>
+                     <img src="./img/members/1.png" alt="Member">
+                  </picture>
+               </div>
+               <div class="members__info" data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
+                  <div class="members__info-name">
+                     <p>Eliot Shiner</p>
+                     <span>Co-Founder</span>
+                  </div>
+                  <div class="members__info-socials">
+                     <a href="#">
+                        <picture>
+                           <img src="./img/icons/email.svg" alt="Email">
+                        </picture>
+                     </a>
+                     <a href="#">
+                        <picture>
+                           <img src="./img/icons/linkedin.svg" alt="Email">
+                        </picture>
+                     </a>
+                  </div>
+               </div>
+            </div>
 
+         </div>
+      </div>
+   </section>
+
+   <section class="about-us">
       <section class="sections">
          <section class="section section_red-to-orange">
             <div class="container">
@@ -430,8 +516,6 @@
             </div>
          </section>
       </section>
-
-
    </section>
 
    <section class="reviews">
@@ -536,43 +620,19 @@
 
 <footer class="footer">
    <div class="container">
+      <div class="footer__bg">
+         <img src="./img/backgrounds/background_m.png" alt="">
+      </div>
       <div class="footer__inner">
-         <div class="footer__introduction">
-            <div class="footer__logo">
-               <a href="/">
-                  <picture>
-                  <img src="./img/global/logo.svg" alt="Bind Media">
-                  </picture>
-               </a>
-            </div>
-            <p class="text2">Passionate about the businesses we work with and working hard to empower them with a range of services that produce exceptional results, time after time.</p>
-         </div>
-         <ul class="footer__list">
+         <ul class="footer__list light-blue">
             <li>
-                  <a href="#" class="text2">
-                     Who we are
-                  </a>
-               </li>
-            <li>
-                  <a href="#" class="text2">
-                     What we do
-                  </a>
-               </li>
-            <li>
-                  <a href="#" class="text2">
-                     Portfolio
-                  </a>
-               </li>
-            <li>
-                  <a href="#" class="text2">
-                     Insights
-                  </a>
-               </li>
-         </ul>
-         <ul class="footer__list">
+               <p>
+                  say hello
+               </p>
+            </li>
             <li>
                <picture>
-               <img src="./img/icons/footer/list/email.svg" alt="Email">
+                  <img src="./img/icons/footer/list/email.svg" alt="Email">
                </picture>
                <a href="mailto:hello@bind.media" class="text2">
                   hello@bind.media
@@ -580,7 +640,7 @@
             </li>
             <li>
                <picture>
-               <img src="./img/icons/footer/list/gb_flag.svg" alt="GB">
+                  <img src="./img/icons/footer/list/gb_flag.svg" alt="GB">
                </picture>
                <a href="tel:01225931074" class="text2">
                   01225 931074
@@ -588,7 +648,7 @@
             </li>
             <li>
                <picture>
-               <img src="./img/icons/footer/list/us_flag.svg" alt="US">
+                  <img src="./img/icons/footer/list/us_flag.svg" alt="US">
                </picture>
                <a href="tel:885678445" class="text2">
                   885 678 445
@@ -596,47 +656,131 @@
             </li>
             <li>
                <picture>
-               <img src="./img/icons/footer/list/canada_flag.svg" alt="Canada">
+                  <img src="./img/icons/footer/list/location.svg" alt="Canada">
                </picture>
-               <a href="tel:4378861262" class="text2">
-                  437 886 1262
+               <a href="" class="text2">
+                  33 Oldfield Rd, Bath BA2 3NE
+               </a>
+            </li>
+            <li>
+               <picture>
+                  <img src="./img/icons/footer/list/start.svg" alt="Canada">
+               </picture>
+               <a href="start.craft.pint" class="text2">
+                  start.craft.pint
                </a>
             </li>
          </ul>
-         <ul class="footer__list">
+         <ul class="footer__list sandy">
+            <li>
+               <p>
+                  our services
+               </p>
+            </li>
+            <li>
+               <a href="#" class="text2">
+                  Paid media
+               </a>
+            </li>
+            <li>
+               <a href="#" class="text2">
+                  Ad creative & landing pages
+               </a>
+            </li>
+            <li>
+               <a href="#" class="text2">
+                  Conversion rate optimisation
+               </a>
+            </li>
+            <li>
+               <a href="#" class="text2">
+                  Web analytics & tech
+               </a>
+            </li>
+         </ul>
+         <ul class="footer__list tomato">
+            <li>
+               <p>
+                  about us
+               </p>
+            </li>
+            <li>
+               <a href="#" class="text2">
+                  About us
+               </a>
+            </li>
+            <li>
+               <a href="#" class="text2">
+                  Case studies
+               </a>
+            </li>
+            <li>
+               <a href="#" class="text2">
+                  Insights
+               </a>
+            </li>
+            <li>
+               <a href="#" class="text2">
+                  Careers
+               </a>
+               <span>
+                     We’re hiring!
+                  </span>
+            </li>
+         </ul>
+         <ul class="footer__list turqoise">
+            <li>
+               <p>
+                  credentials
+               </p>
+            </li>
             <li>
                <a href="#">
                   <picture>
-                  <img src="./img/icons/footer/awards/google.svg" alt="Google Partner">
+                     <img src="./img/icons/footer/awards/google.svg" alt="Google Partner">
                   </picture>
                </a>
             </li>
             <li>
                <a href="#">
                   <picture>
-                  <img src="./img/icons/footer/awards/fb.svg" alt="Facebook">
+                     <img src="./img/icons/footer/awards/fb.svg" alt="Facebook">
                   </picture>
                </a>
             </li>
             <li>
                <a href="#">
                   <picture>
-                  <img src="./img/icons/footer/awards/unbounce.svg" alt="Unbounce">
+                     <img src="./img/icons/footer/awards/drum.svg" alt="Unbounce">
                   </picture>
                </a>
             </li>
             <li>
                <a href="#">
                   <picture>
-                  <img src="./img/icons/footer/awards/ecology.svg" alt="Ecology">
+                     <img src="./img/icons/footer/awards/ecology.svg" alt="Ecology">
                   </picture>
                </a>
             </li>
          </ul>
       </div>
       <div class="footer__bottom">
-         <p class="text2">© Bind Media 2021</p>
-         <a href="#" class="text2">Privacy Policy</a>
+         <div class="footer__bottom-left">
+            <div class="footer__logo">
+               <a href="/">
+                  <picture>
+                     <img src="./img/global/logo.svg" alt="Bind Media">
+                  </picture>
+               </a>
+            </div>
+            <p>
+               © 2022 Bind Media Ltd. Registered in England & Wales       No. 11364140. VAT Reg GB295618559.
+            </p>
+         </div>
+         <div class="footer__bottom-right">
+            <a href="#" class="text2">Cookies</a>
+            <a href="#" class="text2">Privacy Policy</a>
+         </div>
       </div>
    </div>
 </footer>
