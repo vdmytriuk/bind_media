@@ -1,11 +1,15 @@
 .about-us{
+  .title{
+    text-align: center;
+    margin-bottom: 170px;
+  }
   @media(min-width: 789px){
     .section{
       &__image{
-        flex-basis: 50%;
+        //flex-basis: 50%;
       }
       &__info{
-        flex-basis: 40%;
+        flex-basis: 50%;
         p{
           margin-bottom: 60px;
         }

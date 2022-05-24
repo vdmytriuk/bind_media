@@ -1,6 +1,28 @@
 .section{
   margin-top: 100px;
   padding-top: 100px;
+  &.not-reverse{
+    &.section{
+      &:nth-of-type(odd){
+        .container{
+          @media(min-width: 789px){
+            flex-direction: initial;
+          }
+        }
+      }
+    }
+  }
+  &.reverse{
+    &.section{
+      &:nth-of-type(even){
+        .container{
+          @media(min-width: 789px){
+            flex-direction: row-reverse;
+          }
+        }
+      }
+    }
+  }
   @include tablet-m{
     margin-top: 70px;
     padding-top: 50px;
@@ -63,7 +85,7 @@
   }
   &:nth-of-type(even){
     .container {
-      flex-direction: row-reverse;
+      //flex-direction: row-reverse;
       //&:before {
       //  right: 0;
       //  border-top-right-radius: 40px;

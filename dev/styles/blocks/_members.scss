@@ -1,9 +1,29 @@
 .members{
+  margin: 160px 0;
+  @include laptop-s-m {
+  margin: 110px 0;
+}
   &__blocks{
-    @include gridTemplate(4, 1, 0, 65px 27px, 0, 60px 0);
-    margin-top: 80px;
+    //@include gridTemplate(4, 1, 0, 65px 27px, 0, 60px 0);
+    display: flex;
+    flex-wrap: wrap;
+    margin: 96px -13px -13px -13px;
     @include tablet-m{
       margin-top: 20px;
+      display: block;
+      white-space: nowrap;
+      overflow-y: auto;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+  &__block{
+    margin: 13px;
+    width: calc((100% - (13px * 8))/4);
+    @include tablet-m{
+      width: 272px;
+      display: inline-block;
     }
   }
   &__image{
@@ -16,13 +36,12 @@
     @include flexAlignment(center, space-between);
     &-name{
       p{
-        @include font(18px, 600, 32px);
+        @include font(24px, 600, 35px);
         margin-bottom: 7px;
       }
       span{
-        @include font(12px, 600, 14px);
-        color: var(--dark-turqoise);
-        text-transform: uppercase;
+        @include font(18px, 600, 30px);
+        display: block;
       }
     }
     &-socials{
