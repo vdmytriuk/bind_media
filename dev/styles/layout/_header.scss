@@ -127,6 +127,7 @@
 
     .sub-menu{
       position: absolute;
+      pointer-events: none;
       left: 0;
       top: 30px;
       padding-top: 10px;
@@ -211,6 +212,7 @@
           .sub-menu{
             opacity: 1;
             z-index: 0;
+            pointer-events: initial;
           }
        a {
           color: var(--light-blue);
