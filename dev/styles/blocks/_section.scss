@@ -6,6 +6,7 @@
   }
   .top-bg{
     position: absolute;
+    z-index: -1;
   }
   &.not-reverse{
     position: relative;

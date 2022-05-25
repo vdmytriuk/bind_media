@@ -2,6 +2,9 @@
   .title{
     text-align: center;
     margin-bottom: 170px;
+    @include mobile-l{
+      margin-bottom: 61px;
+    }
   }
   @media(min-width: 789px){
     .section{
