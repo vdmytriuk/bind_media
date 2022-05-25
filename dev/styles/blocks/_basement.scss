@@ -1,14 +1,15 @@
-.basement{
-  &__inner{
-    padding: 110px 50px;
+.basement {
+  &__inner {
+    padding: 85px 50px;
     @include laptop-xs {
-      padding: 40px 40px 350px 40px;
+      padding: 50px 35px 304px;
     }
     @include mobile-s {
       padding: 20px 15px 300px 15px;
     }
   }
-  .container{
+
+  .container {
     position: relative;
     background-image: linear-gradient(90deg, #00C0E7 0%, #00E3CF 100%);;
     background-position-x: 0;
@@ -16,7 +17,7 @@
     margin-top: 260px;
     max-width: 1200px;
     z-index: 0;
-    @include laptop-xs{
+    @include laptop-xs {
       margin: 90px 10px 10px 10px;
       background-size: 100%;
     }
@@ -27,15 +28,15 @@
       top: 0;
       right: 0;
       bottom: 0;
-      width: 30%;
+      width: 35%;
       background: linear-gradient(90deg, #FF566D 0%, #FFC33A 100%);
       box-sizing: border-box;
-      transform: rotate(180deg);
       z-index: -3;
-      @include laptop-xs{
+      @include laptop-xs {
         display: none;
       }
     }
+
     &:before {
       content: url("../img/basement/basement_background.png");
       position: absolute;
@@ -45,74 +46,115 @@
       height: 100%;
     }
   }
-  &__persons{
+
+  &__persons {
     position: absolute;
     bottom: 0;
     right: 0;
-    display: flex;
-    align-items: flex-end;
-    justify-content: flex-end;
-    @include laptop-xs{
+    width: 100%;
+    height: 478px;
+
+    @include laptop-xs {
       left: 50%;
-      width: calc(100% - 20px);
-      transform: translate(-50%, -10px);
+      transform: translate(-50%, 0px);
+    }
+    @include tablet-m {
+      height: 265px;
     }
   }
-  &__person{
-    position: relative;
+
+  &__person {
+    position: absolute;
     width: fit-content;
-    &:first-of-type{
-      transform: translate(50%, 0);
-      z-index: 1;
-      @include mobile-xl{
-        position: absolute;
-        left: -10px;
-        transform: none;
+    width: 317px;
+    height: 100%;
+    bottom: 0;
+    right: 0;
+    @include tablet-m {
+      width: 180px;
+    }
+
+    .basement__person-info {
+      bottom: 54px;
+      left: 1px;
+      @include tablet-m {
+        bottom: 19px;
+        left: -24px;
       }
     }
-    &-img{
-      width: fit-content;
-      @include mobile-xl {
-        img {
-          height: 64vw;
+
+    &:first-child {
+      z-index: 1;
+      height: 467px;
+      right: 197px;
+      width: 436px;
+
+      .basement__person-info {
+        bottom: 55px;
+        left: -10px;
+        @include tablet-m {
+          bottom: 19px;
+          left: 24px;
         }
       }
+
+      @include tablet-m {
+        height: 256px;
+        right: 113px;
+        width: 249px;
+      }
     }
-    &-info{
+
+    &-img {
+      height: 100%;
+
+      img {
+        height: 100%;
+        width: 100%;
+        max-width: initial;
+        object-fit: contain;
+      }
+
+    }
+
+    &-info {
       position: absolute;
-      bottom: 20px;
-      left: -10px;
       color: var(--white);
       z-index: 2;
-      @include mobile-xl{
-          left: 30px;
+      @include mobile-xl {
+        left: 30px;
       }
-      &_centered{
-        left: 50%;
-        transform: translate(-50%, 0);
-      }
-      h6 , .text2{
+
+      h6, .text2 {
         line-height: 1;
         width: fit-content;
-        padding: 3px;
+        padding: 2px 3px;
         background: var(--dark-grey);
-        @include mobile-s{
+        @include mobile-s {
           transform: scale(0.8);
         }
       }
-      h6{
-        margin-bottom: 7px;
+
+      h6 {
+        margin-bottom: 5px;
         white-space: nowrap;
       }
     }
   }
-  &__info{
-    //max-width: 640px;
+
+  &__info {
     position: relative;
     z-index: 2;
-    h3{
+
+    h3 {
       color: var(--white);
       margin-bottom: 60px;
+    }
+
+    @include tablet-m {
+      h3 {
+        margin-bottom: 27px;
+      }
     }
 
     .rounded-button {
@@ -130,6 +172,7 @@
 
       &:hover {
         color: var(--light-blue);
+
         &:after {
           content: url(../img/icons/light_arrow_right.svg);
           background: var(--light-blue);
@@ -137,70 +180,81 @@
       }
     }
   }
+
   &_bg {
     .basement__info {
-      @include  laptop-xs {
+      @include laptop-xs {
         padding: 0 45px;
       }
     }
+
     .container {
       background-size: cover;
-      @include  laptop-xs {
+      @include laptop-xs {
         padding: 0;
         margin: 30px 0 0 0;
       }
+
       &:before {
         display: none;
       }
     }
+
     h3 {
-      color:  var(--white);;
+      color: var(--white);;
     }
+
     .basement__inner {
       padding: 70px 50px;
-      @include  laptop-xs {
+      @include laptop-xs {
         padding: 70px 0;
       }
     }
+
     .basement__persons {
-      @include  laptop-xs {
+      @include laptop-xs {
         position: relative;
         bottom: -80px;
       }
     }
+
     .basement__person {
-      @include  laptop-xs {
+      @include laptop-xs {
         width: auto;
-        &:first-of-type{
+        &:first-of-type {
           position: relative;
           width: auto;
           transform: translate(50%, 0);
         }
       }
-      @include mobile-xl{
+      @include mobile-xl {
         width: auto;
         flex-shrink: 0;
       }
     }
-    .basement__person-img  {
+
+    .basement__person-img {
       img {
-        @include mobile-xl{
+        @include mobile-xl {
           object-fit: initial;
         }
       }
 
     }
   }
+
   &_cta {
     .rounded-button {
       display: inline-block;
     }
+
     .container {
       &:before,
       &:after {
         display: none;
       }
     }
+
     .basement__inner {
       text-align: center;
     }

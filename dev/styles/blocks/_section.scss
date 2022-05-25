@@ -66,31 +66,9 @@
   .container{
     position: relative;
     @include flexAlignment(center, space-between, wrap);
-    //&:before {
-    //  content: '';
-    //  position: absolute;
-    //  top: 50%;
-    //  opacity: .1;
-    //  width: 175px;
-    //  height: 360px;
-    //  @include tablet-m{
-    //    top: 150px;
-    //  }
-    //}
   }
   // Changing position for even/odd sections
   &:nth-of-type(odd){
-    .container{
-      //&:before{
-      //  left: 0;
-      //  border-top-left-radius: 40px;
-      //  border-bottom-right-radius: 40px;
-      //  transform: translate(-120px , -50%) skew(-25deg);
-      //  @include tablet-m{
-      //    transform: translate(-60px , -50%) skew(-25deg);
-      //  }
-      //}
-    }
     .section{
       &__image{
         &-award{
@@ -104,18 +82,6 @@
     }
   }
   &:nth-of-type(even){
-    .container {
-      //flex-direction: row-reverse;
-      //&:before {
-      //  right: 0;
-      //  border-top-right-radius: 40px;
-      //  border-bottom-left-radius: 40px;
-      //  transform: translate(120px, -50%) skew(25deg);
-      //  @include tablet-m{
-      //    transform: translate(60px , -50%) skew(25deg);
-      //  }
-      //}
-    }
     .section{
       &__image{
         &-award{
@@ -128,19 +94,6 @@
       }
     }
   }
-  // Colors for backgrounds
-  //&_blue{
-  //  @include sectionBackgroundColor(var(--light-blue))
-  //}
-  //&_sandy{
-  //  @include sectionBackgroundColor(var(--sandy))
-  //}
-  //&_tomato{
-  //  @include sectionBackgroundColor(var(--tomato))
-  //}
-  //&_darkturqoise{
-  //  @include sectionBackgroundColor(var(--dark-turqoise))
-  //}
   // Colors for strong text
   &_blue-to-light{
     @include sectionFontColor(var(--blue-gradient))
@@ -164,7 +117,7 @@
   }
   // Blocks alignment
   &__info{
-    flex-basis: 50%;
+    flex-basis: 57%;
     @include tablet-m {
       flex-basis: 100%;
     }
@@ -180,7 +133,7 @@
   }
   &__image{
     position: relative;
-    flex-basis: calc(45% - 70px);
+    flex-basis: 33%;
     @include tablet-m{
       margin-bottom: 62px;
     }

@@ -3,6 +3,7 @@
     .separator-rd{
       &__bottom{
         max-width: 100%;
+        padding: 0 0 0 73px;
       }
       &__top{
         max-width: 100%;
@@ -13,6 +14,7 @@
         flex: 0 0 480px;
         width: initial;
         height: 240px;
+        margin: 0 0 0 78px;
         &.mobile{
           display: none;
           margin: 40px 6px 6px 6px;
@@ -29,8 +31,10 @@
         }
       }
       &__editor{
-        flex: 0 1 47%;
-        //margin: 0 0 0 104px;
+        flex: 0 1 44%;
+        h3{
+          margin-bottom: 40px;
+        }
       }
     }
   }
@@ -70,7 +74,7 @@
   &__bottom{
     max-width: 752px;
     width: 100%;
-    margin: 85px 0 0 0;
+    margin: 113px 0 0 0;
     padding: 0 0 0 28px;
     ul{
       display: flex;
