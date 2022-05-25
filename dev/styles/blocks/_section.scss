@@ -118,6 +118,7 @@
   // Blocks alignment
   &__info{
     flex-basis: 57%;
+    margin: 0 0 0 47px;
     @include tablet-m {
       flex-basis: 100%;
     }

@@ -4,6 +4,9 @@
       &__bottom{
         max-width: 100%;
         padding: 0 0 0 73px;
+        @include mobile-l{
+          padding: 0 0 0 25px;
+        }
       }
       &__top{
         max-width: 100%;
@@ -18,6 +21,9 @@
         &.mobile{
           display: none;
           margin: 40px 6px 6px 6px;
+          @include mobile-l{
+            margin: 0 6px 6px 6px;
+          }
           &:after{
             width: initial;
             height: initial;
@@ -34,6 +40,11 @@
         flex: 0 1 44%;
         h3{
           margin-bottom: 40px;
+        }
+        @include mobile-l{
+          h3{
+            margin-bottom: 18px;
+          }
         }
       }
     }

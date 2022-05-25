@@ -21,7 +21,7 @@
   max-width: 650px;
   margin: 84px auto 142px;
   @include mobile-l{
-    margin: 121px auto 142px;
+    margin: 121px auto 83px;
   }
   &.blue-to-light{
     span{
@@ -36,6 +36,8 @@
   &__color-text{
       @include font(48px, 400, 60px);
     @include tablet-m{
+      margin: 14px 0 0 0;
+      padding: 0 16px;
       @include font(35px, 400, 45px);
     }
     span{
