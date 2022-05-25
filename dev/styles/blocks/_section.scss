@@ -1,8 +1,21 @@
 .section{
   margin-top: 100px;
   padding-top: 100px;
+  .container{
+    z-index: 2;
+  }
+  .top-bg{
+    position: absolute;
+  }
   &.not-reverse{
+    position: relative;
     &.section{
+      .top-bg{
+        width: 550px;
+        height: 420px;
+        right: 1px;
+        top: -271px;
+      }
       &:nth-of-type(odd){
         .container{
           @media(min-width: 789px){
@@ -13,7 +26,14 @@
     }
   }
   &.reverse{
+    position: relative;
     &.section{
+      .top-bg{
+        top: 205px;
+        left: 1px;
+        width: 250px;
+        height: 420px;
+      }
       &:nth-of-type(even){
         .container{
           @media(min-width: 789px){
