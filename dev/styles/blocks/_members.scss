@@ -4,7 +4,6 @@
   margin: 110px 0;
 }
   &__blocks{
-    //@include gridTemplate(4, 1, 0, 65px 27px, 0, 60px 0);
     display: flex;
     flex-wrap: wrap;
     margin: 96px -13px -13px -13px;
@@ -12,8 +11,7 @@
       margin-top: 20px;
       display: block;
       white-space: nowrap;
-      overflow-y: auto;
-      overflow-x: hidden;
+      overflow-y: scroll;
       &::-webkit-scrollbar {
         display: none;
       }
@@ -22,7 +20,6 @@
   &__block{
     margin: 13px;
     width: calc((100% - (13px * 8))/4);
-    overflow: hidden;
     @include tablet-m{
       width: 272px;
       display: inline-block;
