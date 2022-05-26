@@ -2,7 +2,7 @@
   .title{
     text-align: center;
     margin-bottom: 170px;
-    @include mobile-l{
+    @include laptop-s-m{
       margin-bottom: 61px;
     }
   }

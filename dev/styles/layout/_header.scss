@@ -90,17 +90,10 @@
     }
   }
   &-list{
-    @include flexAlignment(center, flex-end);
-    @include laptop-s-m {
-      flex-wrap: wrap;
-    }
-    a{
-      @include font(14px, 600, 30px)
-    }
-    .menu-item{
+    &>.menu-item{
       position: relative;
       margin-right: 8%;
-      @include laptop-s-m {
+      @include laptop-s-m{
         width: 100%;
         margin-right: 0;
         margin-bottom: 8px;
@@ -113,6 +106,13 @@
           @include font(30px, 400, 60px)
         }
       }
+    }
+    @include flexAlignment(center, flex-end);
+    @include laptop-s-m {
+      flex-wrap: wrap;
+    }
+    a{
+      @include font(14px, 600, 30px)
     }
     a{
       transition: .3s ease-in;

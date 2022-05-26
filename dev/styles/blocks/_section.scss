@@ -16,6 +16,9 @@
         height: 420px;
         right: 1px;
         top: -271px;
+        @include tablet-m{
+          display: none;
+        }
       }
       &:nth-of-type(odd){
         .container{
@@ -34,6 +37,9 @@
         left: 1px;
         width: 250px;
         height: 420px;
+        @include tablet-m{
+          top: 362px;
+        }
       }
       &:nth-of-type(even){
         .container{
