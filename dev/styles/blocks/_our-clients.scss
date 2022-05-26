@@ -4,20 +4,36 @@
     margin-top: 31px;
   }
   &__blocks{
-    @include flexAlignment(center, space-between, wrap);
-    margin-right: -5%;
-    @include mobile-xl {
-      flex-wrap: nowrap;
-      overflow-x: scroll;
+    display: flex;
+    flex-wrap: wrap;
+    margin: -22px -40px;
+    //@include flexAlignment(center, space-between, wrap);
+    //margin-right: -5%;
+    @include laptop-xs {
+      display: block;
+      white-space: nowrap;
+      overflow-x: auto;
       &::-webkit-scrollbar {
         display: none;
       }
     }
   }
   &__block{
-    margin-right: 3%;
-    @include mobile-xl {
-      flex: none;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    margin: 22px 40px;
+    width: calc((100% - (40px * 10))/5);
+    height: 100px;
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
+    //margin-right: 3%;
+    @include laptop-xs {
+      width: auto;
+      max-width: 286px;
+      }
   }
 }

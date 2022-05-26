@@ -1,9 +1,7 @@
 .section{
   margin-top: 100px;
   padding-top: 100px;
-  .container{
-    z-index: 2;
-  }
+
   .top-bg{
     position: absolute;
     z-index: -1;
@@ -72,6 +70,10 @@
   // Container settings & create global background styles
   .container{
     position: relative;
+    z-index: 2;
+    &.top-img{
+      align-items: initial;
+    }
     @include flexAlignment(center, space-between, wrap);
   }
   // Changing position for even/odd sections
@@ -127,6 +129,7 @@
     flex-basis: 57%;
     margin: 0 0 0 47px;
     @include tablet-m {
+      margin: 0;
       flex-basis: 100%;
     }
     p{
@@ -158,6 +161,65 @@
     }
     @include tablet-m {
       flex-basis: 100%;
+    }
+  }
+  &__table{
+    &.double-column{
+      ul{
+        margin: -35px -50px;
+        li{
+          strong{
+            font-size: 18px;
+            line-height: 24px;
+            font-weight: 700;
+          }
+          margin: 35px 50px;
+          width: calc((100% - (50px* 4))/2);
+          @include laptop-s-m {
+                width: calc((100% - (50px* 2)));
+          }
+        }
+      }
+    }
+    ul{
+      display: flex;
+      flex-wrap: wrap;
+      margin: 55px -32px -15px;
+      @include mobile-xl{
+        margin: 25px -15px -15px;
+      }
+      li{
+      margin: 50px 32px;
+      width: calc((100% - (32px * 6))/3);
+      position: relative;
+      padding: 0 0 0 31px;
+      @include laptop-xs {
+        width: calc((100% - (32px * 4))/2);
+      }
+      @include mobile-xl {
+        margin: 15px;
+        width: calc((100% - (15px * 2)));
+      }
+      &:before{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 1px;
+        background: var(--light-blue);
+      }
+    p{
+      font-size: 18px;
+      line-height: 30px;
+      strong{
+        display: block;
+        font-size: 24px;
+        line-height: 35px;
+        margin: 0 0 23px;
+      }
+    }
+    }
     }
   }
   &__numbers{

@@ -2,6 +2,9 @@
   position: relative;
   margin: 0 10px 10px 10px;
   width: fit-content;
+  &.custom-shadow{
+    box-shadow: 0px 35px 70px rgba(180, 202, 223, 0.3);
+  }
   &__banner{
     position: absolute;
     right: -39px;
