@@ -48,6 +48,16 @@
       }
     }
   }
+  &.order-mod{
+    .section{
+      &__info{
+        order: 2;
+        @include tablet-m{
+          order: initial;
+        }
+      }
+    }
+  }
   @include tablet-m{
     margin-top: 70px;
     padding-top: 50px;
@@ -81,6 +91,13 @@
     .section{
       &__image{
         &-award{
+          &.to-right{
+            left: 0;
+            transform: translate(50%, 50%);
+            @include tablet-m{
+              transform: translate(10%, 50%);
+            }
+          }
           left: 0;
           transform: translate(-50%, 50%);
           @include tablet-m{
@@ -94,6 +111,13 @@
     .section{
       &__image{
         &-award{
+          &.to-left{
+            left: 0;
+            transform: translate(-50%, 50%);
+            @include tablet-m{
+              transform: translate(-10%, 50%);
+            }
+          }
           right: 0;
           transform: translate(50%, 50%);
           @include tablet-m{
@@ -126,6 +150,25 @@
   }
   // Blocks alignment
   &__info{
+    &.full-page-st{
+      margin: 0;
+      flex-basis: 100%;
+      p{
+        max-width: 695px;
+      }
+    }
+    &.short-text-st{
+      margin: 0 50px 0 0;
+      p{
+        max-width: 545px;
+      }
+      @include tablet-m{
+        margin: 0;
+        p{
+          max-width: 100%;
+        }
+      }
+    }
     flex-basis: 57%;
     margin: 0 0 0 47px;
     @include tablet-m {
@@ -149,7 +192,13 @@
       margin-bottom: 62px;
     }
     &-img{
+      max-height: 506px;
       box-shadow: 0px 72px 124px rgba(0, 0, 0, 0.121831);
+      &.center-img{
+        @include tablet-m{
+          margin: 0 auto;
+        }
+      }
     }
     &-award{
       position: absolute;
@@ -164,6 +213,55 @@
     }
   }
   &__table{
+    &.orange-table{
+      li{
+        &:before{
+          background: var(--sandy);
+        }
+        &:nth-child(6n-3), &:nth-child(6n-4), &:nth-child(6n-5){
+          &:before{
+            background: var(--tomato);
+          }
+        }
+      }
+    }
+    &.blue-table{
+      li{
+        &:before{
+          background: #00E3CF;
+        }
+        &:nth-child(6n-3), &:nth-child(6n-4), &:nth-child(6n-5){
+          &:before{
+            background: #01C2E6;
+          }
+        }
+      }
+    }
+    &.blue-table-v{
+      li{
+        &:before{
+          background: #00E3CF;
+        }
+        &:nth-child(2n+1),{
+          &:before{
+            background: #01C2E6;
+          }
+        }
+      }
+    }
+    &.orange-table-v{
+      li{
+        &:before{
+          background: var(--sandy);
+        }
+        &:nth-child(2n+1),{
+          &:before{
+            background: var(--tomato);
+          }
+        }
+      }
+    }
+
     &.double-column{
       ul{
         margin: -35px -50px;
@@ -214,6 +312,7 @@
       line-height: 30px;
       strong{
         display: block;
+        font-weight: 700;
         font-size: 24px;
         line-height: 35px;
         margin: 0 0 23px;

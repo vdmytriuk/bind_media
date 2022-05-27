@@ -300,8 +300,9 @@ var Site = {
     },
 
     modal: ()=> {
-        const modalTrigger = document.querySelectorAll('.js-modal')
         const modalLayout = document.querySelector('.modal')
+        if(modalLayout){
+        const modalTrigger = document.querySelectorAll('.js-modal')
         const modalClose = document.querySelector('.modal__close')
         modalTrigger.forEach(item => {
             item.addEventListener('click', ()=> {
@@ -317,6 +318,7 @@ var Site = {
             modalLayout.classList.remove('active')
             document.querySelector('body').style.overflow = 'visible'
         })
+        }
     },
 
     beforeAfter: ()=> {
