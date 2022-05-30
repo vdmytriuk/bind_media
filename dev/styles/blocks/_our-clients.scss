@@ -3,12 +3,31 @@
   @include laptop-xs {
     margin-top: 31px;
   }
+  &.cro-stack{
+    .our-clients{
+      &__block{
+        width: calc((100% - (40px * 12))/6);
+        @include laptop-s-m{
+          width: auto;
+          max-width: 286px;
+        }
+      }
+      &__blocks{
+        @include laptop-s-m{
+          display: block;
+          white-space: nowrap;
+          overflow-x: auto;
+          &::-webkit-scrollbar {
+            display: none;
+          }
+        }
+      }
+    }
+  }
   &__blocks{
     display: flex;
     flex-wrap: wrap;
     margin: -22px -40px;
-    //@include flexAlignment(center, space-between, wrap);
-    //margin-right: -5%;
     @include laptop-xs {
       display: block;
       white-space: nowrap;
