@@ -7,7 +7,7 @@ var Site = {
         this.headerBurger();
         this.headerScroll();
         this.headerDropdown();
-        this.clientsScroll();
+        // this.clientsScroll();
         this.initLibs();
         this.customSelect();
         this.customSelectForm();
@@ -61,11 +61,11 @@ var Site = {
         }
     },
 
-    clientsScroll: ()=> {
-        if($(window).width() <= 541) {
-            $('.our-clients__blocks').animate({scrollLeft: 1400}, 20000);
-        }
-    },
+    // clientsScroll: ()=> {
+    //     if($(window).width() <= 541) {
+    //         $('.our-clients__blocks').animate({scrollLeft: 1400}, 20000);
+    //     }
+    // },
 
     initLibs: ()=> {
         $('.reviews__slider').slick({
