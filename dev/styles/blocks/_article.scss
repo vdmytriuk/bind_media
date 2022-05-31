@@ -1,6 +1,12 @@
 .article {
   padding-top: 0;
   margin-top: 0;
+  .container{
+    display: block;
+    align-items: initial;
+    justify-content: initial;
+    flex-wrap: initial;
+  }
 
   &__info {
     display: flex;
@@ -37,12 +43,45 @@
 
   .quote__heading {
     padding-top: 0;
-    flex-basis: auto;
-    width: auto;
+    //flex-basis: auto;
+    min-width: initial;
+    justify-content: space-between;
+    width: 100%;
     margin-bottom: 60px;
     align-items: center;
     @include laptop-xs {
       order: 0;
+    }
+    @include mobile-l{
+      .quote__img{
+        width: 60px;
+        height: 60px;
+        margin-top: 85px;
+      }
+    }
+  }
+
+  .quote__content{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    @include mobile-l{
+      flex-direction: column;
+      align-items: flex-start;
+      .quote__title{
+        margin-top: 40px;
+        order: 2;
+      }
+    }
+    .grid__item-tag{
+      height: 40px;
+      margin: 0 0 0 40px;
+      @include mobile-l{
+        order: 1;
+        margin: 0 0 0 -60px;
+        flex-basis: auto;
+      }
     }
   }
 
@@ -61,7 +100,12 @@
     margin: 0 auto;
     max-width: 840px;
     width: 100%;
-
+    .form-wrap{
+      h3{
+        text-align: initial;
+        margin: 0;
+      }
+    }
     h2, h3, h4 {
       text-align: center;
       font-size: 48px;
@@ -261,7 +305,7 @@
 
 .social-share {
   position: absolute;
-  top: 65px;
+  top: 290px;
   left: -30px;
 
   @media (max-width: 1190px) {
