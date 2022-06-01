@@ -1,7 +1,6 @@
 .section{
   position: relative;
   margin: 150px 0;
-  //padding-top: 100px;
 
   .top-bg{
     position: absolute;
@@ -14,46 +13,9 @@
       display: none;
     }
   }
-  //&.not-reverse{
-  //  position: relative;
-  //  &.section{
-  //    .top-bg{
-  //      width: 550px;
-  //      height: 420px;
-  //      right: 1px;
-  //      top: -271px;
-  //      @include tablet-m{
-  //        display: none;
-  //      }
-  //    }
-  //    &:nth-of-type(odd){
-  //      .container{
-  //        @media(min-width: 789px){
-  //          flex-direction: initial;
-  //        }
-  //      }
-  //    }
-  //  }
-  //}
-  //&.order-mod{
-  //  .section{
-  //    &__info{
-  //      order: 2;
-  //      @include tablet-m{
-  //        order: initial;
-  //      }
-  //    }
-  //  }
-  //}
   @include tablet-m{
     margin-top: 70px;
-    //padding-top: 50px;
   }
-
-  //&:first-of-type {
-  //  margin-top: 0;
-  //  padding-top: 0;
-  //}
 
   .arrow-button:hover{
     color: var(--dark-grey);
@@ -73,47 +35,6 @@
     }
     @include flexAlignment(center, space-between, wrap);
   }
-  // Changing position for even/odd sections
-  //&:nth-of-type(odd){
-  //  .section{
-  //    &__image{
-  //      &-award{
-  //        &.to-right{
-  //          left: 0;
-  //          transform: translate(50%, 50%);
-  //          @include tablet-m{
-  //            transform: translate(10%, 50%);
-  //          }
-  //        }
-  //        left: 0;
-  //        transform: translate(-50%, 50%);
-  //        @include tablet-m{
-  //          transform: translate(-10%, 50%);
-  //        }
-  //      }
-  //    }
-  //  }
-  //}
-  //&:nth-of-type(even){
-  //  .section{
-  //    &__image{
-  //      &-award{
-  //        &.to-left{
-  //          left: 0;
-  //          transform: translate(-50%, 50%);
-  //          @include tablet-m{
-  //            transform: translate(-10%, 50%);
-  //          }
-  //        }
-  //        right: 0;
-  //        transform: translate(50%, 50%);
-  //        @include tablet-m{
-  //          transform: translate(10%, 50%);
-  //        }
-  //      }
-  //    }
-  //  }
-  //}
   // Colors for strong text
   &_blue-to-light{
     @include sectionFontColor(var(--blue-gradient))
