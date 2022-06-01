@@ -13,7 +13,7 @@ var Site = {
         this.customSelectForm();
         this.formTabs();
         this.modal();
-        this.theme();
+        // this.theme();
     },
 
     headerBurger: ()=> {
@@ -325,13 +325,13 @@ var Site = {
         document.getElementById('compare').style.width = document.getElementById('compareSlider').value + "%";
     },
 
-    theme: ()=> {
-        const body = document.querySelector('body');
-        const root = document.querySelector(':root');
-
-        if (body.classList.contains('tomato')) {
-            root.style.setProperty('--blue-gradient', 'linear-gradient(90.63deg, #FF566D 41.32%, #FFC33A 99.54%)');
-            root.style.setProperty('--light-blue', '#F84E6C')
-        }
-    }
+    // theme: ()=> {
+    //     const body = document.querySelector('body');
+    //     const root = document.querySelector(':root');
+    //
+    //     if (body.classList.contains('tomato')) {
+    //         root.style.setProperty('--blue-gradient', 'linear-gradient(90.63deg, #FF566D 41.32%, #FFC33A 99.54%)');
+    //         root.style.setProperty('--light-blue', '#F84E6C')
+    //     }
+    // }
 };

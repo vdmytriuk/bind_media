@@ -171,11 +171,11 @@
       }
 
       &:hover {
-        color: var(--light-blue);
+        color: #00C0E7;
 
         &:after {
           content: url(../img/icons/light_arrow_right.svg);
-          background: var(--light-blue);
+          background: #00C0E7;
         }
       }
     }

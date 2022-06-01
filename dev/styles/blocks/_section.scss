@@ -14,7 +14,7 @@
     }
   }
   @include tablet-m{
-    margin-top: 70px;
+    margin: 70px 0;
   }
 
   .arrow-button:hover{
@@ -138,11 +138,11 @@
     &.blue-table{
       li{
         &:before{
-          background: #00E3CF;
+          background: var(--light-green);
         }
         &:nth-child(6n-3), &:nth-child(6n-4), &:nth-child(6n-5){
           &:before{
-            background: #01C2E6;
+            background: var(--light-blue);
           }
         }
       }
@@ -150,11 +150,11 @@
     &.blue-table-v{
       li{
         &:before{
-          background: #00E3CF;
+          background: var(--light-green);
         }
         &:nth-child(2n+1),{
           &:before{
-            background: #01C2E6;
+            background: var(--light-blue);
           }
         }
       }

@@ -1,5 +1,5 @@
 
-:root {
+body {
   // Gradients
   --blue-gradient: linear-gradient(90.63deg, #00c0e7 66.17%, #00E3CF 98.31%);
   --blue-gradient-reverse: linear-gradient(90.63deg, #00E3CF 66.17%, #00C0E7 98.31%);
@@ -8,12 +8,25 @@
   --hero-gradient: linear-gradient(90.66deg, #00C0E7 0.66%, #00D1E3 62.5%);
   // Colors
   --light-blue: #00C0E7;
+  --light-green: #00E3CF;
   --white: #ffffff;
   --dark-grey: #303E55;
   --sandy: #FFC33A;
   --tomato: #F84E6C;
   --dark-turqoise: #00E3CF;
   --disabled: #E6E6E6;
+}
+
+.tomato{
+    --blue-gradient: linear-gradient(90.63deg, #FF566D 41.32%, #FFC33A 99.54%);
+    --light-blue: #F84E6C;
+    --light-green: #F84E6C;
+}
+
+.blue{
+  --orange-gradient: linear-gradient(90.63deg, #00c0e7 66.17%, #00E3CF 98.31%);
+  --tomato: #00C0E7;
+  --sandy: #00E3CF;
 }
 
 
