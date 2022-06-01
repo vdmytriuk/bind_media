@@ -42,16 +42,16 @@
         }
 
       }
-        &:nth-of-type(even){
-          .container{
-            flex-direction: row;
-          }
-        }
-        &:nth-of-type(odd){
-          .container {
-            flex-direction: row-reverse;
-          }
-        }
+        //&:nth-of-type(even){
+        //  .container{
+        //    flex-direction: row;
+        //  }
+        //}
+        //&:nth-of-type(odd){
+        //  .container {
+        //    flex-direction: row-reverse;
+        //  }
+        //}
       }
   }
 
