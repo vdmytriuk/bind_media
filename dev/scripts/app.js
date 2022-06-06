@@ -19,18 +19,25 @@ var Site = {
     headerBurger: ()=> {
         let burger = document.querySelector('.header__burger-lines');
         let offCanvas = document.querySelector('.header__content');
+        let body = document.querySelector('body');
+
         burger.addEventListener('click', ()=>{
             if (burger.classList.contains('active')) {
                 burger.classList.remove('active');
+                body.classList.remove('body-lock');
             }
             else {
                 burger.classList.add('active');
+                body.classList.add('body-lock');
+                body.classList.add('body-lock');
             }
             if (offCanvas.classList.contains('active')) {
                 offCanvas.classList.remove('active');
+                body.classList.remove('body-lock');
             }
             else {
                 offCanvas.classList.add('active');
+                body.classList.add('body-lock');
             }
         });
     },
@@ -50,12 +57,10 @@ var Site = {
     headerDropdown: ()=> {
         if(window.screen.width <= 1199){
             let menuItems = document.querySelectorAll('.menu-item.menu-item-has-children>a');
-            let body = document.querySelector('body');
             menuItems.forEach(item => {
                 item.onclick = (e) => {
                     e.preventDefault();
                     item.parentNode.classList.toggle('active');
-                    body.classList.toggle('body-lock');
                 }
             })
         }
