@@ -2,8 +2,9 @@
   position: relative;
   display: block;
   background: transparent;
-  padding: 13px 73px 14px 32px;
+  padding: 14px 74px 14px 32px;
   width: fit-content;
+  max-width: 100%;
   color: var(--dark-grey);
   @include font(16px, 900, 22px);
   border-radius: 100px;
@@ -97,4 +98,11 @@
       }
     }
   }
+}
+
+.button-centred-wrapper{
+  position: relative;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%);
 }
