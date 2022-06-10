@@ -133,8 +133,57 @@
             background: var(--tomato);
           }
         }
+        @include laptop-xs {
+          &:nth-child(2n+1),{
+            &:before{
+              background: var(--tomato);
+            }
+          }
+          &:nth-child(2n+2),{
+            &:before{
+              background: var(--sandy);
+            }
+          }
+        }
+        @include mobile-xl {
+          &:nth-child(6n-3), &:nth-child(6n-4), &:nth-child(6n-5){
+            &:before{
+              background: var(--tomato);
+            }
+          }
+          &:nth-child(6n-2), &:nth-child(6n-1), &:nth-child(6n){
+            &:before{
+              background: var(--sandy);
+            }
+          }
+        }
       }
     }
+    &.orange-table-v{
+      li{
+        &:before{
+          background: var(--sandy);
+        }
+        &:nth-child(2n+1),{
+          &:before{
+            background: var(--tomato);
+          }
+        }
+        @include laptop-s-m {
+          &:nth-child(6n-3), &:nth-child(6n-4), &:nth-child(6n-5){
+            &:before{
+              background: var(--tomato);
+            }
+          }
+          &:nth-child(6n-2), &:nth-child(6n-1), &:nth-child(6n){
+            &:before{
+              background: var(--sandy);
+            }
+          }
+        }
+      }
+    }
+
     &.blue-table{
       li{
         &:before{
@@ -155,18 +204,6 @@
         &:nth-child(2n+1),{
           &:before{
             background: var(--light-blue);
-          }
-        }
-      }
-    }
-    &.orange-table-v{
-      li{
-        &:before{
-          background: var(--sandy);
-        }
-        &:nth-child(2n+1),{
-          &:before{
-            background: var(--tomato);
           }
         }
       }

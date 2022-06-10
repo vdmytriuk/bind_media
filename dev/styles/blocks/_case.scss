@@ -154,6 +154,7 @@
   }
 
   .hero__image {
+    flex-basis: 100%;
     + .hero__image {
       margin-left: 80px;
       @include laptop-xs {
