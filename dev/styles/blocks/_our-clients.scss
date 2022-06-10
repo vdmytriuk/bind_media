@@ -24,6 +24,28 @@
       }
     }
   }
+  &.modal-clients{
+    margin: 100px 0 0 0;
+    .our-clients{
+      &__block{
+        width: calc((100% - (15px * 8))/4);
+        margin: 0 15px;
+        @include mobile-xl{
+          margin: 15px;
+          width: calc((100% - (15px * 4))/2);
+        }
+      }
+      &__blocks{
+        margin: 0 -15px;
+        @include mobile-xl{
+          display: flex!important;
+          white-space: initial!important;
+          overflow-x: initial!important;
+          margin: -15px;
+        }
+      }
+    }
+  }
   &__blocks{
     display: flex;
     flex-wrap: wrap;
