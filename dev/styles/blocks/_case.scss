@@ -48,16 +48,18 @@
 
   &__tags {
     display: flex;
+    flex-wrap: wrap;
     margin: 0 -11px;
     @include laptop-xs {
-      margin: 0 -8px;
+      margin: 20px -8px;
       order: 3;
     }
 
     .grid__item-tag {
-      margin: 0 11px;
+      margin: 5px 11px;
+      max-height: 40px;
       @include laptop-xs {
-        margin: 0 8px;
+        margin: 5px 8px;
       }
     }
   }
