@@ -92,7 +92,7 @@
   &-list{
     &>.menu-item{
       position: relative;
-      margin-right: 8%;
+      margin-right: 50px;
       @include laptop-s-m{
         width: 100%;
         margin-right: 0;
@@ -124,7 +124,11 @@
     }
   }
   .menu-item-has-children{
-
+    @media(min-width: 1199px){
+      cursor: pointer;
+      margin-right: 25px;
+    padding-right: 25px;
+    }
     .sub-menu{
       position: absolute;
       pointer-events: none;
@@ -270,7 +274,7 @@
       vertical-align: middle;
       width: 18px;
       height: 13px;
-      overflow: hidden;
+      //overflow: hidden;
       transition: .25s ease-in-out;
       @media (min-width: 375px) {
         transform: scale(1.5);
@@ -278,22 +282,22 @@
       &.active{
         span{
           &:nth-child(1){
-            top: 10.5px!important;
-            left: 50%;
-            width: 0%;
+            top: 5px!important;
+            opacity: 0;
           }
           &:nth-child(2){
             left: 0!important;
             transform: rotate(45deg);
+            transition-delay: 200ms;
           }
           &:nth-child(3){
             left: 0!important;
             transform: rotate(-45deg);
+            transition-delay: 200ms;
           }
           &:nth-child(4){
-            top: 10.5px!important;
-            left: 50%;
-            width: 0%;
+            top: 5px!important;
+            opacity: 0;
           }
         }
       }

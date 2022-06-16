@@ -3,11 +3,9 @@
   &__top{
     margin: 0 0 75px 0;
     p{
-      font-size: 12px;
-      line-height: 73px;
-      letter-spacing: 0.39em;
-      text-transform: uppercase;
+      @extend .subtitle
     }
+
   }
   &__content{
     position: relative;
@@ -18,8 +16,8 @@
   &__bg{
     position: absolute;
     top: -201px;
-    right: -131px;
-    width: 499px;
+    right: -385px;
+    width: 740px;
     height: 396px;
   }
   &__right{

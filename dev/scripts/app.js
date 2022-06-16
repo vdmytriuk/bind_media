@@ -86,10 +86,6 @@ var Site = {
         document.querySelectorAll('.custom-select').forEach(setupSelector);
         let counter = 0;
         function setupSelector(selector) {
-            selector.addEventListener('change', e => {
-                console.log('changed', e.target.value)
-            })
-
             selector.addEventListener('mousedown', e => {
                 if(window.innerWidth >= 1 && counter === 0) {
                     e.preventDefault();
@@ -128,7 +124,21 @@ var Site = {
                             counter = 0;
                         }
                     });
+                    document.addEventListener('scroll', (e) => {
+                        if(!selector.contains(e.target)) {
+                            dropDown.remove();
+                            selector.classList.remove('active');
+                            counter = 0;
+                        }
+                    });
                 } else {
+                    let activeSelector =document.querySelector('.custom-select.active');
+                    let dropDown = document.querySelector('.custom-select>ul');
+                    if(activeSelector){
+                        dropDown.remove();
+                        selector.classList.remove('active');
+                        counter = 0;
+                    }
                     e.preventDefault();
                 }
             });
