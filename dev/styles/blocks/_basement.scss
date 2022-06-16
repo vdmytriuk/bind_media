@@ -78,6 +78,7 @@
       bottom: 54px;
       left: 1px;
       @include tablet-m {
+        max-width: 120px;
         bottom: 19px;
         left: -24px;
       }
