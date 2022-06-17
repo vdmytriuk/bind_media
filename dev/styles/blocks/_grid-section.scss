@@ -3,6 +3,7 @@
     .container{
       @include flexAlignment(center, flex-start, wrap);
       .subtitle{
+        margin: 0;
         margin-right: 30px;
       }
     }
