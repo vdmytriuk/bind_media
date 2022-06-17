@@ -142,6 +142,34 @@
       li{
         padding: 0 24px 16px;
         background-color: #F7FAFD;
+        &.hover_red{
+          &:hover{
+            a{
+              color: #F84E6C!important;
+            }
+          }
+        }
+        &.hover_green{
+          &:hover{
+            a{
+              color: #00E3CF!important;
+            }
+          }
+        }
+        &.hover_blue{
+          &:hover{
+            a{
+              color: #00C0E7!important;
+            }
+          }
+        }
+        &.hover_yellow{
+          &:hover{
+            a{
+              color: #FFC33A!important;
+            }
+          }
+        }
         &:first-of-type{
           padding-top: 24px;
         }
@@ -151,9 +179,6 @@
         a{
           color: inherit!important;
           transition: .3 ease-in;
-          &:hover{
-            color: var(--light-blue)!important;
-          }
           &:before , &:after{
             display: none;
           }
