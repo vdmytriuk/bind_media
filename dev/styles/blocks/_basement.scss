@@ -77,6 +77,9 @@
     .basement__person-info {
       bottom: 54px;
       left: 1px;
+      h6{
+        white-space: initial!important;
+      }
       @include tablet-m {
         max-width: 120px;
         bottom: 19px;
