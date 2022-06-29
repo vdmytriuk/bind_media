@@ -56,6 +56,10 @@ var Site = {
 
     headerDropdown: ()=> {
         if(window.screen.width <= 1199){
+            let createArrow = document.createElement('div');
+            createArrow.className = 'menu-item__arrow';
+            let children = document.querySelector('.menu-item.menu-item-has-children');
+            children.appendChild(createArrow);
             let menuItems = document.querySelectorAll('.menu-item.menu-item-has-children>.menu-item__arrow');
             menuItems.forEach(item => {
                 item.onclick = (e) => {
@@ -65,12 +69,6 @@ var Site = {
             })
         }
     },
-
-    // clientsScroll: ()=> {
-    //     if($(window).width() <= 541) {
-    //         $('.our-clients__blocks').animate({scrollLeft: 1400}, 20000);
-    //     }
-    // },
 
     initLibs: ()=> {
         $('.reviews__slider').slick({
@@ -340,13 +338,4 @@ var Site = {
         document.getElementById('compare').style.width = document.getElementById('compareSlider').value + "%";
     },
 
-    // theme: ()=> {
-    //     const body = document.querySelector('body');
-    //     const root = document.querySelector(':root');
-    //
-    //     if (body.classList.contains('tomato')) {
-    //         root.style.setProperty('--blue-gradient', 'linear-gradient(90.63deg, #FF566D 41.32%, #FFC33A 99.54%)');
-    //         root.style.setProperty('--light-blue', '#F84E6C')
-    //     }
-    // }
 };
