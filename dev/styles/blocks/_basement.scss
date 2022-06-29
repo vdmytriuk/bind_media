@@ -1,4 +1,7 @@
 .basement {
+  @include tablet-m {
+    overflow: hidden;
+  }
   &__inner {
     padding: 85px 50px;
     @include laptop-xs {
@@ -71,7 +74,7 @@
     bottom: 0;
     right: 0;
     @include tablet-m {
-      width: 180px;
+      width: 176px;
     }
 
     .basement__person-info {
@@ -85,6 +88,9 @@
         bottom: 19px;
         left: -24px;
       }
+      @media(max-width: 374px){
+        left: 30px;
+      }
     }
 
     &:first-child {
@@ -92,6 +98,10 @@
       height: 467px;
       right: 197px;
       width: 436px;
+      @media(max-width: 374px){
+        right: initial;
+        left: -10px;
+      }
 
       .basement__person-info {
         bottom: 55px;

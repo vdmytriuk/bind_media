@@ -56,7 +56,7 @@ var Site = {
 
     headerDropdown: ()=> {
         if(window.screen.width <= 1199){
-            let menuItems = document.querySelectorAll('.menu-item.menu-item-has-children>a');
+            let menuItems = document.querySelectorAll('.menu-item.menu-item-has-children>.menu-item__arrow');
             menuItems.forEach(item => {
                 item.onclick = (e) => {
                     e.preventDefault();
