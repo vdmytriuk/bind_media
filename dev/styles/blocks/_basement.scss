@@ -183,13 +183,14 @@
       &:before {
         background: white;
       }
+      @media (min-width: 1199px) {
+        &:hover {
+          color: #00C0E7;
 
-      &:hover {
-        color: #00C0E7;
-
-        &:after {
-          content: url(../img/icons/light_arrow_right.svg);
-          background: #00C0E7;
+          &:after {
+            content: url(../img/icons/light_arrow_right.svg);
+            background: #00C0E7;
+          }
         }
       }
     }

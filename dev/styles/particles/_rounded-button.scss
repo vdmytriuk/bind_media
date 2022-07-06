@@ -51,14 +51,16 @@
     width: 41px;
     height: 41px;
   }
-  &:hover{
-    color: var(--white);
-    &:before{
-      transform: translateX(0);
-    }
-    &:after{
-      content: url("../img/icons/blue_arrow_right.svg");
-      background: var(--white);
+  @media(min-width: 1199px){
+    &:hover{
+      color: var(--white);
+      &:before{
+        transform: translateX(0);
+      }
+      &:after{
+        content: url("../img/icons/blue_arrow_right.svg");
+        background: var(--white);
+      }
     }
   }
   &:disabled{
