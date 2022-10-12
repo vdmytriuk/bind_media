@@ -56,6 +56,9 @@
   &__top{
     max-width: 580px;
     margin: 20px 0 0 0;
+    h2{
+      @extend h3
+    }
   }
   &__right{
     margin: 0 0 0 30px;
@@ -95,7 +98,7 @@
         position: relative;
         width: calc((100% - (24px * 4)) / 2);
         margin: 45px 24px;
-        p{
+        h3{
           position: relative;
           z-index: 2;
           strong, a{

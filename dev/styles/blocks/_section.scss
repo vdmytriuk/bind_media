@@ -1,113 +1,141 @@
-.section{
+.section {
   position: relative;
   margin: 150px 0;
 
-  .top-bg{
+  .top-bg {
     position: absolute;
     z-index: -1;
     width: 550px;
     height: 420px;
     right: 1px;
     top: -271px;
-    @include tablet-m{
+    @include tablet-m {
       display: none;
     }
   }
-  @include tablet-m{
+
+  @include tablet-m {
     margin: 70px 0;
   }
 
-  .arrow-button:hover{
+  .arrow-button:hover {
     color: var(--dark-grey);
   }
-  .arrow-button:hover .arrow-button__arrow{
+
+  .arrow-button:hover .arrow-button__arrow {
     background-color: var(--dark-grey);
   }
-  .arrow-button:hover .arrow-button__circle{
+
+  .arrow-button:hover .arrow-button__circle {
     border-color: var(--dark-grey);
   }
+
   // Container settings & create global background styles
-  .container{
+  .container {
     position: relative;
     z-index: 2;
-    &.top-img{
+
+    &.top-img {
       align-items: initial;
     }
+
     @include flexAlignment(center, space-between, wrap);
   }
+
   // Colors for strong text
-  &_blue-to-light{
+  &_blue-to-light {
     @include sectionFontColor(var(--blue-gradient))
   }
-  &_light-to-blue{
+
+  &_light-to-blue {
     @include sectionFontColor(var(--blue-gradient-reverse))
   }
-  &_orange-to-red{
+
+  &_orange-to-red {
     @include sectionFontColor(var(--orange-gradient-reverse))
   }
-  &_red-to-orange{
+
+  &_red-to-orange {
     @include sectionFontColor(var(--orange-gradient))
   }
-  // Global text
-  h3{
 
-    strong{
+  // Global text
+  h3 {
+
+    strong {
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
   }
+
   // Blocks alignment
-  &__info{
-    &.full-page-st{
+  &__info {
+    &.full-page-st {
       margin: 0;
       flex-basis: 100%;
-      p{
+
+      p {
         max-width: 695px;
       }
     }
-    &.short-text-st{
+
+    &.short-text-st {
       margin: 0 50px 0 0;
-      p{
+
+      p {
         max-width: 545px;
       }
-      @include tablet-m{
+
+      @include tablet-m {
         margin: 0;
-        p{
+        p {
           max-width: 100%;
         }
       }
     }
+
     flex-basis: 57%;
     @include tablet-m {
       margin: 0;
       flex-basis: 100%;
     }
-    p{
+
+    h2 {
+      @extend h3
+    }
+
+    p {
       margin-bottom: 22px;
     }
-    .subtitle{
+
+    .subtitle {
       margin-bottom: 0;
     }
-    &-icon{
+
+    &-icon {
       margin-bottom: 30px;
     }
   }
-  &__image{
+
+  &__image {
     position: relative;
     flex-basis: 33%;
-    @include tablet-m{
+    @include tablet-m {
       margin-bottom: 62px;
     }
-    &-img{
+
+    &-img {
       max-height: 506px;
       box-shadow: 0px 72px 124px rgba(0, 0, 0, 0.121831);
-      &.center-img{
-        @include tablet-m{
+
+      &.center-img {
+        @include tablet-m {
           margin: 0 auto;
         }
       }
     }
-    &-award{
+
+    &-award {
       position: absolute;
       bottom: 0;
       left: 0;
@@ -118,65 +146,72 @@
         transform: translate(0, 50%);
       }
     }
+
     @include tablet-m {
       flex-basis: 100%;
     }
   }
-  &__table{
-    &.orange-table{
-      li{
-        &:before{
+
+  &__table {
+    &.orange-table {
+      li {
+        &:before {
           background: var(--sandy);
         }
-        &:nth-child(6n-3), &:nth-child(6n-4), &:nth-child(6n-5){
-          &:before{
+
+        &:nth-child(6n-3), &:nth-child(6n-4), &:nth-child(6n-5) {
+          &:before {
             background: var(--tomato);
           }
         }
+
         @include laptop-xs {
-          &:nth-child(2n+1),{
-            &:before{
+          &:nth-child(2n+1), {
+            &:before {
               background: var(--tomato);
             }
           }
-          &:nth-child(2n+2),{
-            &:before{
+          &:nth-child(2n+2), {
+            &:before {
               background: var(--sandy);
             }
           }
         }
         @include mobile-xl {
-          &:nth-child(6n-3), &:nth-child(6n-4), &:nth-child(6n-5){
-            &:before{
+          &:nth-child(6n-3), &:nth-child(6n-4), &:nth-child(6n-5) {
+            &:before {
               background: var(--tomato);
             }
           }
-          &:nth-child(6n-2), &:nth-child(6n-1), &:nth-child(6n){
-            &:before{
+          &:nth-child(6n-2), &:nth-child(6n-1), &:nth-child(6n) {
+            &:before {
               background: var(--sandy);
             }
           }
         }
       }
     }
-    &.orange-table-v{
-      li{
-        &:before{
+
+    &.orange-table-v {
+      li {
+        &:before {
           background: var(--sandy);
         }
-        &:nth-child(2n+1),{
-          &:before{
+
+        &:nth-child(2n+1), {
+          &:before {
             background: var(--tomato);
           }
         }
+
         @include laptop-s-m {
-          &:nth-child(6n-3), &:nth-child(6n-4), &:nth-child(6n-5){
-            &:before{
+          &:nth-child(6n-3), &:nth-child(6n-4), &:nth-child(6n-5) {
+            &:before {
               background: var(--tomato);
             }
           }
-          &:nth-child(6n-2), &:nth-child(6n-1), &:nth-child(6n){
-            &:before{
+          &:nth-child(6n-2), &:nth-child(6n-1), &:nth-child(6n) {
+            &:before {
               background: var(--sandy);
             }
           }
@@ -184,120 +219,140 @@
       }
     }
 
-    &.blue-table{
-      li{
-        &:before{
+    &.blue-table {
+      li {
+        &:before {
           background: var(--light-green);
         }
-        &:nth-child(6n-3), &:nth-child(6n-4), &:nth-child(6n-5){
-          &:before{
-            background: var(--light-blue);
-          }
-        }
-      }
-    }
-    &.blue-table-v{
-      li{
-        &:before{
-          background: var(--light-green);
-        }
-        &:nth-child(2n+1),{
-          &:before{
+
+        &:nth-child(6n-3), &:nth-child(6n-4), &:nth-child(6n-5) {
+          &:before {
             background: var(--light-blue);
           }
         }
       }
     }
 
-    &.double-column{
-      ul{
-        margin: -35px -50px;
-        li{
-          strong{
-            font-size: 18px;
-            line-height: 24px;
-            font-weight: 700;
-          }
-          margin: 35px 50px;
-          width: calc((100% - (50px* 4))/2);
-          @include laptop-s-m {
-                width: calc((100% - (50px* 2)));
+    &.blue-table-v {
+      li {
+        &:before {
+          background: var(--light-green);
+        }
+
+        &:nth-child(2n+1), {
+          &:before {
+            background: var(--light-blue);
           }
         }
       }
     }
-    ul{
+
+    &.double-column {
+      ul {
+        margin: -35px -50px;
+
+        li {
+          p{
+            margin: 0 0 23px 0;
+            strong {
+              font-size: 18px;
+              line-height: 24px;
+              font-weight: 700;
+            }
+          }
+
+          margin: 35px 50px;
+          width: calc((100% - (50px * 4)) / 2);
+          @include laptop-s-m {
+            width: calc((100% - (50px * 2)));
+          }
+        }
+      }
+    }
+
+    ul {
       display: flex;
       flex-wrap: wrap;
       margin: 55px -32px -15px;
-      @include mobile-xl{
+      @include mobile-xl {
         margin: 25px -15px -15px;
       }
-      li{
-      margin: 50px 32px;
-      width: calc((100% - (32px * 6))/3);
-      position: relative;
-      padding: 0 0 0 31px;
-      @include laptop-xs {
-        width: calc((100% - (32px * 4))/2);
+
+      li {
+        margin: 50px 32px;
+        width: calc((100% - (32px * 6)) / 3);
+        position: relative;
+        padding: 0 0 0 31px;
+        @include laptop-xs {
+          width: calc((100% - (32px * 4)) / 2);
+        }
+        @include mobile-xl {
+          margin: 15px;
+          width: calc((100% - (15px * 2)));
+        }
+
+        &:before {
+          content: '';
+          position: absolute;
+          left: 0;
+          top: 0;
+          height: 100%;
+          width: 1px;
+          background: var(--light-blue);
+        }
+
+        p {
+          font-size: 18px;
+          line-height: 30px;
+        }
+
+        h3 {
+          color: var(--dark-grey);
+          display: block;
+          font-weight: 700;
+          font-size: 24px;
+          line-height: 35px;
+          margin: 0 0 23px 0;
+        }
       }
-      @include mobile-xl {
-        margin: 15px;
-        width: calc((100% - (15px * 2)));
-      }
-      &:before{
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        height: 100%;
-        width: 1px;
-        background: var(--light-blue);
-      }
-    p{
-      font-size: 18px;
-      line-height: 30px;
-      strong{
-        display: block;
-        font-weight: 700;
-        font-size: 24px;
-        line-height: 35px;
-        margin: 0 0 23px;
-      }
-    }
-    }
     }
   }
-  &__numbers{
+
+  &__numbers {
     @include flexAlignment(center, space-between);
-    h3{
+
+    h3 {
       margin-bottom: 10px;
     }
   }
+
   &_blue-bg {
     background: #F7FAFD;
   }
-  &.reverse{
-    .section__image-award{
+
+  &.reverse {
+    .section__image-award {
       left: initial;
       right: 0;
       transform: translate(50%, 50%);
-      @include tablet-m{
+      @include tablet-m {
         transform: translate(0, 50%);
       }
     }
-    &.section{
-      .top-bg{
+
+    &.section {
+      .top-bg {
         top: 205px;
         left: 1px;
         width: 250px;
         height: 420px;
-        @include tablet-m{
+        @include tablet-m {
           top: 362px;
         }
       }
-      .container{
-        @media(min-width: 789px){
+
+      .container {
+        @media(min-width: 789px) {
           flex-direction: row-reverse;
         }
       }
@@ -305,12 +360,13 @@
   }
 }
 
-.color{
-  &_red-to-orange{
-    &:before{
+.color {
+  &_red-to-orange {
+    &:before {
       background: var(--tomato);
     }
-    span{
+
+    span {
       font-weight: 800;
       background: var(--orange-gradient);
       font-size: 102px;
@@ -318,11 +374,13 @@
       -webkit-text-fill-color: transparent;
     }
   }
-  &_blue-to-light{
-    &:before{
+
+  &_blue-to-light {
+    &:before {
       background: var(--blue-gradient);
     }
-    span{
+
+    span {
       font-weight: 800;
       background: var(--blue-gradient);
       font-size: 102px;
