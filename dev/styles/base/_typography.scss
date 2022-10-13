@@ -46,6 +46,16 @@ h6{
   letter-spacing: 0.39em;
   text-transform: uppercase;
   margin: 10px 0;
+  &._small{
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 30px;
+    text-align: center;
+    text-transform: initial;
+    letter-spacing: initial;
+    max-width: 521px;
+    margin: 10px auto;
+  }
 }
 
 .text2{
