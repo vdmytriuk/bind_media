@@ -3,17 +3,19 @@
   @include laptop-xs {
     margin-top: 31px;
   }
-  &.cro-stack{
-    .our-clients{
-      &__block{
-        width: calc((100% - (40px * 12))/6);
-        @include laptop-s-m{
+
+  &.cro-stack {
+    .our-clients {
+      &__block {
+        width: calc((100% - (40px * 12)) / 6);
+        @include laptop-s-m {
           width: auto;
           max-width: 286px;
         }
       }
-      &__blocks{
-        @include laptop-s-m{
+
+      &__blocks {
+        @include laptop-s-m {
           display: block;
           white-space: nowrap;
           overflow-x: auto;
@@ -24,29 +26,33 @@
       }
     }
   }
-  &.modal-clients{
+
+  &.modal-clients {
     margin: 100px 0 0 0;
-    .our-clients{
-      &__block{
-        width: calc((100% - (15px * 8))/4);
+
+    .our-clients {
+      &__block {
+        width: calc((100% - (15px * 8)) / 4);
         margin: 0 15px;
-        @include mobile-xl{
+        @include mobile-xl {
           margin: 15px;
-          width: calc((100% - (15px * 4))/2);
+          width: calc((100% - (15px * 4)) / 2);
         }
       }
-      &__blocks{
+
+      &__blocks {
         margin: 0 -15px;
-        @include mobile-xl{
-          display: flex!important;
-          white-space: initial!important;
-          overflow-x: initial!important;
+        @include mobile-xl {
+          display: flex !important;
+          white-space: initial !important;
+          overflow-x: initial !important;
           margin: -15px;
         }
       }
     }
   }
-  &__blocks{
+
+  &__blocks {
     display: flex;
     flex-wrap: wrap;
     margin: -22px -40px;
@@ -59,21 +65,24 @@
       }
     }
   }
-  &__block{
+
+  &__block {
     display: inline-block;
     align-items: center;
     justify-content: center;
     margin: 22px 40px;
-    width: calc((100% - (40px * 10))/5);
+    width: calc((100% - (40px * 10)) / 5);
     height: 100px;
-    img{
+
+    img {
       width: 100%;
       height: 100%;
       object-fit: contain;
     }
+
     @include laptop-xs {
       width: auto;
       max-width: 286px;
-      }
+    }
   }
 }

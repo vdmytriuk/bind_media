@@ -1,41 +1,46 @@
-.awards{
+.awards {
   margin-top: 200px;
   padding-top: 85px;
   background-image: url("../img/backgrounds/background_awards.png");
   background-position: left bottom;
   background-size: auto;
   background-repeat: no-repeat;
-  @include tablet-m{
+  @include tablet-m {
     margin-top: 100px;
     padding: 0;
     background-size: 160%;
     background-position: bottom;
   }
-  .container{
+
+  .container {
     @include flexAlignment(center, space-between, wrap);
-    @include tablet-m{
+    @include tablet-m {
       flex-direction: column-reverse;
     }
   }
-  &__image{
+
+  &__image {
     flex-basis: 45%;
-    @media(min-width: 1024px){
+    @media(min-width: 1024px) {
       margin-left: 5%;
     }
-    img{
+
+    img {
       width: 85%;
       margin: 0 auto;
-      @include tablet-m{
+      @include tablet-m {
         width: 80%;
       }
     }
-    @include tablet-m{
+
+    @include tablet-m {
       flex-basis: 100%;
     }
   }
-  &__info{
+
+  &__info {
     flex-basis: 33%;
-    @include tablet-m{
+    @include tablet-m {
       flex-basis: 100%;
       margin-bottom: 70px;
     }

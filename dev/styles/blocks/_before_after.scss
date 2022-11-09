@@ -5,16 +5,17 @@
   overflow: hidden;
   width: 842px;
   position: relative;
-  @include  laptop-xs {
+  @include laptop-xs {
     height: auto;
     margin: 30px auto;
   }
+
   &__before {
     background-size: cover;
     height: 100%;
     position: relative;
     width: 100%;
-    @include  laptop-xs {
+    @include laptop-xs {
       position: static;
       height: 170px;
       background-size: contain;
@@ -31,6 +32,7 @@
       }
     }
   }
+
   &__after {
     background-size: cover;
     bottom: 0;
@@ -41,7 +43,7 @@
     overflow: visible;
     position: absolute;
     width: 50%;
-    @include  laptop-xs {
+    @include laptop-xs {
       border-right: 0;
       width: 100%;
       position: static;
@@ -51,17 +53,18 @@
       background-position: center;
       margin-top: 30px;
     }
+
     &::before {
       background: url('../img/case_study/chevron-right-left.png') no-repeat scroll 0 center transparent;
-      background-size:contain;
+      background-size: contain;
       content: " ";
       float: right;
       height: 100%;
       margin-right: -34px;
       position: relative;
-      top:0;
+      top: 0;
       width: 64px;
-      @include  laptop-xs {
+      @include laptop-xs {
         content: "After";
         display: block;
         position: relative;
@@ -89,12 +92,14 @@
   position: relative;
   top: -100vw;
   width: 100%;
-  @include  laptop-xs {
+  @include laptop-xs {
     display: none;
   }
+
   &::-moz-range-track {
     background: transparent;
   }
+
   &::-ms-track {
     border: none;
     background-color: transparent;
@@ -109,27 +114,32 @@
     cursor: col-resize;
     color: transparent;
   }
+
   &::-ms-fill-lower {
-    background-color:transparent;
+    background-color: transparent;
   }
+
   &::-webkit-slider-thumb {
-    -webkit-appearance:none;
+    -webkit-appearance: none;
     height: 100vw;
     width: 0.5%;
     opacity: 0;
   }
+
   &::-moz-range-thumb {
     -moz-appearance: none;
     height: 100vw;
     width: 0.5%;
     opacity: 0;
   }
+
   &::-ms-thumb {
     height: 100vw;
     width: 0.5%;
-    opacity:0;
+    opacity: 0;
   }
+
   &::-ms-tooltip {
-    display:none;
+    display: none;
   }
 }

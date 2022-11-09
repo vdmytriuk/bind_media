@@ -1,25 +1,30 @@
-.review{
+.review {
   padding: 30px;
   background: #F7FAFD;
-  &.mob{
+
+  &.mob {
     margin-top: 30px;
   }
+
   &__top {
     display: flex;
     margin-bottom: 30px;
-    .custom-image{
+
+    .custom-image {
       margin-right: 30px;
       width: 25%;
       z-index: 1;
-      &:before{
+
+      &:before {
         left: -3px;
         right: -3px;
         bottom: -3px;
       }
     }
   }
-  &__content{
-    p{
+
+  &__content {
+    p {
       @include font(20px, 400, 28px)
     }
   }

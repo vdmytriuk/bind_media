@@ -96,17 +96,19 @@
       width: calc((100% - (35px * 2)));
     }
 
-    &.light-blue{
-      &>p {
+    &.light-blue {
+      & > p {
         color: var(--light-blue);
+
         &:before {
           background-image: url("../img/separator-rd/1.svg");
         }
       }
-      ul{
-        li{
-          a{
-            span{
+
+      ul {
+        li {
+          a {
+            span {
               color: var(--light-blue);
               border: 1px solid var(--light-blue);
             }
@@ -114,17 +116,20 @@
         }
       }
     }
-    &.sandy{
-      &>p {
+
+    &.sandy {
+      & > p {
         color: var(--sandy);
+
         &:before {
           background-image: url("../img/separator-rd/2.svg");
         }
       }
-      ul{
-        li{
-          a{
-            span{
+
+      ul {
+        li {
+          a {
+            span {
               color: var(--sandy);
               border: 1px solid var(--sandy);
             }
@@ -132,17 +137,20 @@
         }
       }
     }
-    &.tomato{
-      &>p {
+
+    &.tomato {
+      & > p {
         color: var(--tomato);
+
         &:before {
           background-image: url("../img/separator-rd/3.svg");
         }
       }
-      ul{
-        li{
-          a{
-            span{
+
+      ul {
+        li {
+          a {
+            span {
               color: var(--tomato);
               border: 1px solid var(--tomato);
             }
@@ -150,17 +158,20 @@
         }
       }
     }
-    &.turqoise{
-      &>p {
+
+    &.turqoise {
+      & > p {
         color: var(--dark-turqoise);
+
         &:before {
           background-image: url("../img/separator-rd/4.svg");
         }
       }
-      ul{
-        li{
-          a{
-            span{
+
+      ul {
+        li {
+          a {
+            span {
               color: var(--dark-turqoise);
               border: 1px solid var(--dark-turqoise);
             }
@@ -179,20 +190,22 @@
       img + a {
         margin-left: 17px;
       }
-      a{
+
+      a {
         display: flex;
         align-items: center;
+
         span {
-        cursor: text;
-        text-align: center;
-        font-size: 12px;
-        font-weight: 900;
-        line-height: 22px;
-        border-radius: 500px;
-        padding: 0 7px;
-        margin: 0 0 0 15px;
-        white-space: nowrap;
-      }
+          cursor: text;
+          text-align: center;
+          font-size: 12px;
+          font-weight: 900;
+          line-height: 22px;
+          border-radius: 500px;
+          padding: 0 7px;
+          margin: 0 0 0 15px;
+          white-space: nowrap;
+        }
       }
     }
   }

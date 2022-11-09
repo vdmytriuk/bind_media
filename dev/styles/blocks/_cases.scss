@@ -1,9 +1,10 @@
-.cases{
+.cases {
   margin-top: 200px;
-  @include tablet-m{
+  @include tablet-m {
     margin-top: 117px;
   }
-  &__blocks{
+
+  &__blocks {
     --columnsCount: 3;
     display: grid;
     margin: 70px 0;
@@ -20,28 +21,33 @@
       }
     }
   }
-  &__block{
-    @include tablet-m{
+
+  &__block {
+    @include tablet-m {
       flex: none;
       width: 70vw;
     }
-    &-img{
+
+    &-img {
       margin-bottom: 35px;
       height: 350px;
-      @include tablet-m{
+      @include tablet-m {
         height: 272px;
       }
-      img{
+
+      img {
         height: 100%;
         object-fit: cover;
         width: 100%;
       }
     }
-    h5{
+
+    h5 {
       transition: .3s;
     }
-    &:hover{
-      h5{
+
+    &:hover {
+      h5 {
         color: var(--light-blue);
       }
     }

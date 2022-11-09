@@ -1,8 +1,10 @@
-.separator{
+.separator {
   margin-top: 110px;
+
   &_decorated {
     .container {
       position: relative;
+
       &:before {
         content: '';
         position: absolute;
@@ -14,9 +16,9 @@
         border-top-left-radius: 65px;
         border-bottom-right-radius: 65px;
         transform: translate(-150px, -50%) skew(-25deg);
-        @include tablet-m{
+        @include tablet-m {
           top: 150px;
-          transform: translate(-75px , 5%) skew(-25deg);
+          transform: translate(-75px, 5%) skew(-25deg);
         }
       }
 
@@ -31,7 +33,7 @@
         border-top-right-radius: 65px;
         border-bottom-left-radius: 65px;
         transform: translate(60%, 40%) skew(25deg);
-        @include tablet-m{
+        @include tablet-m {
           transform: translate(35%, 40%) skew(25deg);
         }
       }
@@ -63,82 +65,94 @@
   }
 
 
-
-  &__blocks{
+  &__blocks {
     @include gridTemplate(4, 1, 70px 0, 95px 60px, 45px 0, 50px 0);
 
     &_binary {
       @include gridTemplate(2, 1, 70px 0, 90px 150px, 45px 0, 50px 0);
     }
   }
-  &__block{
+
+  &__block {
     @include flexAlignment(center);
     flex-direction: column;
     text-align: center;
-    h6{
+
+    h6 {
       margin-bottom: 28px;
     }
   }
-  &__icon{
+
+  &__icon {
     position: relative;
     width: 60px;
     height: 60px;
     margin-bottom: 30px;
+
     &:before {
       content: '';
       position: absolute;
       top: 50%;
-      transform: translate(0 , -50%);
+      transform: translate(0, -50%);
       opacity: .1;
       width: 45px;
       height: 85px;
     }
-    &_to-left{
-      &:before{
+
+    &_to-left {
+      &:before {
         border-top-right-radius: 10px;
         border-bottom-left-radius: 10px;
-        transform: translate(0 , -50%) skew(25deg);
+        transform: translate(0, -50%) skew(25deg);
       }
     }
-    &_to-right{
-      &:before{
+
+    &_to-right {
+      &:before {
         border-top-left-radius: 10px;
         border-bottom-right-radius: 10px;
-        transform: translate(0 , -50%) skew(-25deg);
+        transform: translate(0, -50%) skew(-25deg);
       }
     }
-    &_left{
-      &:before{
+
+    &_left {
+      &:before {
         left: -30px;
       }
     }
-    &_right{
-      &:before{
+
+    &_right {
+      &:before {
         right: 0;
       }
     }
-    &_center{
-      &:before{
+
+    &_center {
+      &:before {
         right: calc(50% + 25px);
       }
     }
-    &_blue{
-      &:before{
+
+    &_blue {
+      &:before {
         background: #00C0E7;
       }
     }
-    &_sandy{
-      &:before{
+
+    &_sandy {
+      &:before {
         background: #FFC33A;
       }
     }
-    &_tomato{
-      &:before{
+
+    &_tomato {
+      &:before {
         background: #F84E6C;
       }
     }
-    &_darkturqoise{
-      &:before{
+
+    &_darkturqoise {
+      &:before {
         background: #00E3CF;
       }
     }

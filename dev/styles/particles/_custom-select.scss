@@ -1,9 +1,10 @@
 .custom-select {
   position: relative;
   display: inline-block;
-  @include mobile-xl{
+  @include mobile-xl {
     width: 100%;
   }
+
   select {
     display: block;
     width: fit-content;
@@ -18,11 +19,12 @@
     cursor: pointer;
     appearance: none;
     transition: .3s;
-    @include mobile-xl{
+    @include mobile-xl {
       width: 100%;
     }
   }
-  &::before{
+
+  &::before {
     content: "";
     position: absolute;
     top: 50%;
@@ -34,7 +36,8 @@
     background-color: var(--dark-grey);
     transform: translate(-3px, -50%) rotate(45deg);
   }
-  &::after{
+
+  &::after {
     content: "";
     position: absolute;
     top: 50%;
@@ -46,14 +49,17 @@
     background-color: var(--dark-grey);
     transform: translate(3px, -50%) rotate(-45deg);
   }
-  &.active{
-    &::after{
+
+  &.active {
+    &::after {
       transform: translate(3px, -50%) rotate(45deg);
     }
-    &::before{
+
+    &::before {
       transform: translate(-3px, -50%) rotate(-45deg);
     }
   }
+
   .selector-options {
     list-style: none;
     padding: 24px 30px;
@@ -64,21 +70,26 @@
     position: absolute;
     left: 0;
     top: calc(100% + 6px);
+
     li {
       height: 35px;
       display: flex;
       align-items: center;
       cursor: pointer;
-      &:nth-of-type(2){
+
+      &:nth-of-type(2) {
         color: var(--light-blue);
       }
-      &:nth-of-type(3){
+
+      &:nth-of-type(3) {
         color: var(--sandy);
       }
-      &:nth-of-type(4){
+
+      &:nth-of-type(4) {
         color: var(--tomato);
       }
-      &:nth-of-type(5){
+
+      &:nth-of-type(5) {
         color: var(--dark-turqoise);
       }
     }

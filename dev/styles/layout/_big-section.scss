@@ -1,4 +1,4 @@
-.big-section{
+.big-section {
   margin-top: 100px;
   @media (min-width: 1025px) {
     margin-top: 120px;
@@ -8,11 +8,13 @@
     background-size: 100% 100%;
     background-repeat: no-repeat;
   }
-  .separator{
+
+  .separator {
     margin: 0;
   }
-  &_mob{
-    @include laptop-xs{
+
+  &_mob {
+    @include laptop-xs {
       margin-top: 84px;
       padding-top: 75px;
       padding-bottom: 125px;
@@ -21,7 +23,7 @@
       background-position: top center;
       background-repeat: no-repeat;
     }
-    @include mobile-xl{
+    @include mobile-xl {
       background-image: url("../img/backgrounds/background_rounded_mob.png");
     }
   }

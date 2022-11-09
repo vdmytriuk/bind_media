@@ -1,10 +1,11 @@
-.grid{
-  &_tertiary{
+.grid {
+  &_tertiary {
     @include gridTemplate(3, 1, 45px 0 100px 0, 80px 60px, 32px 0 48px 0, 48px 0);
-    .grid{
-      &__item{
-        @media(min-width: 789px){
-          &:first-of-type{
+
+    .grid {
+      &__item {
+        @media(min-width: 789px) {
+          &:first-of-type {
             grid-column-start: 1;
             grid-column-end: 3;
           }
@@ -12,6 +13,7 @@
       }
     }
   }
+
   &_tertiary-equal {
     @include gridTemplate(3, 1, 45px 0 100px 0, 80px 60px, 32px 0 48px 0, 48px 0);
     @include laptop-xs {
@@ -20,69 +22,87 @@
       overflow-x: scroll;
     }
   }
-  &_binary{
+
+  &_binary {
     @include gridTemplate(2, 1, 45px 0 20px 0, 75px, 32px 0 0 0, 48px 0);
-    @media screen and (max-width: 1025px){
+    @media screen and (max-width: 1025px) {
       --columnsCount: 2;
     }
-    @include mobile-xl{
+    @include mobile-xl {
       --columnsCount: 1;
     }
   }
-  &__item{
-    &-img{
+
+  &__item {
+    &-img {
       margin-bottom: 20px;
-      img{
+
+      img {
         width: 100%;
       }
     }
-    &-inner{
+
+    &-inner {
       @include flexAlignment(center, space-between);
       margin-bottom: 15px;
     }
-    &-tags{
+
+    &-tags {
       @include flexAlignment(center, flex-start)
     }
-    &-tag{
+
+    &-tag {
       padding: 5px 30px;
       border-radius: 50px;
-      span{
+
+      span {
         font-weight: 900;
         line-height: 1.375;
       }
-      &.blue{
+
+      &.blue {
         background: rgba(0, 192, 231, 0.1);
-        span{
+
+        span {
           color: var(--light-blue);
         }
       }
-      &.sandy{
+
+      &.sandy {
         background: rgba(255, 195, 58, 0.1);
-        span{
+
+        span {
           color: var(--sandy);
         }
       }
-      &.tomato{
+
+      &.tomato {
         background: rgba(248, 78, 108, 0.1);
-        span{
+
+        span {
           color: var(--tomato);
         }
       }
-      &.darkturqoise{
+
+      &.darkturqoise {
         background: rgba(77, 235, 221, 0.1);
-        span{
+
+        span {
           color: var(--dark-turqoise);
         }
       }
     }
-    &-date{
+
+    &-date {
       @include font(12px, 600, 14px);
       color: var(--dark-turqoise);
     }
-    &-day{
+
+    &-day {
       margin-right: 5px;
     }
-    &-text{
+
+    &-text {
       margin-bottom: 0;
     }
   }

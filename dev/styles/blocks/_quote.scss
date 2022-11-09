@@ -16,31 +16,36 @@
     }
   }
 }
-.quote-rd{
+
+.quote-rd {
   text-align: center;
   max-width: 650px;
   margin: 84px auto 142px;
-  @include mobile-l{
+  @include mobile-l {
     margin: 121px auto 83px;
   }
-  &.blue-to-light{
-    span{
+
+  &.blue-to-light {
+    span {
       background: var(--blue-gradient);
     }
   }
-  &.orange{
-    span{
+
+  &.orange {
+    span {
       background: var(--orange-gradient);
     }
   }
-  &__color-text{
-      @include font(48px, 400, 60px);
-    @include tablet-m{
+
+  &__color-text {
+    @include font(48px, 400, 60px);
+    @include tablet-m {
       margin: 14px 0 0 0;
       padding: 0 16px;
       @include font(35px, 400, 45px);
     }
-    span{
+
+    span {
       font-weight: 700;
       padding: 0 10px;
       color: var(--white);

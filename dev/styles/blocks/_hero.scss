@@ -1,28 +1,32 @@
-.hero{
-  .container{
+.hero {
+  .container {
     @include flexAlignment(center, space-between, wrap);
     overflow: hidden;
   }
-  .custom-image{
-    @include laptop-xs{
+
+  .custom-image {
+    @include laptop-xs {
       width: calc(100% - 20px);
     }
   }
-  &__description{
+
+  &__description {
     flex-basis: 48%;
     @include tablet-m {
       flex-basis: 100%;
       margin-bottom: 40px;
     }
-    p{
+
+    p {
       max-width: 405px;
       margin-bottom: 40px;
-      @include mobile-l{
+      @include mobile-l {
         margin-bottom: 30px;
       }
     }
   }
-  &__image{
+
+  &__image {
     position: relative;
     flex-basis: 50%;
     @include tablet-m {
@@ -30,6 +34,7 @@
     }
 
   }
+
   &-banner {
     margin: 0 auto -150px;
     width: 1320px;

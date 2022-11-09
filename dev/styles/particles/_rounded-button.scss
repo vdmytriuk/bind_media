@@ -1,4 +1,4 @@
-.rounded-button{
+.rounded-button {
   position: relative;
   display: block;
   background: transparent;
@@ -10,10 +10,10 @@
   border-radius: 100px;
   border: 1px solid var(--light-blue);
   overflow: hidden;
-  z-index:0;
+  z-index: 0;
   cursor: pointer;
   transition: .3s ease-in;
-  transition-property: all!important;
+  transition-property: all !important;
   transition-delay: 0s !important;
   @include mobile-l {
     padding-left: 30px;
@@ -23,10 +23,12 @@
   @include mobile-m {
     width: 100%;
   }
-  &_centered{
+
+  &_centered {
     margin: 0 auto;
   }
-  &:before{
+
+  &:before {
     content: '';
     position: absolute;
     top: 0;
@@ -38,7 +40,8 @@
     transform: translateX(100%);
     transition: transform .3s ease-in;
   }
-  &:after{
+
+  &:after {
     content: url("../img/icons/light_arrow_right.svg");
     position: absolute;
     right: 4px;
@@ -51,39 +54,49 @@
     width: 41px;
     height: 41px;
   }
-  @media(min-width: 1199px){
-    &:hover{
+
+  @media(min-width: 1199px) {
+    &:hover {
       color: var(--white);
-      &:before{
+
+      &:before {
         transform: translateX(0);
       }
-      &:after{
+
+      &:after {
         content: url("../img/icons/blue_arrow_right.svg");
         background: var(--white);
       }
     }
   }
-  &:disabled{
+
+  &:disabled {
     background: var(--disabled);
     cursor: auto;
-    &:after{
+
+    &:after {
       background: var(--disabled);
     }
-    &:hover{
+
+    &:hover {
       color: inherit;
     }
   }
+
   &_wh {
     border: 1px solid #fff;
     background: transparent;
     color: #fff;
+
     &:before {
       background: transparent;
     }
+
     &:after {
       background: #fff;
       content: url("../img/icons/light_arrow_right_blue.svg");
     }
+
     &:hover {
       &:after {
         content: url("../img/icons/light_arrow_right.svg");
@@ -102,7 +115,7 @@
   }
 }
 
-.button-centred-wrapper{
+.button-centred-wrapper {
   position: relative;
   display: inline-block;
   left: 50%;
