@@ -69,19 +69,19 @@
 
               &._mail {
                 &:before {
-                  background-image: url("../../img/awards/mail.svg");
+                  background-image: url("../img/awards/mail.svg");
                 }
               }
 
               &._phone {
                 &:before {
-                  background-image: url("../../img/awards/phone.svg");
+                  background-image: url("../img/awards/phone.svg");
                 }
               }
 
               &._address {
                 &:before {
-                  background-image: url("../../img/awards/place.svg");
+                  background-image: url("../img/awards/place.svg");
                 }
               }
             }
@@ -181,6 +181,10 @@
 
   .gform_footer.top_label {
     margin: 63px 0 0 0 !important;
+  }
+
+  .awards-rd__right {
+    max-width: 450px !important;
   }
 }
 
