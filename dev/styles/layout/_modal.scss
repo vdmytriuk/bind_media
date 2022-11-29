@@ -747,8 +747,8 @@
       }
 
       &:hover {
-        color: var(--light-blue) !important;
-        box-shadow: 0px 2px 21px 1px rgba(0,192,231,1);
+        background-color: var(--light-blue) !important;
+        color: var(--white) !important;
       }
     }
   }
@@ -766,6 +766,11 @@
 
       &::placeholder {
         color: var(--disabled);
+      }
+
+      &:focus-visible{
+        border: 1px solid var(--dark-turqoise) !important;
+        color: red;
       }
     }
   }
