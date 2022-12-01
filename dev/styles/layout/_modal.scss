@@ -638,6 +638,7 @@
   }
 
   .gform_validation_errors {
+    padding: 0!important;
     background: initial !important;
     box-shadow: initial !important;
 
@@ -753,8 +754,8 @@
     }
   }
 
-  .ginput_container_text, .ginput_container_email, .ginput_container_phone, .ginput_container_website, .ginput_container_select {
-    input, select {
+  .ginput_container_text, .ginput_container_email, .ginput_container_phone, .ginput_container_website, .ginput_container_select, .ginput_container_textarea {
+    input, select, textarea {
       padding: 10px 40px !important;
       border: 1px solid var(--light-blue) !important;
       border-radius: 100px !important;
@@ -772,6 +773,12 @@
         border: 1px solid var(--dark-turqoise) !important;
         color: red;
       }
+    }
+
+    textarea{
+      border-radius: 10px !important;
+      resize: none;
+      height: 100px;
     }
   }
 }
